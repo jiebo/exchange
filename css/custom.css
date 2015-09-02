@@ -1,0 +1,298 @@
+/* CSS Document */
+
+a.overlay-container:hover { 
+    text-decoration: none;
+}
+article {
+  font-family: 'Lora', 'Times New Roman', serif;
+  font-size: 20px;
+  color: #404040;
+}
+
+.intro-header {
+  background-color: #808080;
+  background: no-repeat center center;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  margin-bottom: 50px;
+}
+.intro-header .site-heading,
+.intro-header .post-heading,
+.intro-header .page-heading {
+  padding: 100px 0 50px;
+  color: white;
+}
+@media only screen and (min-width: 768px) {
+  .intro-header .site-heading,
+  .intro-header .post-heading,
+  .intro-header .page-heading {
+    padding: 150px 0;
+  }
+}
+.intro-header .site-heading,
+.intro-header .page-heading {
+  text-align: center;
+}
+.intro-header .site-heading h1,
+.intro-header .page-heading h1 {
+  margin-top: 0;
+  font-size: 50px;
+}
+.intro-header .site-heading .subheading,
+.intro-header .page-heading .subheading {
+  font-size: 24px;
+  line-height: 1.1;
+  display: block;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  margin: 10px 0 0;
+}
+@media only screen and (min-width: 768px) {
+  .intro-header .site-heading h1,
+  .intro-header .page-heading h1 {
+    font-size: 80px;
+  }
+}
+.intro-header .post-heading h1 {
+  font-size: 35px;
+  font-weight: bold;
+}
+.intro-header .post-heading .subheading,
+.intro-header .post-heading .meta {
+  line-height: 1.1;
+  display: block;
+}
+.intro-header .post-heading .subheading {
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 24px;
+  margin: 10px 0 30px;
+  font-weight: 600;
+}
+.intro-header .post-heading .meta {
+  font-family: 'Lora', 'Times New Roman', serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 20px;
+}
+.intro-header .post-heading .meta a {
+  color: white;
+}
+@media only screen and (min-width: 768px) {
+  .intro-header .post-heading h1 {
+    font-size: 55px;
+  }
+  .intro-header .post-heading .subheading {
+    font-size: 30px;
+  }
+}
+article p {
+  line-height: 1.5;
+  margin: 30px 0;
+}
+article p a {
+  text-decoration: underline;
+}
+article h1,
+article h2,
+article h3,
+article h4,
+article h5,
+article h6 {
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 800;
+}
+article a {
+  color: #404040;
+}
+article a:hover,
+article a:focus {
+  color: #0085a1;
+}
+article a img:hover,
+article a img:focus {
+  cursor: zoom-in;
+}
+article blockquote {
+  color: #808080;
+  font-style: italic;
+}
+article hr.small {
+  max-width: 100px;
+  margin: 15px auto;
+  border-width: 4px;
+  border-color: white;
+}
+
+article .section-heading {
+  font-size: 36px;
+  margin-top: 60px;
+  font-weight: 700;
+}
+article .caption {
+  text-align: center;
+  font-size: 14px;
+  padding: 10px;
+  font-style: italic;
+  margin: 0;
+  display: block;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.first-character:first-letter {
+    float: left; 
+    color: #903; 
+    font-size: 70px; 
+    line-height: 50px; 
+    padding-top: 4px; 
+    padding-right: 8px; 
+    padding-left: 3px; 
+    font-family: Georgia;
+}
+
+.transparent-btn {
+    background: #ffffff;
+    border: #ffffff;
+}
+
+/* Thumbnails */
+.overlay-container {
+    position: relative;
+    width: 100%;
+} 
+.overlay {
+    position: absolute;
+    bottom: 2%;
+    left: 5%;
+}
+.backdrop {
+   color: white;  
+   letter-spacing: -1px;  
+   font-weight: bold;
+   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+   padding: 0.5rem; 
+}
+.grayscale {
+ -webkit-filter: grayscale(100%);
+         -moz-filter: grayscale(0%);
+         -ms-filter: grayscale(100%);
+         -o-filter: grayscale(100%);
+          filter: grayscale(100%);
+          filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 4+ */
+          filter: gray; /* IE 6-9 */
+    transition: 0.2s;
+    padding: 10px;
+}
+.grayscale:hover {
+ -webkit-filter: grayscale(0%);
+         -moz-filter: grayscale(0%);
+         -ms-filter: grayscale(0%);
+         -o-filter: grayscale(0%);
+          filter: grayscale(0%);
+          filter: url(filters.svg#grayscale); /* Firefox 4+ */
+          filter: none; /* IE 6-9 */
+}
+
+/* Adjust the left/right padding of the fa icons in posts */
+.less-padding {
+    padding: 6px 8px;
+}
+
+/* Overwrite text-centre applied to form-control-static */
+.form-control-static {
+    text-align: left;
+}
+
+/* Styling for loading-div while ajax loads */
+.loading-div {
+    position: absolute;
+    background-color: #999;
+    height: 100%;
+    width: 100%;
+    top: 0%;
+    z-index: 999;
+    background: rgba(0,0,0,0.5) no-repeat center;
+}
+
+.align-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Styling to align chart */
+.align-chart {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Center col */
+.centered {
+    float: none;
+    margin: 0 auto;
+}
+
+/* Scrollable menu for dropdown */
+.scrollable-menu {
+    height: auto;
+    max-height: 250px;
+    overflow-x: hidden;
+}
+
+/* Set City Expense labels to align left when screen width less than 768px */
+@media (min-width: 244px) {
+    .control-label {
+        float: left;
+        padding-top: 7px;
+    }
+}
+
+/* Set the height of the chart div depending on screen size */
+/* Devices too small to view */
+@media (max-width: 600px) {
+    #chart-div {
+        display: none;
+        height: 400px;
+    }
+}
+
+/* Extra-Small devices (tablets, 601px and up) */
+@media (min-width: 601px) { 
+    #chart-div {
+        height: 300px;
+    }
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+    #chart-div {
+        height: 300px;
+    }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+    #chart-div {
+        height: 300px;
+    }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+    #chart-div {
+        height: 400px;
+    }
+}
+
+/* Extra large devices (my monitor, 1600px and up) */
+@media (min-width: 1800px) {
+    #chart-div {
+        height: 500px;
+    }
+}
