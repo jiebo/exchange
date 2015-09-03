@@ -43,8 +43,12 @@
         <!-- Custom CSS -->
         <link href="<?php bloginfo('template_directory'); ?>/css/stylish-portfolio.css" rel="stylesheet">
         <link href="<?php bloginfo('template_directory'); ?>/css/custom.css" rel="stylesheet">
+        
+        <?php 
+        if(is_home()) : ?>
         <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/owl-carousel/owl.carousel.css">
         <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/owl-carousel/owl.theme.css">
+        <?php endif; ?>
         
         <!-- Custom Fonts -->
         <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>

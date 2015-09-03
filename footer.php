@@ -44,6 +44,7 @@
         <!-- Bootstrap Core JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
         
+        <?php if(is_home()) : ?>
         <!-- HighCharts component -->
         <script src="http://code.highcharts.com/highcharts.js" charset="utf-8"></script>
         <script src="http://code.highcharts.com/modules/drilldown.js"></script>
@@ -53,6 +54,7 @@
         
         <!-- Javascript file for Exchange Expense Chart -->
         <script src="<?php bloginfo('template_directory'); ?>/exchange-expense-chart.php" type="text/javascript"></script>
+        <?php endif; ?>
         
         <!-- Custom Theme JavaScript -->
         <script>
