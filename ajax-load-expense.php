@@ -43,7 +43,7 @@ $avg_meal_cost = mysql_result( $query_resource, 0 ) * $currency_rate;
 $avg_meal_cost = number_format( $avg_meal_cost, 2, '.', '');
 
 // Compute Daily Public Transport
-$query_string  = "SELECT ROUND(AVG(A.ex_amount), 2)";
+$query_string  = "SELECT SUM(A.ex_amount)";
 $query_string .= "FROM wp_expense A ";
 $query_string .= "WHERE A.ex_city = '";
 $query_string .= $city_meta['city_name'];
@@ -54,7 +54,7 @@ $daily_trnsport= mysql_result( $query_resource, 0 ) * $currency_rate / $city_met
 $daily_trnsport= number_format( $daily_trnsport, 2, '.', '');
 
 // Compute Accommodation / night
-$query_string  = "SELECT ROUND(AVG(A.ex_amount), 2)";
+$query_string  = "SELECT SUM(A.ex_amount)";
 $query_string .= "FROM wp_expense A ";
 $query_string .= "WHERE A.ex_city = '";
 $query_string .= $city_meta['city_name'];
