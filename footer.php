@@ -78,23 +78,25 @@
         
         // If statement that will only output pagescroll if in index page
         <?php
-        if(is_home()) {
-            echo "$(function() {\n";
-            echo "\t    $('a[href*=#]:not([href=#])').click(function() {\n";
-            echo        "\t\tif (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {\n";
-            echo            "\t\t\tvar target = $(this.hash);\n";
-            echo            "\t\t\ttarget = target.length ? target : $('[name=' + this.hash.slice(1) + ']');\n";
-            echo            "\t\t\tif (target.length) {\n";
-            echo                "\t\t\t\t$('html,body').animate({\n";
-            echo                    "\t\t\t\t\tscrollTop: target.offset().top\n";
-            echo                "\t\t\t\t}, 1000);\n";
-            echo                "\t\t\t\treturn false;\n";
-            echo            "\t\t\t}\n";
-            echo        "\t\t}\n";
-            echo    "\t});\n";
-            echo "});";
+        if(is_home()) :
+        ?>
+            $(function() {
+                $('a[href*=#]:not([href=#])').click(function() {
+                    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+                        var target = $(this.hash);
+                        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                        if (target.length) {
+                            $('html,body').animate({
+                                scrollTop: target.offset().top
+                            }, 1000);
+                            return false;
+                        }
+                    }
+                });
+            });
             
-        }
+        <?php
+            endif;
         ?>
         </script>
         
