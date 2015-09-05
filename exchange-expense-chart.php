@@ -55,6 +55,8 @@ $query_string   = $sum_query . $flights_key . "';";
 $query_resource = mysql_query( $query_string ) or die (mysql_error());
 $flights_amount    = mysql_result ( $query_resource, 0 );
 
+$total_amount   = $food_amount + $preDeparture_amount + $accommodation_amount + $leisure_amount + $transport_amount + $survival_amount + $wants_amount + $flights_amount;
+$total_amount   = number_format($total_amount, 2, ".", ",");
 
 ?>
 
@@ -74,7 +76,7 @@ $(function () {
             type: 'pie'
         },
         title: {
-            text: 'Total Spending: S$ 14,998.90'
+            text: 'Total Spending: S$ <?php echo $total_amount; ?>'
         },
         subtitle: {
             text: '',
