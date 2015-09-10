@@ -66,7 +66,7 @@ get_header(); ?>
 
     <!-- Pre-departure -->
     <section id="predeparture" class="services bg-primary" style="position: relative;">
-        <div class="loading-div"><div class="align-center"><img src="<?php bloginfo('template_directory'); ?>/img/construction.png"></div></div>
+        <div class="loading-div"><div class="align-center"><img src="<?php bloginfo('template_directory'); ?>/img/construction.png" class="img-responsive"></div></div>
         <div class="container">
             <div class="row text-center">
                 <div class="col-lg-10 col-lg-offset-1">
