@@ -47,7 +47,7 @@
         <?php if(is_home()) : ?>
         <!-- HighCharts component -->
         <script src="http://code.highcharts.com/highcharts.js" charset="utf-8"></script>
-        <script src="http://code.highcharts.com/modules/drilldown.js"></script>
+        <script src="http://code.highcharts.com/modules/drilldown.js" defer></script>
         
         <!-- Javascript for Owl Carousel -->
         <script src="<?php bloginfo('template_directory'); ?>/owl-carousel/owl.carousel.min.js"></script>

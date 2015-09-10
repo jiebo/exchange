@@ -28,7 +28,7 @@ get_header(); ?>
                 <a href="#top" onclick = $("#menu-close").click(); >Home</a>
             </li>
             <li>
-                <a href="#predeparture" onclick = $("#menu-close").click(); >Pre-departure</a>
+                <a href="#" style="cursor: not-allowed;"  onclick = "return false;">Pre-departure</a>
             </li>
             <li>
                 <a href="#travel" onclick = $("#menu-close").click(); >City Guides</a>
@@ -65,7 +65,8 @@ get_header(); ?>
     </section>
 
     <!-- Pre-departure -->
-    <section id="predeparture" class="services bg-primary">
+    <section id="predeparture" class="services bg-primary" style="position: relative;">
+        <div class="loading-div"><div class="align-center"><img src="<?php bloginfo('template_directory'); ?>/img/construction.png"></div></div>
         <div class="container">
             <div class="row text-center">
                 <div class="col-lg-10 col-lg-offset-1">
