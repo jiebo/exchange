@@ -5,8 +5,8 @@
  * Displays all of the <head> section and everything up till <div id="main">
  *
  * @package WordPress
- * @subpackage Twenty_Thirteen
- * @since Twenty Thirteen 1.0
+ * @subpackage exchange
+ * @since exchange 1.0
  */
 ?><!DOCTYPE html>
 <!--[if IE 7]>
@@ -32,6 +32,7 @@
         
         ?>
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+        <link rel="shortcut icon" type="image/png" href="<?php bloginfo('template_directory'); ?>/img/favicon.png">
 	<!--[if lt IE 9]>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/html5.js"></script>
 	<![endif]-->
