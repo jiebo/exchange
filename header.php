@@ -40,10 +40,19 @@
         <!-- Bootstrap Core CSS -->
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
-        <!-- Custom CSS -->
         <link href="<?php bloginfo('template_directory'); ?>/css/stylish-portfolio.css" rel="stylesheet">
+        
+        <?php 
+        if(is_single() || is_home()) : ?>
+        <!-- Custom CSS -->
         <link href="<?php bloginfo('template_directory'); ?>/css/custom.css" rel="stylesheet">
+        <?php endif; ?>
+        
+        <?php
+        if(is_page()) : ?>
+        <link href="<?php bloginfo('template_directory'); ?>/css/article.css" rel="stylesheet">
+        <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+        <?php endif; ?>
         
         <?php 
         if(is_home()) : ?>

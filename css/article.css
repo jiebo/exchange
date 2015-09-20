@@ -1,0 +1,71 @@
+/* CSS Document */
+
+article {
+  font-family: 'Lora', 'Times New Roman', serif;
+  color: #404040;
+}
+article p,
+article td {
+  line-height: 1.5;
+  margin: 30px 0;
+  font-size: 20px;
+}
+article p a {
+  text-decoration: underline;
+}
+article h1,
+article h2,
+article h3,
+article h4,
+article h5,
+article h6 {
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}
+article a {
+  color: #404040;
+}
+article a:hover,
+article a:focus {
+  color: #0085a1;
+}
+article hr.small {
+  max-width: 100px;
+  margin: 15px auto;
+  border-width: 4px;
+  border-color: white;
+}
+/* Center col */
+.centered {
+    float: none;
+    margin: 0 auto;
+}
+
+/* Cool <hr> */
+hr.star-primary {
+    margin: 25px auto 30px;
+    padding: 0;
+    max-width: 250px;
+    border: 0;
+    border-top: solid 5px;
+    text-align: center;
+}
+
+hr.star-primary:after {
+    content: "\f005";
+    display: inline-block;
+    position: relative;
+    top: -.8em;
+    padding: 0 .25em;
+    font-family: FontAwesome;
+    font-size: 2em;
+}
+
+hr.star-primary {
+    border-color: #2c3e50;
+}
+
+hr.star-primary:after {
+    color: #2c3e50;
+    background-color: #fff;
+}

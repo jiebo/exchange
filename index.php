@@ -28,7 +28,7 @@ get_header(); ?>
                 <a href="#top" onclick = $("#menu-close").click(); >Home</a>
             </li>
             <li>
-                <a href="#" style="cursor: not-allowed;"  onclick = "return false;">Pre-departure</a>
+                <a href="#predeparture" onclick = $("#menu-close").click(); >Pre-departure</a>
             </li>
             <li>
                 <a href="#travel" onclick = $("#menu-close").click(); >City Guides</a>
@@ -66,65 +66,40 @@ get_header(); ?>
 
     <!-- Pre-departure -->
     <section id="predeparture" class="services bg-primary" style="position: relative;">
-        <div class="loading-div"><div class="align-center"><img src="<?php bloginfo('template_directory'); ?>/img/construction.png" class="img-responsive"></div></div>
         <div class="container">
             <div class="row text-center">
                 <div class="col-lg-10 col-lg-offset-1">
                     <h2>Pre-departure Info</h2>
                     <hr class="small">
                     <div class="row">
-                        <div class="col-md-6 col-sm-6">		<!--	Country selection	-->
-                            <div class="service-item">
+                        <?php 
+                        
+                        // Get Exchange Articles here
+                        $page_selection_array = array(
+                            'sort_column' => 'menu_order',
+                            'sort_order'   => 'ASC'
+                        );
+                        $pages_array = get_pages($page_selection_array);
+                        foreach( $pages_array as $page ) {
+                            $page_icon = get_post_meta($page -> ID, "Thumbnail", true);
+                            $page_subheading = get_post_meta($page -> ID, "Subheading", true);
+                            
+                        ?>
+                        <div class="col-md-3 col-sm-4">
+                            <a href="<?php echo get_page_link($page -> ID); ?>" class="service-item">
                                 <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-flag fa-stack-1x text-primary"></i>
-                            </span>
-                                <h4>
-                                    <strong>Country Selection</strong>
-                                </h4>
-                                <p>Some factors to consider when choosing a school</p>
-                                <a href="#" class="btn btn-light">Learn More</a>
-                            </div>
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-<?php echo $page_icon; ?> fa-stack-1x text-primary"></i>
+                                </span>
+                                <h4><strong><?php echo $page -> post_title; ; ?></strong></h4>
+                                <p><?php echo $page_subheading; ?></p>
+                                <button class="btn btn-light">Learn More</button>
+                            </a>
                         </div>
-                        <div class="col-md-6 col-sm-6">		<!--	SEP Application	-->
-                            <div class="service-item">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-file-text fa-stack-1x text-primary"></i>
-                            </span>
-                                <h4>
-                                    <strong>SEP Application</strong>
-                                </h4>
-                                <p>Feel free to make use of my application form</p>
-                                <a href="#" class="btn btn-light">Learn More</a>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-sm-6">		<!--	Pertinent Info	-->
-                            <div class="service-item">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-list-alt fa-stack-1x text-primary"></i>
-                            </span>
-                                <h4>
-                                    <strong>Pertinent Info</strong>
-                                </h4>
-                                <p>Checklist of the things to do before flying</p>
-                                <a href="#" class="btn btn-light">Learn More</a>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-sm-6">		<!--	Packing List	-->
-                            <div class="service-item">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-suitcase fa-stack-1x text-primary"></i>
-                            </span>
-                                <h4>
-                                    <strong>Packing List</strong>
-                                </h4>
-                                <p>My packing list and some things to take note of</p>
-                                <a href="#" class="btn btn-light">Learn More</a>
-                            </div>
-                        </div>
+                        
+                        <?php
+                        }
+                        ?>
                     </div>
                 </div>
             </div>
@@ -161,7 +136,7 @@ get_header(); ?>
                                     <a href="<?php echo get_post_permalink( $postid ); ?>" class="thumbnail">
                                         <img class="img-responsive grayscale" src="<?php echo get_post_meta($postid, $thumbnail_key, true);?>" alt="<?php echo $postid; ?>">
                                         <div class=" overlay">
-                                            <h3 class=""><span class="backdrop"><?php echo get_the_title( $postid ); ?></span></h3>
+                                            <h3><span class="backdrop"><?php echo get_the_title( $postid ); ?></span></h3>
                                         </div>
                                     </a>
                                 </div>
@@ -190,7 +165,7 @@ get_header(); ?>
                 <hr class="small">
                 <div id="swipe-div" class="owl-carousel">
                     <div class="this-div-is-for-the-carousel row">
-                        <div class="" id="ajax-expense-display">
+                        <div id="ajax-expense-display">
                             <h3>City</h3>
                             <form class="form-horizontal col-lg-6 col-lg-offset-1 col-md-8 col-sm-8" style="font-size: 18px;"> 
                                 <div class="form-group">        <!-- Form group for AVG MEAL    -->

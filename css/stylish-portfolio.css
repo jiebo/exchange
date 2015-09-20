@@ -137,7 +137,7 @@ hr.small {
 }
 
 #menu-toggle {
-    z-index: 9999;
+    z-index: 10;
     position: fixed;
     top: 0;
     right: 0;
@@ -184,7 +184,19 @@ hr.small {
 }
 
 .service-item {
-    margin-bottom: 30px;
+    margin-bottom: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 20px;
+    display: block;
+}
+a.service-item {
+    color: inherit;
+}
+.service-item:hover,
+.service-item:focus {
+    text-decoration: none;
+    box-shadow: 0 0 10px #222;
 }
 
 /* Portfolio */

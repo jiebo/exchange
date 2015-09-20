@@ -172,7 +172,7 @@ get_header(); ?>
                                         <th>Tips</th>
                                         <th colspan="2">Cost</th>
                                     </thead>
-                                    <tbody class="">
+                                    <tbody>
                                     <?php 
                                         for($i=0; $i<$numpostrow; $i++) {   //Iterate through all Activities
                                             echo "<tr>";
@@ -218,12 +218,12 @@ get_header(); ?>
                                 ?>
                                 <div class="table-responsive">
                                     <table class="table">
-                                        <thead class="">
+                                        <thead>
                                             <th>Name</th>
                                             <th>Tips</th>
                                             <th colspan="2">Cost</th>
                                         </thead>
-                                        <tbody class="">
+                                        <tbody>
                                             <?php 
                                             for($i=0; $i<$numfoodrow; $i++) {
                                             ?>

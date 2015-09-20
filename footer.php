@@ -100,7 +100,9 @@
         ?>
         </script>
         
-        <!-- All ajax scripts are here -->
+        <!-- All ajax index.php scripts are here -->
+        <?php 
+        if(is_home()) : ?>
         <script language="javascript" type="text/javascript">
           
         // On Document Ready, hide ajax loading div & load swipe action
@@ -186,7 +188,31 @@
         ajaxRequest.send(null);
         } ;
         </script>
+        <?php endif; ?>
         
+        <!-- Scripts for pages -->
+        <?php if(is_page()) : ?>
+        <script>
+        $(document).ready(function() {
+            $(".collapse-panel").hide();
+            $("#hide-all-button").hide();
+        })
+        function triggerToggle(toggleIndex) {
+            toggleID = "#panel" + toggleIndex;
+            $(toggleID).toggle('fast');
+            $(".rotate").toggleClass("fa-caret-right");
+            $(".rotate").toggleClass("fa-caret-down");
+        }
+        function showAll() {
+            $(".collapse-panel").show();
+            $(".toggle-btn").toggle();
+        }
+        function hideAll() {
+            $(".collapse-panel").hide();
+            $(".toggle-btn").toggle();
+        }
+        </script>
+        <?php endif; ?>
         
 	<?php wp_footer(); ?>
 </body>
