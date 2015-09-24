@@ -146,7 +146,7 @@ get_header(); ?>
                     </div>
                     <!-- /.row (nested) -->
                     <form>
-                        <a id="ajax-button" class="btn btn-dark" onmouseup="ajaxLoadMore(); return false;">View More Items</a>
+                        <a id="ajax-button" class="btn btn-dark" onclick="ajaxLoadMore(); return false;">View More Items</a>
                     </form>
                 </div>
                 <!-- /.col-lg-10 -->

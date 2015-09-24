@@ -69,3 +69,28 @@ hr.star-primary:after {
     color: #2c3e50;
     background-color: #fff;
 }
+
+/* Styling for dual columns inside packing list */
+.dual-col {
+    -moz-column-count: 2;
+    -moz-column-gap: 2em;
+    -webkit-column-count: 2;
+    -webkit-column-gap: 2em;
+    column-count: 2;
+    column-gap: 2em;
+    font-size: 16px;
+    margin: 10px;
+    line-height: 175%;
+}
+
+/* Rotate packing list category by 45deg */
+.rotate-text {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);    
+    transform: rotate(-45deg);
+    display: inline-block;
+    overflow: hidden;
+    margin: 0 -15px 0 15px;
+}

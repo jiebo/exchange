@@ -83,31 +83,124 @@ get_header(); ?>
                     }
                 </style>
                 <p><?php echo $page_intro; ?></p>
-				<div>
-					<ul>	<!-- Tab Navigation -->
-						<li class="active"><a href="#essential" data-toggle="tab">Essential</a><br>Must bring</li>
-						<li class="active"><a href="#good-to-have" data-toggle="tab">Good to have</a><br>Bring if you find it sensible or if your host city is ridiculously expensive</li>
-						<li class="active"><a href="#depends" data-toggle="tab">Depends</a><br>Important for <em>some</em> cities</li>
-						<li class="active"><a href="#showall" data-toggle="tab">Show All</a></li>
-					</ul>
-					
-					<div>	<!-- Tab Content -->
-						<div class="tab-pane active" id="essential">
-							<p><a onclick="#"><i class="fa fa-aquare-o"></i> Clothing</a></p>
-							<p><a><i class="fa fa-aquare-o"></i> School</a></p>
-						</div>
-						<div class="tab-pane" id="good-to-have">
-						
-						</div>
-						<div class="tab-pane" id="depends">
-						
-						</div>
-						<div class="tab-pane" id="showall">
-						
-						</div>
-					</div>
-				</div>
-                <button class="btn btn-default pull-right" onclick="#"><i class="fa fa-download"></i> Export</button>
+                <form method="" onsubmit="return false;">
+                    <div class="tabs">
+                        <style>
+                            .tabs {
+                                font-size: 18px;
+                            }
+                            .tabs a {
+                                text-decoration: none;
+                            }
+                            .tab-content {
+                                padding: 10px;
+                            }
+                        </style>
+                        <ul class="nav nav-tabs" role="tablist">	<!-- Tab Navigation -->
+                            <li class="active"><a href="#essential" data-toggle="tab">Essential</a></li>
+                            <li ><a href="#good-to-have" data-toggle="tab">Good to have</a></li>
+                            <li ><a href="#depends" data-toggle="tab">Depends</a></li>
+                            <li ><a href="#showall" data-toggle="tab">Show All</a></li>
+                            <li class="pull-right" style="line-height: 225%;">
+                                <style>
+                                    /* Adjust the left/right padding of the fa icons in posts */
+                                    .less-padding {
+                                        padding: 6px 3px;
+                                    }
+                                </style>
+                                <button class="btn btn-light less-padding">
+                                    <span class="fa-stack">
+                                        <i class="fa fa-eraser fa-stack-1x"></i>
+                                    </span>
+                                </button>
+                                <button class="btn btn-light less-padding">
+                                    <span class="fa-stack">
+                                        <i class="fa fa-check fa-stack-1x"></i>
+                                        <i class="fa fa-square-o fa-stack-2x"></i>
+                                    </span>
+                                </button>
+                            </li>
+                        </ul>
+                        <div class="tab-content small row">	<!-- Tab Content -->
+                            <div class="tab-pane active" id="essential">
+                                <div class="col-md-4">
+                                    <button class="btn btn-light btn-lg categoryToggle1" onclick="selectPackingCategory();"><i class="fa fa-square-o"></i> Clothing</button>
+                                </div>
+                                <div class="col-md-4">
+                                    <button class="btn btn-light btn-lg categoryToggle2" onclick="selectPackingCategory();"><i class="fa fa-square-o"></i> Footwear</button>
+                                </div>
+                                <div class="col-md-4">
+                                    <button class="btn btn-light btn-lg categoryToggle3" onclick="selectPackingCategory();"><i class="fa fa-square-o"></i> School</button>
+                                </div>
+                                <div class="col-md-4">
+                                    <button class="btn btn-light btn-lg categoryToggle4" onclick="selectPackingCategory();"><i class="fa fa-square-o"></i> Day-to-day</button>
+                                </div>
+                                <div class="col-md-4">
+                                    <button class="btn btn-light btn-lg categoryToggle5" onclick="selectPackingCategory();"><i class="fa fa-square-o"></i> Tech Accessories</button>
+                                </div>
+                                <div class="col-md-4">
+                                    <button class="btn btn-light btn-lg categoryToggle6" onclick="selectPackingCategory();"><i class="fa fa-square-o"></i> Health</button>
+                                </div>
+                                <div class="col-md-4">
+                                    <button class="btn btn-light btn-lg categoryToggle7" onclick="selectPackingCategory();"><i class="fa fa-square-o"></i> Travel Essential</button>
+                                </div>
+                                <div class="tab-pane" id="good-to-have">
+
+                                </div>
+                                <div class="tab-pane" id="depends">
+
+                                </div>
+                                <div class="tab-pane" id="showall">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row table-responsive">
+                            <style>
+                            </style>
+                            <table class="table-striped table-hover">
+                                <tbody>
+                                    <tr>
+                                        <td><span class="rotate-text">Winter</span></td>
+                                        <td>
+                                            <ul class="dual-col">
+                                                <li>Outer Jacket</li>
+                                                <li>Inner Jacket (e.g., Uniqlo's down jacket)</li>
+                                                <li>Heat Tech</li>
+                                                <li>Leather Gloves</li>
+                                                <li>Sports gloves</li>
+                                                <li>Waterproof shoes with sufficient traction</li>
+                                                <li>Beanie/Headwear</li>
+                                                <li>Scarf (Heat Tech)</li>
+                                                <li>Winter socks</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="rotate-text">Tech </span></td>
+                                        <td>
+                                            <ul class="dual-col">
+                                                <li>Router (maybe)</li>
+                                                <li>≥2 travel adaptors</li>
+                                                <li>Earpiece</li>
+                                                <li>USB cables</li>
+                                                <li>Thumbdrive</li>
+                                                <li>External harddisk</li>
+                                                <li>Laptop</li>
+                                                <li>Monitor?</li>
+                                                <li>Extension cord</li>
+                                                <li>Camera</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                <div id="testing">
+                                    
+                                </div>
+                                </tbody>
+                            </table>
+                        </div>
+                    <button type="submit" class="btn btn-default pull-right row" onclick="ajax();"><i class="fa fa-download"></i> Export</button>
+                </form>
             </div>
         </article>
     </div>

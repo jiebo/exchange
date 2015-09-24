@@ -113,11 +113,11 @@ get_header(); ?>
                                 
                                 <?php 
                                 if($water_boo) : ?>
-                                <button class="btn transparent-btn less-padding" data-toggle="tooltip" data-placement="left" data-trigger="hover click" title="Tap water is potable">
+                                <button class="btn btn-light less-padding" data-toggle="tooltip" data-placement="left" data-trigger="hover click" title="Tap water is potable">
                                     <i class="fa fa-tint fa-lg"></i>
                                 </button>
                                 <?php else : ?>
-                                <button class="btn transparent-btn less-padding" data-toggle="tooltip" data-placement="left" data-trigger="hover click" title="Tap water is not potable">
+                                <button class="btn btn-light less-padding" data-toggle="tooltip" data-placement="left" data-trigger="hover click" title="Tap water is not potable">
                                     <span class="fa-stack">
                                         <i class="fa fa-tint fa-stack-1x"></i>
                                         <i class="fa fa-ban fa-stack-2x"></i>
@@ -125,11 +125,11 @@ get_header(); ?>
                                 </button>                                
                                 <?php endif; ?>
                                 
-                                <button class="btn transparent-btn less-padding" data-toggle="tooltip" data-placement="top" data-trigger="hover click" title="<?php
+                                <button class="btn btn-light less-padding" data-toggle="tooltip" data-placement="top" data-trigger="hover click" title="<?php
                                             echo 'Minimum Spending : ' . $vat_values[0];
                                             echo '&#10;VAT Rate : <'.$vat_values[1];
                                 ?>"><i class="fa fa-shopping-cart fa-lg"></i></button>
-                                <button class="btn transparent-btn less-padding" data-toggle="tooltip" data-placement="bottom" data-trigger="hover click" title="<?php
+                                <button class="btn btn-light less-padding" data-toggle="tooltip" data-placement="bottom" data-trigger="hover click" title="<?php
                                             switch ($moneyscale) :
                                                 case(1): 
                                                     echo 'Cheaper than Singapore';
@@ -151,7 +151,7 @@ get_header(); ?>
                                     }
                                 ?>
                                 </button>
-                                <button class="btn transparent-btn less-padding" data-toggle="modal" data-target="#map"><i class="fa fa-globe fa-lg"></i></button>
+                                <button class="btn btn-light less-padding" data-toggle="modal" data-target="#map"><i class="fa fa-globe fa-lg"></i></button>
                             </li>
                         </ul>
 
