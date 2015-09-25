@@ -121,12 +121,12 @@ $(function () {
                 y: parseInt(<?php echo $transport_amount; ?>),
                 drilldown: null
             }, {
-                name: "Leisure",
-                y: parseInt(<?php echo $leisure_amount; ?>),
-                drilldown: null
-            }, {
                 name: "Accommodation",
                 y: parseInt(<?php echo $accommodation_amount; ?>),
+                drilldown: null
+            }, {
+                name: "Leisure",
+                y: parseInt(<?php echo $leisure_amount; ?>),
                 drilldown: null
             }, {
                 name: "Wants",
