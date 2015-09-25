@@ -100,32 +100,36 @@ get_header(); ?>
                             }
                             $factorarr = explode("^", $factor);
                             $factor_header = $factorarr[0];
+							
+							// if factor has empty set, don't print panel
 							if( count($factorarr) < 2 ) :
                         ?>
 							<tr class="toggle" style="cursor: initial;">
 								<td><?php echo $factor_header; ?></td>
 							</tr>
 							<tr></tr>
-						<?php else : ?>
-										<tr id="toggle<?php echo $count; ?>" class="toggle" onclick="triggerToggle('<?php echo $count;?>');">
-											<?php 
-											// Is the list ordered or unordered?
-											if( $order ) : 
-											?>
-											<td><?php echo $count.'. '.$factor_header;?><i style="line-height: 150%;" class="fa fa-caret-right pull-right rotate"></i></td>
-											<?php else : ?>
-											<td><?php echo $factor_header;?><i style="line-height: 150%;" class="fa fa-caret-right pull-right rotate"></i></td>
-											<?php endif; ?>
-										</tr>
-										<tr>
-											<td id="panel<?php echo $count;?>" class="collapse-panel">
-												<ul>
-													<?php foreach( array_slice($factorarr, 1) as $subfactor ) { ?>
-													<li><?php echo $subfactor; ?></li>
-													<?php } ?>
-												</ul>
-											</td>
-										</tr>
+						<?php 
+						// if factor has valid panel, output
+						else : ?>
+							<tr id="toggle<?php echo $count; ?>" class="toggle" onclick="triggerToggle('<?php echo $count;?>');">
+								<?php 
+								// Is the list ordered or unordered?
+								if( $order ) : 
+								?>
+								<td><?php echo $count.'. '.$factor_header;?><i style="line-height: 150%;" class="fa fa-caret-right pull-right rotate"></i></td>
+								<?php else : ?>
+								<td><?php echo $factor_header;?><i style="line-height: 150%;" class="fa fa-caret-right pull-right rotate"></i></td>
+								<?php endif; ?>
+							</tr>
+							<tr>
+								<td id="panel<?php echo $count;?>" class="collapse-panel">
+									<ul>
+										<?php foreach( array_slice($factorarr, 1) as $subfactor ) { ?>
+										<li><?php echo $subfactor; ?></li>
+										<?php } ?>
+									</ul>
+								</td>
+							</tr>
 
 						<?php
 						endif;
