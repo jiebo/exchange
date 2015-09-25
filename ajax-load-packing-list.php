@@ -37,6 +37,14 @@ $JSONstring = rtrim($JSONstring, ",");
 $JSONstring .= '}';
 $JSONstring = preg_replace('/[\x00-\x1F\x80-\xFF]/', '', $JSONstring);
 
+// Build string here
+$display_string  = "";
+$display_string .= "<tr>";
+$display_string .= "<td><span class=\"rotate-text\">". $categoryheader ."</span></td>";
+$display_string .= "<td>";
+$display_string .= "<ul class=\"dual-col\">";
+
+
 echo json_encode($JSONstring, JSON_UNESCAPED_UNICODE);
 echo json_last_error_msg();
 

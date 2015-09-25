@@ -196,28 +196,21 @@
         $(document).ready(function() {
             $(".collapse-panel").hide();
             $("#hide-all-button").hide();
-            
-            // ajax call php to return Packing List JSON 
+        })
+        function ajaxLoadPackingCategory(categoryName) {
             $.ajax({
-                url: "<?php bloginfo('template_directory'); ?>/load-packing-list.php",
+                url: "<?php bloginfo('template_directory'); ?>/ajax-load-packing-list.php",
                 type: "GET",
-                dataType: "json",
+				data: categoryName,
+                dataType: "html",
                 success: function(data) {
-                    $("#testing").html(
-                );
+                    $("#packing-list-container").prepend(data);
+                },
+				error: function() {
+					// Display Error Message here
+					// Don't forget to toggle checkbox back
+				}
             })
-        })
-        function ajax() {
-            $.ajax({
-                url: "<?php bloginfo('template_directory'); ?>/load-packing-list.php",
-                type: "GET",
-                dataType: "json",
-                success: function(data) {
-                    $("#testing").html(
-                    "something"
-                )
-            }
-        })
         }
         function triggerToggle(toggleIndex) {
             toggleID = "#panel" + toggleIndex;
