@@ -196,7 +196,27 @@
         $(document).ready(function() {
             $(".collapse-panel").hide();
             $("#hide-all-button").hide();
+			$("#panel1").show('slow');
         })
+		
+		
+		// Scripts for article-collapse
+        function triggerToggle(toggleIndex) {
+            toggleID = "#panel" + toggleIndex;
+            $(toggleID).toggle('fast');
+            $(".rotate").toggleClass("fa-caret-right");
+            $(".rotate").toggleClass("fa-caret-down");
+        }
+        function showAll() {
+            $(".collapse-panel").show();
+            $(".toggle-btn").toggle();
+        }
+        function hideAll() {
+            $(".collapse-panel").hide();
+            $(".toggle-btn").toggle();
+        }
+		
+		// Scripts for article-tabs
         function ajaxLoadPackingCategory(categoryName) {
             $.ajax({
                 url: "<?php bloginfo('template_directory'); ?>/ajax-load-packing-list.php",
@@ -211,20 +231,6 @@
 					// Don't forget to toggle checkbox back
 				}
             })
-        }
-        function triggerToggle(toggleIndex) {
-            toggleID = "#panel" + toggleIndex;
-            $(toggleID).toggle('fast');
-            $(".rotate").toggleClass("fa-caret-right");
-            $(".rotate").toggleClass("fa-caret-down");
-        }
-        function showAll() {
-            $(".collapse-panel").show();
-            $(".toggle-btn").toggle();
-        }
-        function hideAll() {
-            $(".collapse-panel").hide();
-            $(".toggle-btn").toggle();
         }
         $(".categoryToggle1").click(function() {
             $(".categoryToggle1 i").toggleClass("fa-square-o").toggleClass("fa-check-square-o");

@@ -159,7 +159,7 @@ get_header(); ?>
                             <style>
                             </style>
                             <table class="table-striped table-hover">
-                                <tbody>
+                                <tbody id="packing-list-container">
                                     <tr>
                                         <td><span class="rotate-text">Winter</span></td>
                                         <td>
@@ -193,9 +193,6 @@ get_header(); ?>
                                             </ul>
                                         </td>
                                     </tr>
-                                <div id="testing">
-                                    
-                                </div>
                                 </tbody>
                             </table>
                         </div>

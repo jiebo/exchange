@@ -96,7 +96,6 @@ get_header(); ?>
                                 <button class="btn btn-light">Learn More</button>
                             </a>
                         </div>
-                        
                         <?php
                         }
                         ?>
