@@ -198,6 +198,11 @@
             $("#hide-all-button").hide();
             $("#panel1").slideDown('slow');
             $("#toggle1 i").toggleClass("fa-caret-right").toggleClass("fa-caret-down");
+            var $essential_div = $("#essential").clone();
+            var $depends_div = $("#depends").clone();
+            var $good_to_have_div = $("#good-to-have").clone();
+            $("#showall").html($essential_div).append($depends_div).append($good_to_have_div);
+            ajaxLoadPackingCategory("Day-to-day");
         })
 		
 		
@@ -243,6 +248,12 @@
                 toggleCheckBox(categoryToggle);
                 return;
             }
+            $(document).ajaxStart(function() {
+                $(document.body).css({'cursor': 'wait'})
+            });
+            $(document).ajaxComplete(function() {
+                $(document.body).css({'cursor': 'default'})
+            });
             $.ajax({
                 url: "<?php bloginfo('template_directory'); ?>/ajax-load-packing-list.php",
                 type: "GET",

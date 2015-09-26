@@ -92,7 +92,7 @@ hr.star-primary:after {
     transform: rotate(-45deg);
     display: inline-block;
     overflow: hidden;
-    margin: 0 -15px 0 15px;
+    margin: 15px -15px 10px 15px;
 }
 
 /* Glow effect for new addition */

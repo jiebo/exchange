@@ -24,6 +24,7 @@ foreach($packinglist_array as $category ) {
     // Need to explode again to get category header
     $category_array = explode("^", $category);
     $categoryheader = trim($category_array[0], " \t\n\r\0\x0B");
+    $categoryheader = substr($categoryheader, 1);
     if($categoryheader === $q) {
         foreach($category_array as $record) {
             $records[] = $record;

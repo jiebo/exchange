@@ -64,6 +64,17 @@ get_header(); ?>
         $category_array = explode("^", $category);
         $records[] = trim($category_array[0], " \t\n\r\0\x0B");
     }
+    // Perform category sorting
+    foreach($records as $record) {
+        $all_records[] = substr($record, 1);
+        if($record[0] === "E") {
+            $essential_records[] = substr($record, 1);
+        } else if($record[0] === "D") {
+            $depends_records[] = substr($record, 1);
+        } else if($record[0] === "G") {
+            $good_to_have_records[] = substr($record, 1);
+        } else;
+    }
     ?>
     
     <div class="container" style="padding-top: 100px;" >
@@ -129,21 +140,35 @@ get_header(); ?>
                         <div class="tab-content small row">	<!-- Tab Content -->
                             <div class="tab-pane active" id="essential">
                                 <?php 
-                                foreach($records as $record) {
+                                foreach($essential_records as $record) {
                                 ?>
                                 <div class="col-md-4">
                                     <button class="btn btn-light btn-lg categoryToggle<?php echo $record; ?>" onclick="ajaxLoadPackingCategory('<?php echo $record; ?>');"><i class="fa fa-square-o"></i> <?php echo $record; ?></button>
                                 </div>
                                 <?php } ?>
-                                <div class="tab-pane" id="good-to-have">
-
+                            </div>
+                            <div class="tab-pane" id="good-to-have">
+                                <?php 
+                                foreach($good_to_have_records as $record) {
+                                ?>
+                                <div class="col-md-4">
+                                    <button class="btn btn-light btn-lg categoryToggle<?php echo $record; ?>" onclick="ajaxLoadPackingCategory('<?php echo $record; ?>');"><i class="fa fa-square-o"></i> <?php echo $record; ?></button>
                                 </div>
-                                <div class="tab-pane" id="depends">
+                                <?php } ?>
 
+                            </div>
+                            <div class="tab-pane" id="depends">
+                                <?php 
+                                foreach($depends_records as $record) {
+                                ?>
+                                <div class="col-md-4">
+                                    <button class="btn btn-light btn-lg categoryToggle<?php echo $record; ?>" onclick="ajaxLoadPackingCategory('<?php echo $record; ?>');"><i class="fa fa-square-o"></i> <?php echo $record; ?></button>
                                 </div>
-                                <div class="tab-pane" id="showall">
+                                <?php } ?>
 
-                                </div>
+                            </div>
+                            <div class="tab-pane" id="showall">
+
                             </div>
                         </div>
                         <div class="row table-responsive">
@@ -153,7 +178,7 @@ get_header(); ?>
                                 <tbody id="packing-list-container"></tbody>
                             </table>
                         </div>
-                    <button type="submit" class="btn btn-default pull-right row" onclick="ajax();"><i class="fa fa-download"></i> Export</button>
+                        <button style="margin: 20px 5px;" type="submit" class="btn btn-default pull-right row" onclick=""><i class="fa fa-download"></i> Export</button>
                 </form>
             </div>
         </article>
