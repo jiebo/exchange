@@ -196,45 +196,74 @@
         $(document).ready(function() {
             $(".collapse-panel").hide();
             $("#hide-all-button").hide();
-			$("#panel1").show('slow');
+            $("#panel1").slideDown('slow');
+            $("#toggle1 i").toggleClass("fa-caret-right").toggleClass("fa-caret-down");
         })
 		
 		
-		// Scripts for article-collapse
+        // Scripts for article-collapse
         function triggerToggle(toggleIndex) {
-            toggleID = "#panel" + toggleIndex;
-            $(toggleID).toggle('fast');
-            $(".rotate").toggleClass("fa-caret-right");
-            $(".rotate").toggleClass("fa-caret-down");
+            panelID = "#panel" + toggleIndex;
+            $(panelID).toggle('fast');
+            toggleID = "#toggle" + toggleIndex + " i";
+            $(toggleID).toggleClass("fa-caret-right").toggleClass("fa-caret-down");
         }
-        function showAll() {
+        $("#show-all-button").click( function showAll() {
             $(".collapse-panel").show();
             $(".toggle-btn").toggle();
-        }
-        function hideAll() {
+            var elements = document.getElementsByClassName("rotate");
+            var i;
+            for(i=0; i<elements.length; i++) {
+                if(elements[i].classList.contains("fa-caret-right")) {
+                    toggleID = "#toggle" + (i+1) + " i";
+                    $(toggleID).toggleClass("fa-caret-right").toggleClass("fa-caret-down");
+                }
+            }
+        })
+        $("#hide-all-button").click( function hideAll() {
             $(".collapse-panel").hide();
             $(".toggle-btn").toggle();
-        }
+            var elements = document.getElementsByClassName("rotate");
+            var i;
+            for(i=0; i<elements.length; i++) {
+                if(elements[i].classList.contains("fa-caret-down")) {
+                    toggleID = "#toggle" + (i+1) + " i";
+                    $(toggleID).toggleClass("fa-caret-right").toggleClass("fa-caret-down");
+                }
+            }
+        })
 		
-		// Scripts for article-tabs
+        // Scripts for article-tabs
         function ajaxLoadPackingCategory(categoryName) {
+            var categoryElement = document.getElementById(categoryName);
+            categoryToggle = ".categoryToggle" + categoryName + " i";
+            if(categoryElement !== null) {
+                id = "#" + categoryName;
+                $(id).remove();
+                toggleCheckBox(categoryToggle);
+                return;
+            }
             $.ajax({
                 url: "<?php bloginfo('template_directory'); ?>/ajax-load-packing-list.php",
                 type: "GET",
-				data: categoryName,
-                dataType: "html",
-                success: function(data) {
-                    $("#packing-list-container").prepend(data);
-                },
-				error: function() {
-					// Display Error Message here
-					// Don't forget to toggle checkbox back
-				}
+                data: { "Category": categoryName },
+                dataType: "html"
             })
+                    .done (function(html) {
+                        $("#packing-list-container").hide();
+                        $("#packing-list-container").prepend(html);
+                        $("#packing-list-container").slideDown("slow");
+                        toggleCheckBox(categoryToggle);
+                    })
+                    .fail (function() {
+                        alert ("error");
+                
+                    })
         }
-        $(".categoryToggle1").click(function() {
-            $(".categoryToggle1 i").toggleClass("fa-square-o").toggleClass("fa-check-square-o");
-        })
+        function toggleCheckBox(id) {
+            $(id).toggleClass("fa-square-o");
+            $(id).toggleClass("fa-check-square-o");
+        }
         </script>
         <?php endif; ?>
         

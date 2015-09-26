@@ -94,3 +94,43 @@ hr.star-primary:after {
     overflow: hidden;
     margin: 0 -15px 0 15px;
 }
+
+/* Glow effect for new addition */
+.category-added {
+    -webkit-animation: glow 0.5s;
+    -moz-animation: glow 0.5s;
+    -o-animation: glow 0.5s;
+    animation: glow 0.5s;
+}
+@-webkit-keyframes glow {
+    0% {
+        background-color: #F9F9F9;
+    }
+    100% {
+        background-color: #f0f0f0;
+    }
+}
+@-moz-keyframes glow {
+    0% {
+        background-color: #F9F9F9;
+    }
+    100% {
+        background-color: #f0f0f0;
+    }
+}
+@-o-keyframes glow {
+    0% {
+        background-color: #F9F9F9;
+    }
+    100% {
+        background-color: #f0f0f0;
+    }
+}
+@keyframes glow {
+    0% {
+        background-color: #F9F9F9;
+    }
+    100% {
+        background-color: #f0f0f0;
+    }
+}

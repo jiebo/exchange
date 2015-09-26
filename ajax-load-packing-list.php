@@ -16,36 +16,39 @@ $packinglist_string = mysql_fetch_row($packinglist_resource, 0);
 // Convert String into 1 level array
 $packinglist_array = array_slice(explode("~", $packinglist_string[post_content]), 1);
 
-// Convert array into JSON
-$JSONstring = "{ ";
-foreach($packinglist_array as $category) {
-    // Need to explode it again to remove the category header
-    $category_array = explode("^", $category);
-    $categoryheader = $category_array[0];
-    $JSONstring .= '"' . $categoryheader . '":[';
-    $category_array = array_slice($category_array, 1);
-    
-    // Create an item array
-    $item_array = array();
-    foreach($category_array as $item) {
-        $JSONstring .= '"' . $item . '",' ;
-    }
-    $JSONstring = rtrim($JSONstring, ",");
-    $JSONstring .= '],';
-}
-$JSONstring = rtrim($JSONstring, ",");
-$JSONstring .= '}';
-$JSONstring = preg_replace('/[\x00-\x1F\x80-\xFF]/', '', $JSONstring);
+// Retrieve Packing Category
+$q = $_GET['Category'];
 
-// Build string here
+// Get relevant Category records here
+foreach($packinglist_array as $category ) {
+    // Need to explode again to get category header
+    $category_array = explode("^", $category);
+    $categoryheader = trim($category_array[0], " \t\n\r\0\x0B");
+    if($categoryheader === $q) {
+        foreach($category_array as $record) {
+            $records[] = $record;
+        }
+        break;
+    }
+}
+
+// Build String here
+$records = array_slice($records, 1);
+
 $display_string  = "";
-$display_string .= "<tr>";
+$display_string .= "<tr id=\"".$categoryheader."\" class=\"category-added\">";
 $display_string .= "<td><span class=\"rotate-text\">". $categoryheader ."</span></td>";
 $display_string .= "<td>";
 $display_string .= "<ul class=\"dual-col\">";
+foreach($records as $record) {
+    $display_string .= "<li>" . $record . "</li>";
+}
+$display_string .= "</ul>";
+$display_string .= "</td>";
+$display_string .= "</tr>";
+
+echo $display_string;
 
 
-echo json_encode($JSONstring, JSON_UNESCAPED_UNICODE);
-echo json_last_error_msg();
 
 ?>

@@ -58,7 +58,12 @@ get_header(); ?>
     $page_intro = get_post_meta($pageid, "Introduction", true);
     $page_icon  = get_post_meta($pageid, "Thumbnail", true);
 
-    
+    // Get all category headers 
+    $packinglist_array = array_slice(explode("~", $page_content), 1);
+    foreach($packinglist_array as $category) {
+        $category_array = explode("^", $category);
+        $records[] = trim($category_array[0], " \t\n\r\0\x0B");
+    }
     ?>
     
     <div class="container" style="padding-top: 100px;" >
@@ -123,27 +128,13 @@ get_header(); ?>
                         </ul>
                         <div class="tab-content small row">	<!-- Tab Content -->
                             <div class="tab-pane active" id="essential">
+                                <?php 
+                                foreach($records as $record) {
+                                ?>
                                 <div class="col-md-4">
-                                    <button class="btn btn-light btn-lg categoryToggle1" onclick="selectPackingCategory();"><i class="fa fa-square-o"></i> Clothing</button>
+                                    <button class="btn btn-light btn-lg categoryToggle<?php echo $record; ?>" onclick="ajaxLoadPackingCategory('<?php echo $record; ?>');"><i class="fa fa-square-o"></i> <?php echo $record; ?></button>
                                 </div>
-                                <div class="col-md-4">
-                                    <button class="btn btn-light btn-lg categoryToggle2" onclick="selectPackingCategory();"><i class="fa fa-square-o"></i> Footwear</button>
-                                </div>
-                                <div class="col-md-4">
-                                    <button class="btn btn-light btn-lg categoryToggle3" onclick="selectPackingCategory();"><i class="fa fa-square-o"></i> School</button>
-                                </div>
-                                <div class="col-md-4">
-                                    <button class="btn btn-light btn-lg categoryToggle4" onclick="selectPackingCategory();"><i class="fa fa-square-o"></i> Day-to-day</button>
-                                </div>
-                                <div class="col-md-4">
-                                    <button class="btn btn-light btn-lg categoryToggle5" onclick="selectPackingCategory();"><i class="fa fa-square-o"></i> Tech Accessories</button>
-                                </div>
-                                <div class="col-md-4">
-                                    <button class="btn btn-light btn-lg categoryToggle6" onclick="selectPackingCategory();"><i class="fa fa-square-o"></i> Health</button>
-                                </div>
-                                <div class="col-md-4">
-                                    <button class="btn btn-light btn-lg categoryToggle7" onclick="selectPackingCategory();"><i class="fa fa-square-o"></i> Travel Essential</button>
-                                </div>
+                                <?php } ?>
                                 <div class="tab-pane" id="good-to-have">
 
                                 </div>
@@ -158,42 +149,8 @@ get_header(); ?>
                         <div class="row table-responsive">
                             <style>
                             </style>
-                            <table class="table-striped table-hover">
-                                <tbody id="packing-list-container">
-                                    <tr>
-                                        <td><span class="rotate-text">Winter</span></td>
-                                        <td>
-                                            <ul class="dual-col">
-                                                <li>Outer Jacket</li>
-                                                <li>Inner Jacket (e.g., Uniqlo's down jacket)</li>
-                                                <li>Heat Tech</li>
-                                                <li>Leather Gloves</li>
-                                                <li>Sports gloves</li>
-                                                <li>Waterproof shoes with sufficient traction</li>
-                                                <li>Beanie/Headwear</li>
-                                                <li>Scarf (Heat Tech)</li>
-                                                <li>Winter socks</li>
-                                            </ul>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><span class="rotate-text">Tech </span></td>
-                                        <td>
-                                            <ul class="dual-col">
-                                                <li>Router (maybe)</li>
-                                                <li>≥2 travel adaptors</li>
-                                                <li>Earpiece</li>
-                                                <li>USB cables</li>
-                                                <li>Thumbdrive</li>
-                                                <li>External harddisk</li>
-                                                <li>Laptop</li>
-                                                <li>Monitor?</li>
-                                                <li>Extension cord</li>
-                                                <li>Camera</li>
-                                            </ul>
-                                        </td>
-                                    </tr>
-                                </tbody>
+                            <table class="table-striped table-hover" style="width: 100%;">
+                                <tbody id="packing-list-container"></tbody>
                             </table>
                         </div>
                     <button type="submit" class="btn btn-default pull-right row" onclick="ajax();"><i class="fa fa-download"></i> Export</button>

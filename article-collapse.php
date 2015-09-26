@@ -90,49 +90,49 @@ get_header(); ?>
                 <p><?php echo $page_intro; ?></p>
                 <div class="table-responsive">
                     <table class="table table-striped">
-                        <?php
-                        // Retrieve page content here
-                        $factors = array_slice(explode("~", $page_content), 1);
-                        $count = 1;
-                        foreach( $factors as $factor ) {
-                            if($order) {
-                                $factor = substr($factor, 0, -1);
-                            }
-                            $factorarr = explode("^", $factor);
-                            $factor_header = $factorarr[0];
-							
-							// if factor has empty set, don't print panel
-							if( count($factorarr) < 2 ) :
-                        ?>
-							<tr class="toggle" style="cursor: initial;">
-								<td><?php echo $factor_header; ?></td>
-							</tr>
-							<tr></tr>
-						<?php 
-						// if factor has valid panel, output
-						else : ?>
-							<tr id="toggle<?php echo $count; ?>" class="toggle" onclick="triggerToggle('<?php echo $count;?>');">
-								<?php 
-								// Is the list ordered or unordered?
-								if( $order ) : 
-								?>
-								<td><?php echo $count.'. '.$factor_header;?><i style="line-height: 150%;" class="fa fa-caret-right pull-right rotate"></i></td>
-								<?php else : ?>
-								<td><?php echo $factor_header;?><i style="line-height: 150%;" class="fa fa-caret-right pull-right rotate"></i></td>
-								<?php endif; ?>
-							</tr>
-							<tr>
-								<td id="panel<?php echo $count;?>" class="collapse-panel">
-									<ul>
-										<?php foreach( array_slice($factorarr, 1) as $subfactor ) { ?>
-										<li><?php echo $subfactor; ?></li>
-										<?php } ?>
-									</ul>
-								</td>
-							</tr>
+                    <?php
+                    // Retrieve page content here
+                    $factors = array_slice(explode("~", $page_content), 1);
+                    $count = 1;
+                    foreach( $factors as $factor ) {
+                        if($order) {
+                            $factor = substr($factor, 0, -1);
+                        }
+                        $factorarr = explode("^", $factor);
+                        $factor_header = $factorarr[0];
 
-						<?php
-						endif;
+                        // if factor has empty set, don't print panel
+                        if( count($factorarr) < 2 ) :
+                    ?>
+                        <tr class="toggle" style="cursor: initial;">
+                                <td><?php echo $factor_header; ?></td>
+                        </tr>
+                        <tr></tr>
+                    <?php 
+                    // if factor has valid panel, output
+                    else : ?>
+                        <tr id="toggle<?php echo $count; ?>" class="toggleRow" onclick="triggerToggle('<?php echo $count;?>');">
+                        <?php 
+                        // Is the list ordered or unordered?
+                        if( $order ) : 
+                        ?>
+                        <td><?php echo $count.'. '.$factor_header;?><i style="line-height: 150%;" class="fa fa-caret-right pull-right rotate"></i></td>
+                        <?php else : ?>
+                        <td><?php echo $factor_header;?><i style="line-height: 150%;" class="fa fa-caret-right pull-right rotate"></i></td>
+                        <?php endif; ?>
+                        </tr>
+                        <tr>
+                            <td id="panel<?php echo $count;?>" class="collapse-panel">
+                                <ul>
+                                    <?php foreach( array_slice($factorarr, 1) as $subfactor ) { ?>
+                                    <li><?php echo $subfactor; ?></li>
+                                    <?php } ?>
+                                </ul>
+                            </td>
+                        </tr>
+
+                    <?php
+                    endif;
 						
                         $count++;
                         }
@@ -145,7 +145,7 @@ get_header(); ?>
                         .collapse-panel li {
                             line-height: 200%;
                         }
-                        .toggle:hover {
+                        .toggleRow:hover {
                             cursor: pointer;
                         }
                         .rotate{
@@ -155,8 +155,8 @@ get_header(); ?>
                         }
                     </style>
                 </div>
-                <button class="btn btn-default pull-right toggle-btn" onclick="showAll();"><i class="fa fa-eye"></i> Show All</button>
-                <button id="hide-all-button" class="btn btn-default pull-right toggle-btn" onclick="hideAll();"><i class="fa fa-eye-slash"></i> Hide All</button>
+                <button id="show-all-button" class="btn btn-default pull-right toggle-btn"><i class="fa fa-eye"></i> Show All</button>
+                <button id="hide-all-button" class="btn btn-default pull-right toggle-btn"><i class="fa fa-eye-slash"></i> Hide All</button>
             </div>
         </article>
     </div>
