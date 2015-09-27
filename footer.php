@@ -201,7 +201,7 @@
             var $essential_div = $("#essential").clone();
             var $depends_div = $("#depends").clone();
             var $good_to_have_div = $("#good-to-have").clone();
-            $("#showall").html($essential_div).append($depends_div).append($good_to_have_div);
+            $("#showall").html($essential_div).append($good_to_have_div).append($depends_div);
             ajaxLoadPackingCategory("Day-to-day");
         })
 		
@@ -241,18 +241,19 @@
         // Scripts for article-tabs
         function ajaxLoadPackingCategory(categoryName) {
             var categoryElement = document.getElementById(categoryName);
-            categoryToggle = ".categoryToggle" + categoryName + " i";
             if(categoryElement !== null) {
                 id = "#" + categoryName;
                 $(id).remove();
-                toggleCheckBox(categoryToggle);
+                toggleCheckBox(categoryName);
                 return;
             }
             $(document).ajaxStart(function() {
                 $(document.body).css({'cursor': 'wait'})
+                $("button").css({'cursor': 'wait'})
             });
             $(document).ajaxComplete(function() {
                 $(document.body).css({'cursor': 'default'})
+                $("button").css({'cursor': 'pointer'})
             });
             $.ajax({
                 url: "<?php bloginfo('template_directory'); ?>/ajax-load-packing-list.php",
@@ -264,7 +265,7 @@
                         $("#packing-list-container").hide();
                         $("#packing-list-container").prepend(html);
                         $("#packing-list-container").slideDown("slow");
-                        toggleCheckBox(categoryToggle);
+                        toggleCheckBox(categoryName);
                     })
                     .fail (function() {
                         alert ("error");
@@ -272,9 +273,19 @@
                     })
         }
         function toggleCheckBox(id) {
+            id= ".categoryToggle" + id + " i";
             $(id).toggleClass("fa-square-o");
             $(id).toggleClass("fa-check-square-o");
         }
+        $(".uncheck-all").click(function() {
+            var elements = document.getElementsByClassName("category-added");
+            var i;
+            for(i=0; i<elements.length; console.log(i), i++) {
+                var id = elements[i].id;
+                toggleCheckBox(id);
+            }
+            $(".category-added").remove();
+        })
         </script>
         <?php endif; ?>
         

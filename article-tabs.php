@@ -124,16 +124,8 @@ get_header(); ?>
                                         padding: 6px 3px;
                                     }
                                 </style>
-                                <button class="btn btn-light less-padding">
-                                    <span class="fa-stack">
-                                        <i class="fa fa-eraser fa-stack-1x"></i>
-                                    </span>
-                                </button>
-                                <button class="btn btn-light less-padding">
-                                    <span class="fa-stack">
-                                        <i class="fa fa-check fa-stack-1x"></i>
-                                        <i class="fa fa-square-o fa-stack-2x"></i>
-                                    </span>
+                                <button class="btn btn-light less-padding uncheck-all">
+                                    Uncheck All <i class="fa fa-square-o"></i>
                                 </button>
                             </li>
                         </ul>
@@ -142,7 +134,7 @@ get_header(); ?>
                                 <?php 
                                 foreach($essential_records as $record) {
                                 ?>
-                                <div class="col-md-4">
+                                <div class="col-md-4 col-sm-4">
                                     <button class="btn btn-light btn-lg categoryToggle<?php echo $record; ?>" onclick="ajaxLoadPackingCategory('<?php echo $record; ?>');"><i class="fa fa-square-o"></i> <?php echo $record; ?></button>
                                 </div>
                                 <?php } ?>
@@ -151,7 +143,7 @@ get_header(); ?>
                                 <?php 
                                 foreach($good_to_have_records as $record) {
                                 ?>
-                                <div class="col-md-4">
+                                <div class="col-md-4 col-sm-4">
                                     <button class="btn btn-light btn-lg categoryToggle<?php echo $record; ?>" onclick="ajaxLoadPackingCategory('<?php echo $record; ?>');"><i class="fa fa-square-o"></i> <?php echo $record; ?></button>
                                 </div>
                                 <?php } ?>
@@ -161,7 +153,7 @@ get_header(); ?>
                                 <?php 
                                 foreach($depends_records as $record) {
                                 ?>
-                                <div class="col-md-4">
+                                <div class="col-md-4 col-sm-4">
                                     <button class="btn btn-light btn-lg categoryToggle<?php echo $record; ?>" onclick="ajaxLoadPackingCategory('<?php echo $record; ?>');"><i class="fa fa-square-o"></i> <?php echo $record; ?></button>
                                 </div>
                                 <?php } ?>
@@ -171,9 +163,7 @@ get_header(); ?>
 
                             </div>
                         </div>
-                        <div class="row table-responsive">
-                            <style>
-                            </style>
+                        <div class="row table-responsive" style="margin-top: 25px;">
                             <table class="table-striped table-hover" style="width: 100%;">
                                 <tbody id="packing-list-container"></tbody>
                             </table>

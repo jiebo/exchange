@@ -33,23 +33,26 @@ foreach($packinglist_array as $category ) {
     }
 }
 
-// Build String here
-$records = array_slice($records, 1);
+if($records != null) {
+    // Build String here
+    $records = array_slice($records, 1);
 
-$display_string  = "";
-$display_string .= "<tr id=\"".$categoryheader."\" class=\"category-added\">";
-$display_string .= "<td><span class=\"rotate-text\">". $categoryheader ."</span></td>";
-$display_string .= "<td>";
-$display_string .= "<ul class=\"dual-col\">";
-foreach($records as $record) {
-    $display_string .= "<li>" . $record . "</li>";
+    $display_string  = "";
+    $display_string .= "<tr id=\"".$categoryheader."\" class=\"category-added\">";
+    $display_string .= "<td><span class=\"rotate-text\">". $categoryheader ."</span></td>";
+    $display_string .= "<td style=\"overflow-y: hidden;\">";
+    $display_string .= "<ul class=\"dual-col\">";
+    foreach($records as $record) {
+        $display_string .= "<li>" . $record . "</li>";
+    }
+    $display_string .= "</ul>";
+    $display_string .= "</td>";
+    $display_string .= "</tr>";
+
+    echo $display_string;
+} else {
+    echo "";
 }
-$display_string .= "</ul>";
-$display_string .= "</td>";
-$display_string .= "</tr>";
-
-echo $display_string;
-
 
 
 ?>
