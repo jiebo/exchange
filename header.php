@@ -24,7 +24,7 @@
         <meta name="description" content="An exchange guide that houses my Europe 2015 experience">
         <meta name="author" content="Ti Jie Bo">
 	<?php 
-        if(is_single()) {
+        if(!is_home()) {
             echo '<title>'.get_the_title(get_the_ID()).' - Europe 2015</title>';
         } else {
             echo '<title>Europe 2015</title>';
