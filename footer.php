@@ -249,11 +249,13 @@
             }
             $(document).ajaxStart(function() {
                 $(document.body).css({'cursor': 'wait'})
-                $("button").css({'cursor': 'wait'})
+                $(".nav-tabs button").css({'cursor': 'wait'})
+                $(".tab-content button").css({'cursor': 'wait'})
             });
             $(document).ajaxComplete(function() {
                 $(document.body).css({'cursor': 'default'})
-                $("button").css({'cursor': 'pointer'})
+                $(".nav-tabs button").css({'cursor': 'pointer'})
+                $(".tab-content button").css({'cursor': 'pointer'})
             });
             $.ajax({
                 url: "<?php bloginfo('template_directory'); ?>/ajax-load-packing-list.php",

@@ -168,7 +168,7 @@ get_header(); ?>
                                 <tbody id="packing-list-container"></tbody>
                             </table>
                         </div>
-                        <button style="margin: 20px 5px;" type="submit" class="btn btn-default pull-right row" onclick=""><i class="fa fa-download"></i> Export</button>
+                        <button style="margin: 20px 5px; cursor: not-allowed;" type="submit" class="btn btn-default pull-right row disabled" onclick=""><i class="fa fa-download"></i> Export</button>
                 </form>
             </div>
         </article>
