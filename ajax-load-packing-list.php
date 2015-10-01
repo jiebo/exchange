@@ -39,7 +39,7 @@ if($records != null) {
 
     $display_string  = "";
     $display_string .= "<tr id=\"".$categoryheader."\" class=\"category-added\">";
-    $display_string .= "<td><span class=\"rotate-text\">". $categoryheader ."</span></td>";
+    $display_string .= "<td style=\"line-height: 200%;\"><span class=\"rotate-text\">". $categoryheader ."</span></td>";
     $display_string .= "<td style=\"overflow-y: hidden;\">";
     $display_string .= "<ul class=\"dual-col\">";
     foreach($records as $record) {

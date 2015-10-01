@@ -165,6 +165,11 @@ get_header(); ?>
                         </div>
                         <div class="row table-responsive" style="margin-top: 25px;">
                             <table class="table-striped table-hover" style="width: 100%;">
+								<style>
+									.category-added td {
+										line-height: 200%;
+									}
+								</style>
                                 <tbody id="packing-list-container"></tbody>
                             </table>
                         </div>
