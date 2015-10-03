@@ -49,7 +49,6 @@ get_header(); ?>
     
     <?php
     // Get all variables
-    
     $pageid = get_the_ID(); 
     $page = get_post($pageid);
     $page_title = $page -> post_title;
@@ -80,8 +79,8 @@ get_header(); ?>
     <div class="container" style="padding-top: 100px;" >
         <article class="row">
             <div class="col-lg-8 centered">
-                <h1 class="post-title"><i class="fa fa-<?php echo $page_icon ?> fa-1x"></i> <?php echo $page_title; ?> <i class="fa fa-<?php echo $page_icon ?> fa-1x"></i></h1>
-                <hr class="star-primary" style="margin-top: 50px; margin-bottom: 50px;">
+                <h1 class="post-title"><i class="fa fa-<?php echo $page_icon ?> fa-1x hidden-xs"></i> <?php echo $page_title; ?> <i class="fa fa-<?php echo $page_icon ?> fa-1x hidden-xs"></i></h1>
+                <hr class="star-primary" style="margin: 50px auto;">
                 
                 <style>
                     .post-title {
@@ -94,12 +93,9 @@ get_header(); ?>
                     h1.post-title {
                         font-size: 3em;
                     }
-                    h2.post-title {
-                        font-size: 2.5em;
-                    }
                 </style>
                 <p><?php echo $page_intro; ?></p>
-                <form method="" onsubmit="return false;">
+                <form onsubmit="return false;">
                     <div class="tabs">
                         <style>
                             .tabs {
@@ -165,15 +161,16 @@ get_header(); ?>
                         </div>
                         <div class="row table-responsive" style="margin-top: 25px;">
                             <table class="table-striped table-hover" style="width: 100%;">
-								<style>
-									.category-added td {
-										line-height: 200%;
-									}
-								</style>
+                                <style>
+                                    .category-added td {
+                                            line-height: 200%;
+                                    }
+                                </style>
                                 <tbody id="packing-list-container"></tbody>
                             </table>
                         </div>
                         <button style="margin: 20px 5px; cursor: not-allowed;" type="submit" class="btn btn-default pull-right row disabled" onclick=""><i class="fa fa-download"></i> Export</button>
+                    </div>
                 </form>
             </div>
         </article>

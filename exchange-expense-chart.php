@@ -79,7 +79,6 @@ $(function () {
             text: 'Total Spending: S$ <?php echo $total_amount; ?>'
         },
         subtitle: {
-            text: '',
             color: '#FFFFFF'
         },
         plotOptions: {
@@ -94,9 +93,7 @@ $(function () {
         },
 
         tooltip: {
-            enabled: false,
-            headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
-            pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.2f} SGD</b><br/>'
+            enabled: false
         },
         series: [{
             name: "Exchange Expense",
@@ -135,7 +132,7 @@ $(function () {
             }, {
                 name: "Survival",
                 y: parseInt(<?php echo $survival_amount; ?>),
-                drilldown: "Survival"
+                drilldown: null
             }]
         }],
         drilldown: {
@@ -159,22 +156,6 @@ $(function () {
                     ["<?php echo $row['ex_name']; ?>", parseFloat(<?php echo $row['ex_amount']; ?>)],
                 <?php
                 }
-                ?>
-                ]
-            }, {
-                name: "Survival",
-                id: "Survival",
-                data: [
-                <?php
-                    $survival_arr_string = $array_query . $survival_key . "' ORDER BY A.ex_amount ASC;";
-                    $survival_resource   = mysql_query ( $survival_arr_string ) or die( mysql_error() );
-                    while ( $row = mysql_fetch_assoc ( $survival_resource) ) {
-                    ?>
-                
-                    ["<?php echo $row['ex_name']; ?>", parseFloat(<?php echo $row['ex_amount']; ?>)],
-                
-                <?php 
-                    }
                 ?>
                 ]
             }]

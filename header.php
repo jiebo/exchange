@@ -2,7 +2,7 @@
 /**
  * The Header template for our theme
  *
- * Displays all of the <head> section and everything up till <div id="main">
+ * Displays all of the <head> section and everything up till <body>
  *
  * @package WordPress
  * @subpackage exchange
@@ -21,10 +21,10 @@
     <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="An exchange guide that houses my Europe 2015 experience">
+        <meta name="description" content="An exchange guide that houses my Stockholm Exchange experience">
         <meta name="author" content="Ti Jie Bo">
 	<?php 
-        if(!is_home()) {
+        if(!is_home() && !is_404()) {
             echo '<title>'.get_the_title(get_the_ID()).' - Europe 2015</title>';
         } else {
             echo '<title>Europe 2015</title>';
@@ -44,29 +44,25 @@
         
         <?php 
         if(is_single() || is_home()) : ?>
-        <!-- Custom CSS -->
-        <link href="<?php bloginfo('template_directory'); ?>/css/custom.css" rel="stylesheet">
+            <link href="<?php bloginfo('template_directory'); ?>/css/custom.css" rel="stylesheet">
         <?php endif; ?>
         
         <?php
         if(is_page()) : ?>
-        <link href="<?php bloginfo('template_directory'); ?>/css/article.css" rel="stylesheet">
-        <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+            <link href="<?php bloginfo('template_directory'); ?>/css/article.css" rel="stylesheet">
+            <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
         <?php endif; ?>
         
         <?php 
         if(is_home()) : ?>
-        <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/owl-carousel/owl.carousel.css">
-        <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/owl-carousel/owl.theme.css">
+            <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/owl-carousel/owl.carousel.css">
+            <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/owl-carousel/owl.theme.css">
         <?php endif; ?>
         
         <!-- Custom Fonts -->
         <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
         <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 
-       
-        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
             <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>

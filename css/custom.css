@@ -77,9 +77,6 @@ article {
   font-weight: 300;
   font-size: 20px;
 }
-.intro-header .post-heading .meta a {
-  color: white;
-}
 @media only screen and (min-width: 768px) {
   .intro-header .post-heading h1 {
     font-size: 55px;
@@ -167,11 +164,6 @@ article hr.small {
           filter: none; /* IE 6-9 */
 }
 
-/* Adjust the left/right padding of the fa icons in posts */
-.less-padding {
-    padding: 6px 8px;
-}
-
 /* Overwrite text-centre applied to form-control-static */
 .form-control-static {
     text-align: left;
@@ -180,11 +172,10 @@ article hr.small {
 /* Styling for loading-div while ajax loads */
 .loading-div {
     position: absolute;
-    background-color: #999;
     height: 100%;
     width: 100%;
     top: 0%;
-    z-index: 999;
+    z-index: 9;
     background: rgba(0,0,0,0.5) no-repeat center;
 }
 
@@ -211,7 +202,6 @@ article hr.small {
 
 /* Scrollable menu for dropdown */
 .scrollable-menu {
-    height: auto;
     max-height: 250px;
     overflow-x: hidden;
 }
@@ -225,13 +215,6 @@ article hr.small {
 }
 
 /* Set the height of the chart div depending on screen size */
-/* Devices too small to view */
-@media (max-width: 600px) {
-    #chart-div {
-        display: none;
-        height: 400px;
-    }
-}
 
 /* Extra-Small devices (tablets, 601px and up) */
 @media (min-width: 601px) { 
@@ -240,22 +223,8 @@ article hr.small {
     }
 }
 
-/* Small devices (tablets, 768px and up) */
-@media (min-width: 768px) { 
-    #chart-div {
-        height: 300px;
-    }
-}
-
-/* Medium devices (desktops, 992px and up) */
-@media (min-width: 992px) { 
-    #chart-div {
-        height: 300px;
-    }
-}
-
 /* Large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) { 
+@media (min-width: 1400px) { 
     #chart-div {
         height: 400px;
     }

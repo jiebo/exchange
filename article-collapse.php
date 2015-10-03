@@ -69,8 +69,8 @@ get_header(); ?>
     <div class="container" style="padding-top: 100px;" >
         <article class="row">
             <div class="col-lg-8 centered">
-                <h1 class="post-title"><i class="fa fa-<?php echo $page_icon ?> fa-1x"></i> <?php echo $page_title; ?> <i class="fa fa-<?php echo $page_icon ?> fa-1x"></i></h1>
-                <hr class="star-primary" style="margin-top: 50px; margin-bottom: 50px;">
+                <h1 class="post-title"><i class="fa fa-<?php echo $page_icon ?> fa-1x hidden-xs"></i> <?php echo $page_title; ?> <i class="fa fa-<?php echo $page_icon ?> fa-1x hidden-xs"></i></h1>
+                <hr class="star-primary" style="margin: 50px auto;">
                 
                 <style>
                     .post-title {
@@ -82,9 +82,6 @@ get_header(); ?>
                     }
                     h1.post-title {
                         font-size: 3em;
-                    }
-                    h2.post-title {
-                        font-size: 2.5em;
                     }
                 </style>
                 <p><?php echo $page_intro; ?></p>
@@ -104,7 +101,7 @@ get_header(); ?>
                         // if factor has empty set, don't print panel
                         if( count($factorarr) < 2 ) :
                     ?>
-                        <tr class="toggle" style="cursor: initial;">
+                        <tr>
                                 <td><?php echo $factor_header; ?></td>
                         </tr>
                         <tr></tr>
@@ -124,18 +121,16 @@ get_header(); ?>
                         <tr>
                             <td id="panel<?php echo $count;?>" class="collapse-panel">
                                 <ul>
-                                    <?php foreach( array_slice($factorarr, 1) as $subfactor ) { ?>
+                                <?php foreach( array_slice($factorarr, 1) as $subfactor ) { ?>
                                     <li><?php echo $subfactor; ?></li>
-                                    <?php } ?>
+                                <?php } ?>
                                 </ul>
                             </td>
                         </tr>
-
                     <?php
-                    endif;
-						
-                        $count++;
-                        }
+                    endif;			
+                    $count++;
+                    }
                         ?>
                     </table>
                     <style>
@@ -147,11 +142,6 @@ get_header(); ?>
                         }
                         .toggleRow:hover {
                             cursor: pointer;
-                        }
-                        .rotate{
-                            -moz-transition: all 0.25s linear;
-                            -webkit-transition: all 0.25s linear;
-                            transition: all 0.25s linear;
                         }
                     </style>
                 </div>

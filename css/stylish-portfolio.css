@@ -1,9 +1,3 @@
-/*!
- * Start Bootstrap - Stylish Portfolio Bootstrap Theme (http://startbootstrap.com)
- * Code licensed under the Apache License v2.0.
- * For details, see http://www.apache.org/licenses/LICENSE-2.0.
- */
-
 /* Global Styles */
 
 html,
@@ -14,6 +8,10 @@ body {
 
 body {
     font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+section, aside {
+    padding: 50px 0;
 }
 
 .text-vertical-center {
@@ -67,7 +65,7 @@ hr.small {
 /* Side Menu */
 
 #sidebar-wrapper {
-    z-index: 1000;
+    z-index: 11;
     position: fixed;
     right: 0;
     width: 250px;
@@ -171,17 +169,7 @@ hr.small {
     -o-background-size: cover;
 }
 
-/* About */
-
-.about {
-    padding: 50px 0;
-}
-
 /* Services */
-
-.services {
-    padding: 50px 0;
-}
 
 .service-item {
     margin-bottom: 10px;
@@ -199,44 +187,8 @@ a.service-item {
     box-shadow: 0 0 10px #222;
 }
 
-/* Portfolio */
-
-.portfolio {
-    padding: 50px 0;
-}
-
-.portfolio-item {
-    margin-bottom: 30px;
-}
-
-.img-portfolio {
-    margin: 0 auto;
-}
-
-.img-portfolio:hover {
-    opacity: 0.8;
-}
-
-/* Call to Action */
-
-.call-to-action {
-    padding: 50px 0;
-}
-
-/* Map */
-
-.map {
-    height: 500px;
-}
-
-@media(max-width:768px) {
-    .map {
-        height: 75%;
-    }
-}
-
 /* Footer */
 
 footer {
-    padding: 100px 0;
+    padding: 75px 0;
 }

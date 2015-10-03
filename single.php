@@ -97,11 +97,10 @@ get_header(); ?>
     <article id="top">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="col-lg-8 col-md-10 centered">
                     <p class="first-character"><?php echo get_post_meta($postid, $introduction, true) ?></p>
 
                     <div>    <!-- Nav tabs -->
-               
                         <ul class="nav nav-tabs small" role="tablist">
                             <li role="presentation" class="active"><a href="#activity" aria-controls="activity" role="tab" data-toggle="tab">Activity</a></li>
                             <li role="presentation"><a href="#food" aria-controls="food" role="tab" data-toggle="tab">Food</a></li>
@@ -110,7 +109,12 @@ get_header(); ?>
 
                             <!-- All pull right elements are here -->
                             <li class="pull-right" style="line-height: 225%;">
-                                
+                                <style>
+                                    /* Adjust the left/right padding of the fa icons in posts */
+                                    .less-padding {
+                                        padding: 6px 8px;
+                                    }                  
+                                </style>
                                 <?php 
                                 if($water_boo) : ?>
                                 <button class="btn btn-light less-padding" data-toggle="tooltip" data-placement="left" data-trigger="hover click" title="Tap water is potable">
@@ -151,7 +155,7 @@ get_header(); ?>
                                     }
                                 ?>
                                 </button>
-                                <button class="btn btn-light less-padding" data-toggle="modal" data-target="#map"><i class="fa fa-globe fa-lg"></i></button>
+                                <button class="btn btn-light less-padding disabled" data-toggle="modal" data-target="#map"><i class="fa fa-globe fa-lg"></i></button>
                             </li>
                         </ul>
 
@@ -354,8 +358,8 @@ get_header(); ?>
     <hr>
                     
 
-		</div><!-- #content -->
-	</div><!-- #primary -->
+		</div>
+	</div>
 <!-- Modal -->
 <div class="modal fade" id="map" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">

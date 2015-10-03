@@ -44,9 +44,9 @@ get_header(); ?>
 
     <!-- Header -->
     <header id="top" class="header">
-        <div class="text-vertical-center" style="">
+        <div class="text-vertical-center">
             <h1>Europe 2015</h1>
-            <h3>1 Exchange, 9 Countries, 15 Cities</h3>
+            <h3>1 Exchange, 9 Countries, 22 Cities</h3>
             <br>
             <a href="#about" class="btn btn-dark btn-lg">Find Out More</a>
         </div>
@@ -57,15 +57,15 @@ get_header(); ?>
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>An ultimate travel guide that chronicles my entire (almost) exchange experience in Stockholm!</h2>
-                    <p class="lead">This site will house pre-departure info to city guides, as well as an expense estimator for each city and the entire student exchange.</p>
+                    <h2>An ultimate travel guide that chronicles my entire exchange experience in Stockholm!</h2>
+                    <p class="lead">This site will house pre-departure info to city guides, as well as an expense estimator for the entire student exchange.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Pre-departure -->
-    <section id="predeparture" class="services bg-primary" style="position: relative;">
+    <section id="predeparture" class="services bg-primary">
         <div class="container">
             <div class="row text-center">
                 <div class="col-lg-10 col-lg-offset-1">
@@ -93,7 +93,6 @@ get_header(); ?>
                                 </span>
                                 <h4><strong><?php echo $page -> post_title; ; ?></strong></h4>
                                 <p><?php echo $page_subheading; ?></p>
-                                <button class="btn btn-light">Learn More</button>
                             </a>
                         </div>
                         <?php
@@ -113,9 +112,8 @@ get_header(); ?>
                     <h2>City Guide</h2>
                     <hr class="small">
                     <div class="row">
-                        <?php /* Get all posts */ ?>
-                        <?php
-                            
+                        <?php 
+                            /* Get all Primary post IDs */
                             $post_selection_array = array(
                                 'posts_per_page'    => -1,
                                 'fields'            => 'ids',
@@ -124,17 +122,17 @@ get_header(); ?>
                                 'order'             => 'ASC'
                             );
                             
-                            $posts_array = get_posts( $post_selection_array );   // Query all post IDs
+                            $posts_array = get_posts( $post_selection_array );  
                             $thumbnail_key = "Thumbnail";
                             
                             foreach ($posts_array as $postid) {
                                
                         ?>
-                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                                <div class=" overlay-container">
+                            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                                <div class="overlay-container">
                                     <a href="<?php echo get_post_permalink( $postid ); ?>" class="thumbnail">
-                                        <img class="img-responsive grayscale" src="<?php echo get_post_meta($postid, $thumbnail_key, true);?>" alt="<?php echo $postid; ?>">
-                                        <div class=" overlay">
+                                        <img class="grayscale" src="<?php echo get_post_meta($postid, $thumbnail_key, true);?>" alt="<?php echo $postid; ?>">
+                                        <div class="overlay">
                                             <h3><span class="backdrop"><?php echo get_the_title( $postid ); ?></span></h3>
                                         </div>
                                     </a>
@@ -143,16 +141,10 @@ get_header(); ?>
                             <?php } ?>
                         <div id="ajax-city-display"></div>
                     </div>
-                    <!-- /.row (nested) -->
-                    <form>
-                        <a id="ajax-button" class="btn btn-dark" onclick="ajaxLoadMore(); return false;">View More Items</a>
-                    </form>
+                    <a id="ajax-button" class="btn btn-dark">View More Items</a>
                 </div>
-                <!-- /.col-lg-10 -->
             </div>
-            <!-- /.row -->
         </div>
-        <!-- /.container -->
     </section>
     
     <!-- Expense Guide -->
@@ -191,7 +183,6 @@ get_header(); ?>
                                         <p class="form-control-static"></p>
                                     </div>
                                 </div>  
-                                <div id="ajax-expense-default"></div>
                             </form>  
                         </div>
                         <div class="row">
@@ -221,7 +212,7 @@ get_header(); ?>
                             </form>  
                         </div>
                     </div>
-                    <div class="this-div-is-for-the-carousel"  id="chart-div">
+                    <div class="this-div-is-for-the-carousel hidden-xs"  id="chart-div">
                         <h3>Exchange</h3>
                         <div id="chart" style="height: 40%;" class="align-chart"></div>
                     </div> 
@@ -230,21 +221,6 @@ get_header(); ?>
             </div>
         </div>
     </aside>
-
-    <!-- Map 
-    <section id="map" class="map">
-        <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src=""></iframe>
-        <br />
-        <small>
-            <a href="#"></a>
-        </small>
-    </section>
-    -->
-    
-    <!-- Contact -->
-    <section id="contact" class="contact">
-    
-    </section>
 
 
 <?php get_footer(); ?>
