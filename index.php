@@ -131,7 +131,7 @@ get_header(); ?>
                             <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
                                 <div class="overlay-container">
                                     <a href="<?php echo get_post_permalink( $postid ); ?>" class="thumbnail">
-                                        <img class="grayscale" src="<?php echo get_post_meta($postid, $thumbnail_key, true);?>" alt="<?php echo $postid; ?>">
+                                        <img class="grayscale img-responsive" src="<?php echo get_post_meta($postid, $thumbnail_key, true);?>" alt="<?php echo $postid; ?>">
                                         <div class="overlay">
                                             <h3><span class="backdrop"><?php echo get_the_title( $postid ); ?></span></h3>
                                         </div>
