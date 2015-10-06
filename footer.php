@@ -14,24 +14,64 @@
         <footer>
             <div class="container" id="contact">
                 <div class="row">
-                    <div class="col-lg-10 col-lg-offset-1 text-center">
-                        <h4><strong>Ti Jie Bo</strong>
-                        </h4>
-                        <p>School of Computing<br>13 Computing Drive, 117417</p>
-                        <br>
-                        <ul class="list-inline">
-                            <li>
-                                <a href="https://www.facebook.com/jiebo.ti" target="_blank"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
-                            </li>
-                            <li>
-                                <a href="https://www.linkedin.com/pub/jie-bo-ti/66/657/a72" target="_blank"><i class="fa fa-linkedin fa-fw fa-3x"></i></a>
-                            </li>
-                            <li>
-                                <a href="mailto:jiebo@u.nus.edu" target="_blank"><i class="fa fa-envelope fa-fw fa-3x"></i></a>
-                            </li>
-                        </ul>
+                    <div class="col-lg-10 col-md-12 col-sm-10 centered col-xs-10">
+                        <h2 class="text-center">Contact</h2>
                         <hr class="small">
-                        <p class="text-muted">Copyright &copy; 2015</p>
+                        <div class="col-lg-5 col-md-5 hidden-sm hidden-xs">
+                            <h3><strong>About Me</strong></h3>
+                            <p style="line-height: 175%; padding-top: 1em;" class="text-muted">I am a Year 4 Computing student at NUS and I went for my Student Exchange in 2015 (Y3S2)
+                                at Stockholm University.</p>
+                            <p style="line-height: 175%;" class="text-muted">
+                                So the whole point of creating this was to catalogue my memories so I wouldn't forget my experience and to 
+                                <em>maybe</em> help whoever stumbled onto this place. </p>
+                            <p class="text-muted"><br>Copyright &copy; 2015</p>
+                        </div>
+                        <div class="col-lg-6 col-lg-offset-1 col-md-6 col-md-offset-1">
+                            <h3 class="row"><strong>Get in Touch</strong></h3>
+                            <form action="#" class="form-horizontal" style="padding-top: 1em;">
+                                <div class="form-group">
+                                    <label for="inputEmail3" class="col-lg-3 col-md-3 col-sm-2 col-xs-2 control-label">Name</label>
+                                    <div class="col-lg-6 col-md-6 col-sm-5 col-xs-5">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control">
+                                            <span class="input-group-addon"><i class="fa fa-user text-primary"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputEmail3" class="col-lg-3 col-md-3 col-sm-2 col-xs-2 control-label">Email</label>
+                                    <div class="col-lg-9 col-md-9 col-sm-8 col-xs-8">
+                                        <div class="input-group">
+                                            <input type="email" class="form-control">
+                                            <span class="input-group-addon"><i class="fa fa-envelope text-primary"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group" style="position: relative;">
+                                    <label for="inputEmail3" class="col-lg-3 col-md-3 col-sm-2 col-xs-2 control-label">Message</label>
+                                    <div class="col-lg-9 col-md-9 col-sm-8 col-xs-8">
+                                        <textarea type="text-area" class="form-control" id="inputEmail3" required></textarea>
+                                    </div>
+                                    <div class="visible-sm visible-xs">
+                                        <button class="btn btn-primary col-sm-offset-1" style="position: absolute; bottom: 0;">Send</button>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-offset-3 col-sm-9">
+                                        <button class="btn btn-primary hidden-sm hidden-xs">Send</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-lg-5 col-md-5 visible-sm visible-xs">
+                            <h3><strong>About Me</strong></h3>
+                            <p style="line-height: 175%; padding-top: 1em;" class="text-muted">I am a Year 4 Computing student at NUS and I went for my Student Exchange in 2015 (Y3S2)
+                                at Stockholm University.</p>
+                            <p style="line-height: 175%;" class="text-muted">
+                                So the whole point of creating this was to catalogue my memories so I wouldn't forget my experience and to 
+                                <em>maybe</em> help whoever stumbled onto this place. </p>
+                            <p class="text-muted"><br>Copyright &copy; 2015</p>
+                        </div>
                     </div>
                 </div>
             </div>
