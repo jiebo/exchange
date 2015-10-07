@@ -38,16 +38,16 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group required">
                                     <label for="inputEmail3" class="col-lg-3 col-md-3 col-sm-2 col-xs-2 control-label">Email</label>
                                     <div class="col-lg-9 col-md-9 col-sm-8 col-xs-8">
                                         <div class="input-group">
-                                            <input type="email" class="form-control">
+                                            <input type="email" class="form-control" required>
                                             <span class="input-group-addon"><i class="fa fa-envelope text-primary"></i></span>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="form-group" style="position: relative;">
+                                <div class="form-group required" style="position: relative;">
                                     <label for="inputEmail3" class="col-lg-3 col-md-3 col-sm-2 col-xs-2 control-label">Message</label>
                                     <div class="col-lg-9 col-md-9 col-sm-8 col-xs-8">
                                         <textarea type="text-area" class="form-control" id="inputEmail3" required></textarea>
@@ -61,6 +61,12 @@
                                         <button class="btn btn-primary hidden-sm hidden-xs">Send</button>
                                     </div>
                                 </div>
+                                <style>
+                                    .form-group.required .control-label:after {
+                                        content:"*";
+                                        color:red;
+                                    }
+                                </style>
                             </form>
                         </div>
                         <div class="col-lg-5 col-md-5 visible-sm visible-xs">
