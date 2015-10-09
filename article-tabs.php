@@ -174,5 +174,6 @@ get_header(); ?>
                 </form>
             </div>
         </article>
+        <hr>
     </div>
 <?php get_footer(); ?>

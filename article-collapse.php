@@ -149,5 +149,6 @@ get_header(); ?>
                 <button id="hide-all-button" class="btn btn-default pull-right toggle-btn"><i class="fa fa-eye-slash"></i> Hide All</button>
             </div>
         </article>
+        <hr>
     </div>
 <?php get_footer(); ?>
