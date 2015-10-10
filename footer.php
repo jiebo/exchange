@@ -53,7 +53,7 @@
                                     <label class="col-lg-3 col-md-3 col-sm-2 col-xs-2 control-label hidden-xs">Email</label>
                                     <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
                                         <div class="input-group">
-                                            <input type="email" title="Email" class="form-control" id="contact-email">
+                                            <input type="email" title="Email" class="form-control" id="contact-email" required>
                                             <span class="input-group-addon"><i class="fa fa-envelope text-primary"></i></span>
                                         </div>
                                     </div>
@@ -61,7 +61,7 @@
                                 <div class="form-group required" style="position: relative;">
                                     <label class="col-lg-3 col-md-3 col-sm-2 col-xs-2 control-label hidden-xs">Message</label>
                                     <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
-                                        <textarea type="text-area" title="Message" class="form-control" id="contact-msg"></textarea>
+                                        <textarea type="text-area" title="Message" class="form-control" id="contact-msg" required></textarea>
                                     </div>
                                     <div class="visible-sm">
                                         <button class="btn btn-primary col-sm-offset-1" style="position: absolute; bottom: 0;">Send</button>
@@ -69,7 +69,7 @@
                                 </div>
                                 <div class="form-group">
                                     <div class="col-sm-offset-3 col-sm-9">
-                                        <button type="submit" class="btn btn-primary hidden-sm">Send Big</button>
+                                        <button type="submit" class="btn btn-primary hidden-sm">Send</button>
                                     </div>
                                 </div>
                                 <style>
