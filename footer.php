@@ -41,35 +41,35 @@
                             <h3 class="row"><strong>Get in Touch</strong></h3>
                             <form action="<?php bloginfo('template_directory'); ?>/contact.php" class="form-horizontal" style="padding-top: 1em;" id="ajax-contact-footer" method="post">
                                 <div class="form-group">
-                                    <label class="col-lg-3 col-md-3 col-sm-2 col-xs-2 control-label">Name</label>
-                                    <div class="col-lg-6 col-md-6 col-sm-5 col-xs-5">
+                                    <label class="col-lg-3 col-md-3 col-sm-2 col-xs-2 control-label hidden-xs">Name</label>
+                                    <div class="col-lg-6 col-md-6 col-sm-5 col-xs-8">
                                         <div class="input-group">
-                                            <input type="text" class="form-control" id="contact-name">
+                                            <input type="text" title="Name" class="form-control" id="contact-name">
                                             <span class="input-group-addon"><i class="fa fa-user text-primary"></i></span>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-group required">
-                                    <label class="col-lg-3 col-md-3 col-sm-2 col-xs-2 control-label">Email</label>
-                                    <div class="col-lg-9 col-md-9 col-sm-8 col-xs-8">
+                                    <label class="col-lg-3 col-md-3 col-sm-2 col-xs-2 control-label hidden-xs">Email</label>
+                                    <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
                                         <div class="input-group">
-                                            <input type="email" class="form-control" id="contact-email" required>
+                                            <input type="email" title="Email" class="form-control" id="contact-email">
                                             <span class="input-group-addon"><i class="fa fa-envelope text-primary"></i></span>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-group required" style="position: relative;">
-                                    <label class="col-lg-3 col-md-3 col-sm-2 col-xs-2 control-label">Message</label>
-                                    <div class="col-lg-9 col-md-9 col-sm-8 col-xs-8">
-                                        <textarea type="text-area" class="form-control" id="contact-msg" required></textarea>
+                                    <label class="col-lg-3 col-md-3 col-sm-2 col-xs-2 control-label hidden-xs">Message</label>
+                                    <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+                                        <textarea type="text-area" title="Message" class="form-control" id="contact-msg"></textarea>
                                     </div>
-                                    <div class="visible-sm visible-xs">
+                                    <div class="visible-sm">
                                         <button class="btn btn-primary col-sm-offset-1" style="position: absolute; bottom: 0;">Send</button>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-sm-offset-3 col-sm-9">
-                                        <button type="submit" class="btn btn-primary hidden-sm hidden-xs">Send</button>
+                                        <button type="submit" class="btn btn-primary hidden-sm">Send Big</button>
                                     </div>
                                 </div>
                                 <style>
@@ -379,8 +379,21 @@
                 document.getElementById("alert-message").innerHTML = message;
                 setTimeout(function() {
                     $("#contact-alert").modal('hide');
-                        }, 4000);
-    }
+                }, 4000);
+            }
+            
+            // Change placeholder when screen resizes
+            $(window).resize(function() {
+                if($(window).width() < 751) {
+                    document.getElementById('contact-name').setAttribute('placeholder', 'Name');
+                    document.getElementById('contact-email').setAttribute('placeholder', 'Email');
+                    document.getElementById('contact-msg').setAttribute('placeholder', 'Message');
+                } else {
+                    document.getElementById('contact-name').setAttribute('placeholder', '');
+                    document.getElementById('contact-email').setAttribute('placeholder', '');
+                    document.getElementById('contact-msg').setAttribute('placeholder', '');
+                }
+            })
             </script> 
         <?php endif; ?>
 	<?php wp_footer(); ?>
