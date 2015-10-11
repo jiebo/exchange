@@ -57,6 +57,7 @@ get_header(); ?>
             $introduction   = "Introduction";   
             $VAT_key        = "VAT";
             $water_key      = "Water";
+            $photo_location = "Photo location";
 
             // Save moneyscale value into variable $moneyscale
             $moneyscale = get_post_meta($postid, $moneyscale_key, true);
@@ -79,7 +80,7 @@ get_header(); ?>
         -webkit-background-size: cover;
         -moz-background-size: cover;
         background-size: cover;
-        -o-background-size: cover;">
+        -o-background-size: cover; position: relative;">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -91,6 +92,17 @@ get_header(); ?>
                     </div>
                 </div>
             </div>
+            <div class="post-photo-location hidden-xs">
+                <p><em><strong><?php echo get_post_meta($postid, $photo_location, true) ; ?></strong></em></p>
+            </div>
+            <style>
+                .post-photo-location {
+                    position: absolute;
+                    bottom: 0%;
+                    right: 2.5%;
+                    color: #FFF;
+                }
+            </style>
         </header>
 
         <!-- Post Content -->
