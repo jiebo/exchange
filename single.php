@@ -167,7 +167,7 @@ get_header(); ?>
                                         }
                                     ?>
                                     </button>
-                                    <button class="btn btn-light less-padding disabled" data-toggle="modal" data-target="#map"><i class="fa fa-globe fa-lg"></i></button>
+                                    <button class="btn btn-light less-padding disabled" data-toggle="" data-target="#map"><i class="fa fa-globe fa-lg"></i></button>
                                 </li>
                             </ul>
 
