@@ -25,12 +25,12 @@ $query_result = mysql_query($query) or die(mysql_error());
 // Build Result String
 $display_string = "";
 while ($row = mysql_fetch_array($query_result)) {
-    $display_string .= " <div class=\"col-sm-10 col-md-6 col-lg-4\">";
+    $display_string .= " <div class=\"col-xs-12 col-sm-6 col-md-4 col-lg-4\">";
     $display_string .= " <div class=\" overlay-container\"> ";
     $display_string .= " <a href=\"index.php?p=$row[ID]\" class=\"thumbnail\"> ";
     $display_string .= " <img class=\"img-responsive grayscale\" src=\"$row[meta_value]\"> ";
     $display_string .= " <div class=\" overlay\"> ";
-    $display_string .= " <h3 class=\"overlay\"><span class=\"backdrop\">$row[post_title]</span></h3> ";
+    $display_string .= " <h3><span class=\"backdrop\">$row[post_title]</span></h3> ";
     $display_string .= " </div> ";
     $display_string .= " </a> ";
     $display_string .= " </div> ";
