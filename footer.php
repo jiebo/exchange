@@ -81,6 +81,7 @@
                             </form>
                         </div>
                         <div class="col-lg-5 col-md-5 visible-sm visible-xs">
+                            <div style="padding: 10px 0;"></div>
                             <h3><strong>About Me</strong></h3>
                             <p style="line-height: 175%; padding-top: 1em;" class="text-muted">I am a Year 4 Computing student at NUS and I went for my Student Exchange in 2015 (Y3S2)
                                 at Stockholm University.</p>
