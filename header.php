@@ -91,66 +91,65 @@
     </head>
 
 <body>
-</script>
-        <!-- Social Media Sidebar -->
-        <div class="social-media-sidebar hidden-xs hidden-sm">
-            <ul>
-                <li><a href="https://www.facebook.com/dialog/feed?app_id=181914305480369&display=popup&link=http%3A%2F%2Feu-sep.com&redirect_uri=http%3A%2F%2Feu-sep.com" target="_blank" class="facebook-share"><span style="color: #FFF; font-weight: bold;">Share</span> <i class="fa fa-facebook text-primary"></i></a></li>
-                <li><a href="#"><span style="color: #FFF; font-weight: bold;">Tweet</span> <i class="fa fa-twitter text-primary"></i></a></li>
-            </ul>
-        </div>
-        <style>
-            .social-media-sidebar {
-                position: fixed;
-                top: 50%;
-                left: 0%;
-                z-index: 9999;
-                visibility: hidden;
-            }
-            .social-media-sidebar ul {
-                transform: translate(-242px, 0);
-            }
-            .social-media-sidebar a:hover {
-                text-decoration: none;
-            }
-            .social-media-sidebar ul li {
-                color: #FFF;
-                display: block;
-                width: 250px;
-                background: rgba(0,0,0,0.36);
-                text-align: right;
-                padding: 10px;
-                margin: 5px;
-                font-size: 1.25em;
-                -webkit-border-radius: 0 30px 30px 0;
-                -moz-border-radius: 0 30px 30px 0;
-                border-radius: 0 30px 30px 0;
-                -webkit-transition: -webkit-transform 0.5s ease-in; /* Changed here */ 
-                   -moz-transition: -moz-transform 0.3s ease-in;
-                     -o-transition: -o-transform 0.5s ease-in;
-                        transition: transform 0.3s ease-in;
-            }
-            .social-media-sidebar ul li:hover,
-            .social-media-sidebar ul li:focus {
-                -webkit-transform: translate(60px, 0);
-                   -moz-transform: translate(60px, 0);
-                    -ms-transform: translate(60px, 0);
-                     -o-transform: translate(60px, 0);
-                        transform: translate(60px, 0);
-                -webkit-transition: -webkit-transform 0.3s ease-in; /* Changed here */ 
-                   -moz-transition: -moz-transform 0.3s ease-in;
-                     -o-transition: -o-transform 0.3s ease-in;
-                        transition: transform 0.3s ease-in;
-            }
-            .social-media-sidebar ul li i {
-                margin-left: 10px; /* Margin between <i> and <span> */
-                width: 2em;        /* Size of the white circle of i */
-                height: 2em;       /* Size of the white circle of i */   
-                padding: 0.5em;
-                font-size: 1em;
-                background: #FFF;
-                -webkit-border-radius: 50%;
-                -moz-border-radius: 50%;
-                border-radius: 50%;
-            }
-        </style>
+    <!-- Social Media Sidebar -->
+    <div class="social-media-sidebar hidden-xs hidden-sm">
+        <ul>
+            <li><a href="https://www.facebook.com/dialog/feed?app_id=181914305480369&display=popup&link=http%3A%2F%2Feu-sep.com&redirect_uri=http%3A%2F%2Feu-sep.com" target="_blank" class="facebook-share"><span style="color: #FFF; font-weight: bold;">Share</span> <i class="fa fa-facebook text-primary"></i></a></li>
+            <li><a href="#"><span style="color: #FFF; font-weight: bold;">Tweet</span> <i class="fa fa-twitter text-primary"></i></a></li>
+        </ul>
+    </div>
+    <style>
+        .social-media-sidebar {
+            position: fixed;
+            top: 50%;
+            left: 0%;
+            z-index: 9999;
+            visibility: hidden;
+        }
+        .social-media-sidebar ul {
+            transform: translate(-242px, 0);
+        }
+        .social-media-sidebar a:hover {
+            text-decoration: none;
+        }
+        .social-media-sidebar ul li {
+            color: #FFF;
+            display: block;
+            width: 250px;
+            background: rgba(0,0,0,0.36);
+            text-align: right;
+            padding: 10px;
+            margin: 5px;
+            font-size: 1.25em;
+            -webkit-border-radius: 0 30px 30px 0;
+            -moz-border-radius: 0 30px 30px 0;
+            border-radius: 0 30px 30px 0;
+            -webkit-transition: -webkit-transform 0.5s ease-in; /* Changed here */ 
+               -moz-transition: -moz-transform 0.3s ease-in;
+                 -o-transition: -o-transform 0.5s ease-in;
+                    transition: transform 0.3s ease-in;
+        }
+        .social-media-sidebar ul li:hover,
+        .social-media-sidebar ul li:focus {
+            -webkit-transform: translate(60px, 0);
+               -moz-transform: translate(60px, 0);
+                -ms-transform: translate(60px, 0);
+                 -o-transform: translate(60px, 0);
+                    transform: translate(60px, 0);
+            -webkit-transition: -webkit-transform 0.3s ease-in; /* Changed here */ 
+               -moz-transition: -moz-transform 0.3s ease-in;
+                 -o-transition: -o-transform 0.3s ease-in;
+                    transition: transform 0.3s ease-in;
+        }
+        .social-media-sidebar ul li i {
+            margin-left: 10px; /* Margin between <i> and <span> */
+            width: 2em;        /* Size of the white circle of i */
+            height: 2em;       /* Size of the white circle of i */   
+            padding: 0.5em;
+            font-size: 1em;
+            background: #FFF;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+        }
+    </style>
