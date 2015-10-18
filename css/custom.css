@@ -197,7 +197,7 @@ article hr.small {
 /* Styling to remove default text-shadow */
 .highcharts-drilldown-data-label tspan {
     text-shadow: 0px 0px 0px #000;
-    font-size: 110%;
+    font-size: 100%;
 }
 
 /* Center col */

@@ -142,6 +142,7 @@ get_header(); ?>
                         <div id="ajax-city-display"></div>
                     </div>
                     <a id="ajax-button" class="btn btn-dark">View More Items</a>
+                    <span id="ajax-load-sm" class="fa fa-refresh fa-spin fa-4x"></span>
                 </div>
             </div>
         </div>

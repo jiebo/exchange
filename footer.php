@@ -201,6 +201,7 @@
                     dots: true
                 });
                 $("#ajax-loading").hide();
+                $("#ajax-load-sm").hide();
             });
 
             // Script for ajax loading of City Guide thumbnails
@@ -223,13 +224,21 @@
                     }
                 }
                 ajaxRequest.onreadystatechange = function () {
-                    if(ajaxRequest.readyState === 4) {
+                    if(ajaxRequest.readyState === 1) {
+                        $("#ajax-button").hide();
+                        $("#ajax-load-sm").fadeIn();
+                    }
+                    if(ajaxRequest.readyState === 4 && ajaxRequest.status === 200) {
                         var ajaxDisplay = document.getElementById('ajax-city-display');
-                        $("#ajax-button").fadeOut(300);
+                        $("#ajax-load-sm").fadeOut(300);
                         $("#ajax-city-display").fadeOut('', function() {
                             ajaxDisplay.innerHTML = ajaxRequest.responseText;
                             $("#ajax-city-display").fadeIn();
                         });
+                    }
+                    if(ajaxRequest.readyState === 4 && ajaxRequest.status === 404) {
+                        $("#ajax-button").fadeIn();
+                        $("#ajax-load-sm").hide();
                     }
                 };
                 ajaxRequest.open("GET", "<?php bloginfo('template_directory'); ?>/ajax-load-more.php", true);
@@ -256,8 +265,8 @@
                 }
             }
             ajaxRequest.onreadystatechange = function () {
-            $("#ajax-loading").show();
-            if(ajaxRequest.readyState === 4) {
+                $("#ajax-loading").show();
+                if(ajaxRequest.readyState === 4 && ajaxRequest.status === 200) {
                     var ajaxDisplay = document.getElementById('ajax-expense-display');
                     $("#ajax-expense-display").fadeOut(200, function() {
                         ajaxDisplay.innerHTML = ajaxRequest.responseText; 
@@ -265,6 +274,10 @@
                     });
 
                     $("#ajax-loading").fadeOut('slow');
+                }
+                if(ajaxRequest.readyState === 4 && ajaxRequest.status === 404) {
+                    $("#ajax-loading").fadeOut();
+                    displayContactAlert("Unable to process, please try again!")
                 }
             };
             ajaxRequest.open("GET", "<?php bloginfo('template_directory'); ?>/ajax-load-expense.php?q="+cityName, true);
@@ -409,7 +422,7 @@
                 document.getElementById("alert-message").innerHTML = message;
                 setTimeout(function() {
                     $("#contact-alert").modal('hide');
-                }, 4000);
+                }, 3000);
             }
             
             // Change placeholder when screen resizes
