@@ -16,7 +16,7 @@
 
 get_header(); ?>
 
-    <!-- Navigation -->
+    <!-- Navigation -->        
     <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
     <nav id="sidebar-wrapper">
         <ul class="sidebar-nav">

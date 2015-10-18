@@ -140,8 +140,29 @@
             $('[data-toggle="tooltip"]').tooltip();
         });
         
-        // If statement that will only output pagescroll if in index page
+        // Make social-media-sidebar appear after scroll
+        $(document).scroll(function() {
+            var div = $("header").height();
+            var win = $(window).scrollTop();
+            if(div -75 < win) {
+                $(".social-media-sidebar").fadeIn('fast');
+            } else {
+                $(".social-media-sidebar").fadeOut('fast');
+            }
+        });
+        
+        // Open Facebook share dialog
+        $(".facebook-").click(function() {
+            FB.ui({
+                method: 'share',
+                href: 'http://eu-sep.com'
+            }, function(response) {
+                if(response && response.post_id) {}
+                else{}
+            });
+        });
         <?php
+        // If statement that will only output pagescroll if in index page
         if(is_home()) :
         ?>
             $(function() {
@@ -169,17 +190,17 @@
         if(is_home()) : ?>
             <script language="javascript" type="text/javascript">
             // On Document Ready, hide ajax loading div & load swipe action
-            $(document).ready(
-                function() {
-                    $("#swipe-div").owlCarousel({
-                        items: 1,
-                        itemsDesktop: [1199, 1],
-                        itemsDesktopSmall: [979, 1],
-                        itemsTablet: [768, 1],
-                        itemsMobile: [479, 1],
-                        dots: true
-                    });
-                    $("#ajax-loading").hide();
+            $(document).ready( function() {
+                $(".social-media-sidebar").hide('1');
+                $("#swipe-div").owlCarousel({
+                    items: 1,
+                    itemsDesktop: [1199, 1],
+                    itemsDesktopSmall: [979, 1],
+                    itemsTablet: [768, 1],
+                    itemsMobile: [479, 1],
+                    dots: true
+                });
+                $("#ajax-loading").hide();
             });
 
             // Script for ajax loading of City Guide thumbnails
@@ -249,6 +270,14 @@
             ajaxRequest.open("GET", "<?php bloginfo('template_directory'); ?>/ajax-load-expense.php?q="+cityName, true);
             ajaxRequest.send(null);
             } ;
+            </script>
+        <?php endif; ?>
+            
+        <?php if(is_single()) : ?>
+            <script>
+                $(document).ready(function() {
+                $(".social-media-sidebar").hide('1');
+                });
             </script>
         <?php endif; ?>
         
