@@ -32,14 +32,15 @@
         ?>
         
         <!-- Facebook Open Graph Meta -->
-        <meta property="og:url" content="<?php echo get_permalink(); ?>" />
         <meta property="og:site_name" content="EU-SEP" />
         <meta property="fb:app_id" content="181914305480369" />
         <?php if(!(is_single() || is_page())) : ?>
+        <meta property="og:url" 			   content="http://eu-sep.com" />
         <meta property="og:title"              content="A comprehensive guide to exchange in Europe" />
         <meta property="og:description"        content="This website houses my entire exchange experience in Stockholm. It includes important pre-departure info to city guides, as well as an expense estimator for the cost conscious student." />
         <meta property="og:image"              content="<?php bloginfo('template_directory'); ?>/img/screenshot.png" />
         <?php else : ?>
+        <meta property="og:url" 			   content="<?php echo get_permalink(); ?>" />
         <meta property="og:type"               content="article" />
         <meta property="og:title"              content="Guide to <?php echo get_the_title(); ?>" />
         <meta property="og:description"        content="<?php echo get_post_meta(get_the_ID(), 'Subheading', TRUE) ?>" />
