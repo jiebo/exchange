@@ -17,32 +17,24 @@ get_header(); ?>
         <li class="sidebar-brand">
             <a href="<?php echo home_url(); ?>/#travel"  onclick = $("#menu-close").click(); ><i class="glyphicon glyphicon-arrow-left"></i>&nbsp;&nbsp;Home</a>
         </li>
-
         <?php 
+        $post_sel_array = array (
+            'posts_per_page'    => -1,
+            'fields'            => 'ids',
+            'orderby'           => 'title',
+            'order'             => 'ASC'
+        );
+        $posts_arr = get_posts( $post_sel_array );
 
-            $post_sel_array = array (
-                'posts_per_page'    => -1,
-                'fields'            => 'ids',
-                'orderby'           => 'title',
-                'order'             => 'ASC'
-            );
-
-            $posts_arr = get_posts( $post_sel_array );
-
-            foreach( $posts_arr as $postid ) {
+        foreach( $posts_arr as $postid ) {
         ?>
-        <li >
-            <a href="<?php echo get_post_permalink( $postid ); ?>" onclick = $("#menu-close").click(); ><?php echo get_the_title( $postid ); ?></a>
-        </li>
-
-        <?php
-            }
-        ?>
+            <li><a href="<?php echo get_post_permalink( $postid ); ?>" onclick = $("#menu-close").click(); ><?php echo get_the_title( $postid ); ?></a></li>
+        <?php } ?>
     </ul>
 </nav>
 
 <div id="primary" class="content-area">
-    <div id="content" class="site-content" role="main">
+    <div id="content" class="site-content" role="main" itemscope itemtype="http://schema.org/Article">
         <?php /* Initialise post variables */ ?>
         <?php   
             $postid = get_the_ID(); 
@@ -85,14 +77,14 @@ get_header(); ?>
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                         <div class="post-heading">
-                            <h1><?php echo get_the_title( $postid ); ?></h1>
-                            <h2 class="subheading"><?php echo get_post_meta($postid, $subheading_key, true) ; ?></h2>
+                            <h1 itemprop="name"><?php echo get_the_title( $postid ); ?></h1>
+                            <h2 class="subheading" itemprop="headline"><?php echo get_post_meta($postid, $subheading_key, true) ; ?></h2>
                             <span class="meta">Last modified on <?php echo the_modified_date() ;?></span>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="post-photo-location hidden-xs">
+            <div class="post-photo-location hidden-xs" itemprop="contentLocation">
                 <p><em><strong><?php echo get_post_meta($postid, $photo_location, true) ; ?></strong></em></p>
             </div>
             <style>
@@ -106,10 +98,10 @@ get_header(); ?>
         </header>
 
         <!-- Post Content -->
-        <article id="top">
+        <article id="top" itemprop="articleBody">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-8 col-md-10 centered">
+                    <div class="col-lg-8 col-md-10 centered" itemprop="description">
                         <p class="first-character"><?php echo get_post_meta($postid, $introduction, true) ?></p>
 
                         <div>    <!-- Nav tabs -->
@@ -175,7 +167,7 @@ get_header(); ?>
                             <div class="tab-content small">
 
                                 <!-- Activity Tab -->
-                                <div role="tabpanel" class="tab-pane active" id="activity">
+                                <div role="tabpanel" class="tab-pane active" id="activity" itemprop="articleSection">
                                     <?php 
                                         // Initialise values
                                         $postarr = explode("|", $post_content);
@@ -224,7 +216,7 @@ get_header(); ?>
                                 </div>
 
                                 <!-- Food Tab -->
-                                <div role="tabpanel" class="tab-pane" id="food">
+                                <div role="tabpanel" class="tab-pane" id="food" itemprop="articleSection">
                                     <?php 
                                         // Initialise values
                                         $foodstring = get_post_meta($postid, $food_key, true);
@@ -244,22 +236,22 @@ get_header(); ?>
                                                 for($i=0; $i<$numfoodrow; $i++) {
                                                 ?>
                                                 <tr>
-                                                    <?php
-                                                        for($j=0; $j<3; $j++) {
+                                                <?php
+                                                    for($j=0; $j<3; $j++) {
+                                                ?>
+                                                    <td><?php echo $foodarr[$i*4+$j];?></td>
+                                                <?php
+                                                    }
+                                                ?>
+                                                    <td>
+                                                    <?php 
+                                                    if(!empty($foodarr[$i*4+3])) {
+                                                        echo "<a href=\"". $foodarr[$i*4+3]."\" target=\"_blank\">";?>
+                                                        <i class="fa fa-external-link pull-right" style="line-height: 150%"></i>
+                                                        <?php echo "</a>";
+                                                    }
                                                     ?>
-                                                        <td><?php echo $foodarr[$i*4+$j];?></td>
-                                                    <?php
-                                                        }
-                                                    ?>
-                                                        <td>
-                                                            <?php 
-                                                            if(!empty($foodarr[$i*4+3])) {
-                                                                echo "<a href=\"". $foodarr[$i*4+3]."\" target=\"_blank\">";?>
-                                                                <i class="fa fa-external-link pull-right" style="line-height: 150%"></i>
-                                                                <?php echo "</a>";
-                                                            }
-                                                            ?>
-                                                        </td>
+                                                    </td>
                                                 </tr>
                                                 <?php
                                                 }
@@ -270,7 +262,7 @@ get_header(); ?>
                                 </div>
 
                                 <!-- Accommodation Tab -->
-                                <div role="tabpanel" class="tab-pane" id="accommodation">
+                                <div role="tabpanel" class="tab-pane" id="accommodation" itemprop="articleSection">
                                     <?php 
                                         $accommodationstring = get_post_meta($postid, $accommodation_key, true);
 
@@ -285,23 +277,23 @@ get_header(); ?>
                                             </thead>
                                             <tbody>
                                             <?php 
-                                                for($i=0; $i<$numaccommodationrow; $i++) {   //Iterate through all rows
-                                                    echo "<tr>";
-                                                    for($j=0; $j<2; $j++) {         // For loop dealing with Type and Location column
-                                                        if(determineRowSpanValueDriver($i*3+$j, $accommodationarr, 3) >= 1) {       // Function that prints rowspan when necessary
-                                                            echo '<td rowspan="'.determineRowSpanValueDriver($i*3+$j, $accommodationarr, 3)."\">". $accommodationarr[$i*3+$j] ."</td>";
-                                                        }
+                                            for($i=0; $i<$numaccommodationrow; $i++) {   //Iterate through all rows
+                                                echo "<tr>";
+                                                for($j=0; $j<2; $j++) {         // For loop dealing with Type and Location column
+                                                    if(determineRowSpanValueDriver($i*3+$j, $accommodationarr, 3) >= 1) {       // Function that prints rowspan when necessary
+                                                        echo '<td rowspan="'.determineRowSpanValueDriver($i*3+$j, $accommodationarr, 3)."\">". $accommodationarr[$i*3+$j] ."</td>";
                                                     }
-
-                                                    // Don't need to check rowspan value. Only question is whether there's a link or not
-                                                    echo "<td>";
-                                                    if(!empty($accommodationarr[$i*3+2])) {
-                                                        echo "<a href=\"".$accommodationarr[$i*3+2]."\" target=\"_blank\" >";
-                                                        echo '<i class="fa fa-external-link pull-right" style="line-height: 150%;"></i></a>';
-                                                    }
-                                                    echo '</td>';
-                                                    echo '</tr>';
                                                 }
+
+                                                // Don't need to check rowspan value. Only question is whether there's a link or not
+                                                echo "<td>";
+                                                if(!empty($accommodationarr[$i*3+2])) {
+                                                    echo "<a href=\"".$accommodationarr[$i*3+2]."\" target=\"_blank\" >";
+                                                    echo '<i class="fa fa-external-link pull-right" style="line-height: 150%;"></i></a>';
+                                                }
+                                                echo '</td>';
+                                                echo '</tr>';
+                                            }
 
                                             ?>
                                             </tbody>
@@ -310,7 +302,7 @@ get_header(); ?>
                                 </div>
 
                                 <!-- Transport Tab -->
-                                <div role="tabpanel" class="tab-pane" id="transport">
+                                <div role="tabpanel" class="tab-pane" id="transport" itemprop="articleSection">
                                     <?php 
                                         $transportstring = get_post_meta($postid, $transport_key, true);
 
@@ -367,6 +359,11 @@ get_header(); ?>
             </div>
         </article>
         <hr>
+
+        <meta itemprop="url" content="<?php echo get_permalink(); ?>" />
+        <meta itemprop="image" content="<?php echo get_post_meta($postid, $banner_key, true); ?>" />
+        <meta itemprop="datePublished" content="<?php echo the_modified_date("F j, Y") ?>" />
+
     </div>
 </div>
 <!-- Modal -->
