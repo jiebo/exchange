@@ -101,8 +101,8 @@ get_header(); ?>
         <article id="top" itemprop="articleBody">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-8 col-md-10 centered" itemprop="description">
-                        <p class="first-character"><?php echo get_post_meta($postid, $introduction, true) ?></p>
+                    <div class="col-lg-8 col-md-10 centered">
+                        <span itemprop="description"><p class="first-character"><?php echo get_post_meta($postid, $introduction, true) ?></p></span>
 
                         <div>    <!-- Nav tabs -->
                             <ul class="nav nav-tabs small" role="tablist">
