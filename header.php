@@ -35,20 +35,20 @@
 	<meta property="og:site_name" content="EU-SEP" />
 	<meta property="fb:app_id" content="181914305480369" />
 	<?php if(!(is_single() || is_page())) : ?>
-	<meta property="og:url" 			   content="http://eu-sep.com" />
+	<meta property="og:url"                content="http://eu-sep.com" />
 	<meta property="og:title"              content="A comprehensive guide to exchange in Europe" />
 	<meta property="og:description"        content="This website houses my entire exchange experience in Stockholm. It includes important pre-departure info to city guides, as well as an expense estimator for the cost conscious student." />
 	<meta property="og:image"              content="<?php bloginfo('template_directory'); ?>/img/screenshot.png" />
 	<?php else : ?>
-	<meta property="og:url" 			   content="<?php echo get_permalink(); ?>" />
+	<meta property="og:url"                content="<?php echo get_permalink(); ?>" />
 	<meta property="og:type"               content="article" />
 	<meta property="og:title"              content="Guide to <?php echo get_the_title(); ?>" />
 	<meta property="og:description"        content="<?php echo get_post_meta(get_the_ID(), 'Subheading', TRUE) ?>" />
-		<?php if(is_single()) : ?>
-		<meta property="og:image"          content="<?php echo get_post_meta(get_the_ID(), 'Banner photo', TRUE) ?>" />
-		<?php else : ?>
-		<meta property="og:image"          content="<?php bloginfo('template_directory'); ?>/img/screenshot.png" />
-		<?php endif; ?>
+        <?php if(is_single()) : ?>
+        <meta property="og:image"          content="<?php echo get_post_meta(get_the_ID(), 'Banner photo', TRUE) ?>" />
+        <?php else : ?>
+        <meta property="og:image"          content="<?php bloginfo('template_directory'); ?>/img/screenshot.png" />
+        <?php endif; ?>
 	<?php endif; ?>
 	
 	<!-- Twitter Cards Meta -->
@@ -58,7 +58,7 @@
 	<meta name="twitter:title" content="A comprehensive guide to exchange in Europe">
 	<meta name="twitter:description" content="This website houses my entire exchange experience in Stockholm, from pre-departure to my final day in Sweden.">
 	<meta name="twitter:image" content="<?php bloginfo('template_directory'); ?>/img/screenshot.png">
-    <?php else : ?>
+        <?php else : ?>
 	<meta name="twitter:title" content="Guide to <?php echo get_the_title(); ?>">
 	<meta name="twitter:description" content="<?php echo get_post_meta(get_the_ID(), 'Subheading', TRUE) ?>">
 	<meta name="twitter:image" content="<?php echo get_post_meta(get_the_ID(), 'Banner photo', TRUE) ?>">
@@ -108,8 +108,14 @@
     <!-- Social Media Sidebar -->
     <div class="social-media-sidebar hidden-xs hidden-sm">
         <ul>
-            <li><a href="https://www.facebook.com/dialog/feed?app_id=181914305480369&display=popup&link=http%3A%2F%2Feu-sep.com&redirect_uri=http%3A%2F%2Feu-sep.com" target="_blank" class="facebook-share"><span style="color: #FFF; font-weight: bold;">Share</span> <i class="fa fa-facebook text-primary"></i></a></li>
-            <li><a href="#"><span style="color: #FFF; font-weight: bold;">Tweet</span> <i class="fa fa-twitter text-primary"></i></a></li>
+            <?php if(is_home()) : ?>
+                <li><a href="https://www.facebook.com/dialog/feed?app_id=181914305480369&display=popup&link=http%3A%2F%2Feu-sep.com&redirect_uri=http%3A%2F%2Feu-sep.com" target="_blank" class="facebook-share"><span style="color: #FFF; font-weight: bold;">Share</span> <i class="fa fa-facebook text-primary"></i></a></li>
+                <li><a href="https://twitter.com/intent/tweet?text=To%20All%20Europe%20Exchangers%21&url=http%3A%2F%2Feu-sep.com" data-via="TiJieBo" target="_blank"><span style="color: #FFF; font-weight: bold;">Tweet</span> <i class="fa fa-twitter text-primary"></i></a></li>
+            <?php else : ?>
+                <li><a href="https://www.facebook.com/dialog/feed?app_id=181914305480369&display=popup&link=http%3A%2F%2Feu-sep.com%2F<?php echo get_the_title(); ?>&redirect_uri=http%3A%2F%2Feu-sep.com%2F<?php echo get_the_title(); ?>" target="_blank" class="facebook-share"><span style="color: #FFF; font-weight: bold;">Share</span> <i class="fa fa-facebook text-primary"></i></a></li>
+                <li><a href="https://twitter.com/intent/tweet?text=To%20All%20Exchangers%21&url=http%3A%2F%2Feu-sep.com%2F<?php echo get_the_title(); ?>" data-via="TiJieBo" target="_blank"><span style="color: #FFF; font-weight: bold;">Tweet</span> <i class="fa fa-twitter text-primary"></i></a></li>
+            <?php endif; ?>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
         </ul>
     </div>
     <style>
@@ -118,7 +124,6 @@
             top: 50%;
             left: 0%;
             z-index: 9999;
-            visibility: hidden;
         }
         .social-media-sidebar ul {
             transform: translate(-242px, 0);
