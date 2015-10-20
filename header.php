@@ -20,37 +20,50 @@
 <!--<![endif]-->
     <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="An exchange guide that houses my Stockholm Exchange experience">
-        <meta name="author" content="Ti Jie Bo">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="An exchange guide that houses my Stockholm Exchange experience">
+	<meta name="author" content="Ti Jie Bo">
 	<?php 
-        if(!is_home() && !is_404()) {
-            echo '<title>'.get_the_title(get_the_ID()).' - Europe 2015</title>';
-        } else {
-            echo '<title>Europe 2015</title>';
-        }
-        ?>
-        
-        <!-- Facebook Open Graph Meta -->
-        <meta property="og:site_name" content="EU-SEP" />
-        <meta property="fb:app_id" content="181914305480369" />
-        <?php if(!(is_single() || is_page())) : ?>
-        <meta property="og:url" 			   content="http://eu-sep.com" />
-        <meta property="og:title"              content="A comprehensive guide to exchange in Europe" />
-        <meta property="og:description"        content="This website houses my entire exchange experience in Stockholm. It includes important pre-departure info to city guides, as well as an expense estimator for the cost conscious student." />
-        <meta property="og:image"              content="<?php bloginfo('template_directory'); ?>/img/screenshot.png" />
-        <?php else : ?>
-        <meta property="og:url" 			   content="<?php echo get_permalink(); ?>" />
-        <meta property="og:type"               content="article" />
-        <meta property="og:title"              content="Guide to <?php echo get_the_title(); ?>" />
-        <meta property="og:description"        content="<?php echo get_post_meta(get_the_ID(), 'Subheading', TRUE) ?>" />
-            <?php if(is_single()) : ?>
-            <meta property="og:image"          content="<?php echo get_post_meta(get_the_ID(), 'Thumbnail', TRUE) ?>" />
-            <?php else : ?>
-            <meta property="og:image"          content="<?php bloginfo('template_directory'); ?>/img/screenshot.png" />
-            <?php endif; ?>
-        <?php endif; ?>
-        
+	if(!is_home() && !is_404()) {
+		echo '<title>'.get_the_title(get_the_ID()).' - Europe 2015</title>';
+	} else {
+		echo '<title>Europe 2015</title>';
+	}
+	?>
+	
+	<!-- Facebook Open Graph Meta -->
+	<meta property="og:site_name" content="EU-SEP" />
+	<meta property="fb:app_id" content="181914305480369" />
+	<?php if(!(is_single() || is_page())) : ?>
+	<meta property="og:url" 			   content="http://eu-sep.com" />
+	<meta property="og:title"              content="A comprehensive guide to exchange in Europe" />
+	<meta property="og:description"        content="This website houses my entire exchange experience in Stockholm. It includes important pre-departure info to city guides, as well as an expense estimator for the cost conscious student." />
+	<meta property="og:image"              content="<?php bloginfo('template_directory'); ?>/img/screenshot.png" />
+	<?php else : ?>
+	<meta property="og:url" 			   content="<?php echo get_permalink(); ?>" />
+	<meta property="og:type"               content="article" />
+	<meta property="og:title"              content="Guide to <?php echo get_the_title(); ?>" />
+	<meta property="og:description"        content="<?php echo get_post_meta(get_the_ID(), 'Subheading', TRUE) ?>" />
+		<?php if(is_single()) : ?>
+		<meta property="og:image"          content="<?php echo get_post_meta(get_the_ID(), 'Banner photo', TRUE) ?>" />
+		<?php else : ?>
+		<meta property="og:image"          content="<?php bloginfo('template_directory'); ?>/img/screenshot.png" />
+		<?php endif; ?>
+	<?php endif; ?>
+	
+	<!-- Twitter Cards Meta -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@nusingapore">
+	<?php if(!(is_single() || is_page())) : ?>
+	<meta name="twitter:title" content="A comprehensive guide to exchange in Europe">
+	<meta name="twitter:description" content="This website houses my entire exchange experience in Stockholm, from pre-departure to my final day in Sweden.">
+	<meta name="twitter:image" content="<?php bloginfo('template_directory'); ?>/img/screenshot.png">
+    <?php else : ?>
+	<meta name="twitter:title" content="Guide to <?php echo get_the_title(); ?>">
+	<meta name="twitter:description" content="<?php echo get_post_meta(get_the_ID(), 'Subheading', TRUE) ?>">
+	<meta name="twitter:image" content="<?php echo get_post_meta(get_the_ID(), 'Banner photo', TRUE) ?>">
+	<?php endif; ?>
+	
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
         <link rel="shortcut icon" type="image/png" href="<?php bloginfo('template_directory'); ?>/img/favicon.png">
 	<!--[if lt IE 9]>
