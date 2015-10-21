@@ -65,7 +65,7 @@
 	<?php endif; ?>
 	
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-        <link rel="shortcut icon" type="image/png" href="<?php bloginfo('template_directory'); ?>/img/favicon.png">
+	<link rel="shortcut icon" type="image/png" href="<?php bloginfo('template_directory'); ?>/img/favicon.png">
 	<!--[if lt IE 9]>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/html5.js"></script>
 	<![endif]-->
@@ -109,13 +109,18 @@
     <div class="social-media-sidebar hidden-xs hidden-sm">
         <ul>
             <?php if(is_home()) : ?>
-                <li><a href="https://www.facebook.com/dialog/feed?app_id=181914305480369&display=popup&link=http%3A%2F%2Feu-sep.com&redirect_uri=http%3A%2F%2Feu-sep.com" target="_blank" class="facebook-share"><span style="color: #FFF; font-weight: bold;">Share</span> <i class="fa fa-facebook text-primary"></i></a></li>
+                <li><a onclick="fbshare('https://www.facebook.com/dialog/feed?app_id=181914305480369&display=popup&link=http%3A%2F%2Feu-sep.com&redirect_uri=http%3A%2F%2Feu-sep.com');" href="javascript:void(0);" class="facebook-share"><span style="color: #FFF; font-weight: bold;">Share</span> <i class="fa fa-facebook text-primary"></i></a></li>
                 <li><a href="https://twitter.com/intent/tweet?text=To%20All%20Europe%20Exchangers%21&url=http%3A%2F%2Feu-sep.com" data-via="TiJieBo" target="_blank"><span style="color: #FFF; font-weight: bold;">Tweet</span> <i class="fa fa-twitter text-primary"></i></a></li>
             <?php else : ?>
-                <li><a href="https://www.facebook.com/dialog/feed?app_id=181914305480369&display=popup&link=http%3A%2F%2Feu-sep.com%2F<?php echo get_the_title(); ?>&redirect_uri=http%3A%2F%2Feu-sep.com%2F<?php echo get_the_title(); ?>" target="_blank" class="facebook-share"><span style="color: #FFF; font-weight: bold;">Share</span> <i class="fa fa-facebook text-primary"></i></a></li>
+                <li><a onclick="fbshare('https://www.facebook.com/dialog/feed?app_id=181914305480369&display=popup&link=http%3A%2F%2Feu-sep.com%2F<?php echo get_the_title(); ?>&redirect_uri=http%3A%2F%2Feu-sep.com%2F<?php echo get_the_title(); ?>')" href="javascript:void(0);" class="facebook-share"><span style="color: #FFF; font-weight: bold;">Share</span> <i class="fa fa-facebook text-primary"></i></a></li>
                 <li><a href="https://twitter.com/intent/tweet?text=To%20All%20Exchangers%21&url=http%3A%2F%2Feu-sep.com%2F<?php echo get_the_title(); ?>" data-via="TiJieBo" target="_blank"><span style="color: #FFF; font-weight: bold;">Tweet</span> <i class="fa fa-twitter text-primary"></i></a></li>
             <?php endif; ?>
-            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+            <script>
+				function fbshare(url) {
+					window.open(url, "_blank", "width=630,height=530,toolbar=0,status=0");
+				}
+			</script>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
         </ul>
     </div>
     <style>
