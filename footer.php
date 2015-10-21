@@ -151,16 +151,6 @@
             }
         });
         
-        // Open Facebook share dialog
-        $(".facebook-").click(function() {
-            FB.ui({
-                method: 'share',
-                href: 'http://eu-sep.com'
-            }, function(response) {
-                if(response && response.post_id) {}
-                else{}
-            });
-        });
         <?php
         // If statement that will only output pagescroll if in index page
         if(is_home()) :
@@ -180,11 +170,8 @@
                 });
             });
             
-        <?php
-            endif;
-        ?>
+        <?php endif; ?>
         </script>
-        
         <!-- All ajax index.php scripts are here -->
         <?php 
         if(is_home()) : ?>
@@ -436,7 +423,13 @@
                     document.getElementById('contact-email').setAttribute('placeholder', '');
                     document.getElementById('contact-msg').setAttribute('placeholder', '');
                 }
-            })
+                if($(window).width() < 600) {
+                    $(".divide-col-xs").removeClass('col-xs-6');
+                } else {
+                    $(".divide-col-xs").addClass('col-xs-6');
+                }
+            });
+            
             </script> 
         <?php endif; ?>
 	<?php wp_footer(); ?>

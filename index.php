@@ -85,7 +85,7 @@ get_header(); ?>
                             $page_subheading = get_post_meta($page -> ID, "Subheading", true);
                             
                         ?>
-                        <div class="col-md-3 col-sm-4">
+                        <div class="col-md-3 col-sm-4 col-xs-6 divide-col-xs">
                             <a href="<?php echo get_page_link($page -> ID); ?>" class="service-item">
                                 <span class="fa-stack fa-4x">
                                     <i class="fa fa-circle fa-stack-2x"></i>
@@ -128,7 +128,7 @@ get_header(); ?>
                             foreach ($posts_array as $postid) {
                                
                         ?>
-                            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xs-6 divide-col-xs">
                                 <div class="overlay-container">
                                     <a href="<?php echo get_post_permalink( $postid ); ?>" class="thumbnail">
                                         <img class="grayscale img-responsive" src="<?php echo get_post_meta($postid, $thumbnail_key, true);?>" alt="<?php echo $postid; ?>">
