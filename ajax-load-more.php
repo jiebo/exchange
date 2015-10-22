@@ -25,7 +25,7 @@ $query_result = mysql_query($query) or die(mysql_error());
 // Build Result String
 $display_string = "";
 while ($row = mysql_fetch_array($query_result)) {
-    $display_string .= " <div class=\"col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xs-6 divide-col-xs\">";
+		$display_string .= " <div class=\"col-sm-6 col-md-4 col-lg-4 divide-col-xs\">";
     $display_string .= " <div class=\" overlay-container\"> ";
     $display_string .= " <a href=\"index.php?p=$row[ID]\" class=\"thumbnail\"> ";
     $display_string .= " <img class=\"img-responsive grayscale\" src=\"$row[meta_value]\"> ";

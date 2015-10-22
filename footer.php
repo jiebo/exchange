@@ -423,10 +423,10 @@
                     document.getElementById('contact-email').setAttribute('placeholder', '');
                     document.getElementById('contact-msg').setAttribute('placeholder', '');
                 }
-                if($(window).width() < 600) {
-                    $(".divide-col-xs").removeClass('col-xs-6');
-                } else {
+                if($(window).width() > 599) {
                     $(".divide-col-xs").addClass('col-xs-6');
+                } else {
+                    $(".divide-col-xs").removeClass('col-xs-6');
                 }
             });
             
