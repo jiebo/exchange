@@ -116,11 +116,11 @@
                 <li><a href="https://twitter.com/intent/tweet?text=To%20All%20Exchangers%21&url=http%3A%2F%2Feu-sep.com%2F<?php echo get_the_title(); ?>" data-via="TiJieBo" target="_blank"><span style="color: #FFF; font-weight: bold;">Tweet</span> <i class="fa fa-twitter text-primary"></i></a></li>
             <?php endif; ?>
             <script>
-				function fbshare(url) {
-					window.open(url, "_blank", "width=630,height=530,toolbar=0,status=0");
-				}
-			</script>
-			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                function fbshare(url) {
+                        window.open(url, "_blank", "width=630,height=530,toolbar=0,status=0");
+                }
+            </script>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
         </ul>
     </div>
     <style>
@@ -129,6 +129,7 @@
             top: 50%;
             left: 0%;
             z-index: 9999;
+            display: none;
         }
         .social-media-sidebar ul {
             transform: translate(-242px, 0);
