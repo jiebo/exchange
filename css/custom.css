@@ -220,8 +220,26 @@ article hr.small {
     }
 }
 
-/* Set the height of the chart div depending on screen size */
-
+/* Extra screen width declaration for col-xs */
+@media (min-width: 450px) and (max-width: 539px) {
+    .col-xs-E-6 {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
+@media (min-width: 540px) and (max-width: 767px) {
+    .col-xs-E-12, .col-xs-E-6 {
+        float: left;
+        padding-left: 10px; 
+        padding-right: 10px;
+    }
+    .col-xs-E-12 {
+        width: 100%;
+    }
+    .col-xs-E-6 {
+        width: 50%;
+    }
+}
 /* Extra-Small devices (tablets, 601px and up) */
 @media (min-width: 601px) { 
     #chart-div {
