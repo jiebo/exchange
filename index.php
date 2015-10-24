@@ -160,25 +160,25 @@ get_header(); ?>
                         <div id="ajax-expense-display">
                             <h3>City</h3>
                             <form class="form-horizontal col-lg-6 col-lg-offset-1 col-md-8 col-sm-8" style="font-size: 18px;"> 
-                                <div class="form-group">        <!-- Form group for AVG MEAL    -->
+                                <div class="form-group">
                                     <label class="col-sm-6 control-label">Average Meal</label>
                                     <div class="col-sm-6">
                                         <p class="form-control-static"></p>
                                     </div>
                                 </div>        
-                                <div class="form-group">        <!-- Form group for TRANSPORT   -->
+                                <div class="form-group">
                                     <label class="col-sm-6 control-label">Transportation / Day</label>
                                     <div class="col-sm-6">
                                         <p class="form-control-static"></p>
                                     </div>
                                 </div>                     
-                                <div class="form-group">        <!-- Form group for ACCOMMODATION -->
+                                <div class="form-group">
                                     <label class="col-sm-6 control-label">Accommodation / Night</label>
                                     <div class="col-sm-6">
                                         <p class="form-control-static"></p>
                                     </div>
                                 </div>                       
-                                <div class="form-group">        <!-- Form group for CURRENCY    -->
+                                <div class="form-group">
                                     <label class="col-sm-6 control-label">Est. Local Currency required</label>
                                     <div class="col-sm-6">
                                         <p class="form-control-static"></p>
@@ -189,14 +189,12 @@ get_header(); ?>
                         <div class="row">
                             <form class="form-horizontal col-lg-10 col-md-11 col-sm-11 col-xs-11">
                                 <?php
-                                        include 'sql.php';
-                                        $city_array = get_expense_city_list();
-                                        
+                                include 'sql.php';
+                                $city_array = get_expense_city_list();
                                 ?>
                                 <div class="btn-group pull-right dropup">     <!-- Button dropdown for Select City -->
                                     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">City Selector &nbsp; <span class="caret"></span>                        </button>
                                     <ul class="dropdown-menu scrollable-menu">
-                                        
                                     <?php
                                     
                                         foreach ( $city_array as $city ) {
@@ -207,7 +205,6 @@ get_header(); ?>
                                     <?php
                                         }
                                     ?>
-                                        
                                     </ul>
                                 </div>
                             </form>  
@@ -217,12 +214,9 @@ get_header(); ?>
                         <h3>Exchange</h3>
                         <div id="chart" style="height: 40%;" class="align-chart"></div>
                     </div> 
-                </div>
-                                          
+                </div>                 
             </div>
         </div>
     </aside>
-
-
-<?php get_footer(); ?>
+    <?php get_footer(); ?>
 

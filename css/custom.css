@@ -221,20 +221,17 @@ article hr.small {
 }
 
 /* Extra screen width declaration for col-xs */
-@media (min-width: 450px) and (max-width: 539px) {
+@media (min-width: 450px) and (max-width: 537px) {
     .col-xs-E-6 {
-        padding-left: 50px;
-        padding-right: 50px;
+        padding-left: 55px;
+        padding-right: 55px;
     }
 }
-@media (min-width: 540px) and (max-width: 767px) {
+@media (min-width: 538px) and (max-width: 767px) {
     .col-xs-E-12, .col-xs-E-6 {
         float: left;
         padding-left: 10px; 
         padding-right: 10px;
-    }
-    .col-xs-E-12 {
-        width: 100%;
     }
     .col-xs-E-6 {
         width: 50%;

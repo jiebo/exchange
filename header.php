@@ -116,65 +116,65 @@
                 <li><a href="https://twitter.com/intent/tweet?text=To%20All%20Exchangers%21&url=http%3A%2F%2Feu-sep.com%2F<?php echo get_the_title(); ?>" data-via="TiJieBo" target="_blank"><span style="color: #FFF; font-weight: bold;">Tweet</span> <i class="fa fa-twitter text-primary"></i></a></li>
             <?php endif; ?>
             <script>
-                function fbshare(url) {
-                        window.open(url, "_blank", "width=630,height=530,toolbar=0,status=0");
-                }
+            function fbshare(url) {
+                window.open(url, "_blank", "width=630,height=530,toolbar=0,status=0");
+            }
             </script>
             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
         </ul>
     </div>
     <style>
-        .social-media-sidebar {
-            position: fixed;
-            top: 50%;
-            left: 0%;
-            z-index: 9999;
-            display: none;
-        }
-        .social-media-sidebar ul {
-            transform: translate(-242px, 0);
-        }
-        .social-media-sidebar a:hover {
-            text-decoration: none;
-        }
-        .social-media-sidebar ul li {
-            color: #FFF;
-            display: block;
-            width: 250px;
-            background: rgba(0,0,0,0.36);
-            text-align: right;
-            padding: 10px;
-            margin: 5px;
-            font-size: 1.25em;
-            -webkit-border-radius: 0 30px 30px 0;
-            -moz-border-radius: 0 30px 30px 0;
-            border-radius: 0 30px 30px 0;
-            -webkit-transition: -webkit-transform 0.5s ease-in; /* Changed here */ 
-               -moz-transition: -moz-transform 0.3s ease-in;
-                 -o-transition: -o-transform 0.5s ease-in;
-                    transition: transform 0.3s ease-in;
-        }
-        .social-media-sidebar ul li:hover,
-        .social-media-sidebar ul li:focus {
-            -webkit-transform: translate(60px, 0);
-               -moz-transform: translate(60px, 0);
-                -ms-transform: translate(60px, 0);
-                 -o-transform: translate(60px, 0);
-                    transform: translate(60px, 0);
-            -webkit-transition: -webkit-transform 0.3s ease-in; /* Changed here */ 
-               -moz-transition: -moz-transform 0.3s ease-in;
-                 -o-transition: -o-transform 0.3s ease-in;
-                    transition: transform 0.3s ease-in;
-        }
-        .social-media-sidebar ul li i {
-            margin-left: 10px; /* Margin between <i> and <span> */
-            width: 2em;        /* Size of the white circle of i */
-            height: 2em;       /* Size of the white circle of i */   
-            padding: 0.5em;
-            font-size: 1em;
-            background: #FFF;
-            -webkit-border-radius: 50%;
-            -moz-border-radius: 50%;
-            border-radius: 50%;
-        }
+    .social-media-sidebar {
+        position: fixed;
+        top: 50%;
+        left: 0%;
+        z-index: 9999;
+        display: none;
+    }
+    .social-media-sidebar ul {
+        transform: translate(-242px, 0);
+    }
+    .social-media-sidebar a:hover {
+        text-decoration: none;
+    }
+    .social-media-sidebar ul li {
+        color: #FFF;
+        display: block;
+        width: 250px;
+        background: rgba(0,0,0,0.36);
+        text-align: right;
+        padding: 10px;
+        margin: 5px;
+        font-size: 1.25em;
+        -webkit-border-radius: 0 30px 30px 0;
+        -moz-border-radius: 0 30px 30px 0;
+        border-radius: 0 30px 30px 0;
+        -webkit-transition: -webkit-transform 0.5s ease-in; /* Changed here */ 
+           -moz-transition: -moz-transform 0.3s ease-in;
+             -o-transition: -o-transform 0.5s ease-in;
+                transition: transform 0.3s ease-in;
+    }
+    .social-media-sidebar ul li:hover,
+    .social-media-sidebar ul li:focus {
+        -webkit-transform: translate(60px, 0);
+           -moz-transform: translate(60px, 0);
+            -ms-transform: translate(60px, 0);
+             -o-transform: translate(60px, 0);
+                transform: translate(60px, 0);
+        -webkit-transition: -webkit-transform 0.3s ease-in; /* Changed here */ 
+           -moz-transition: -moz-transform 0.3s ease-in;
+             -o-transition: -o-transform 0.3s ease-in;
+                transition: transform 0.3s ease-in;
+    }
+    .social-media-sidebar ul li i {
+        margin-left: 10px; /* Margin between <i> and <span> */
+        width: 2em;        /* Size of the white circle of i */
+        height: 2em;       /* Size of the white circle of i */   
+        padding: 0.5em;
+        font-size: 1em;
+        background: #FFF;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+    }
     </style>

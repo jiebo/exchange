@@ -163,7 +163,7 @@ get_header(); ?>
                             <table class="table-striped table-hover" style="width: 100%;">
                                 <style>
                                     .category-added td {
-                                            line-height: 200%;
+                                            line-height: 300%;
                                     }
                                 </style>
                                 <tbody id="packing-list-container"></tbody>
