@@ -31,7 +31,7 @@ get_header(); ?>
             $(document).ready(function() {
                 setTimeout(function() {
                     window.location.replace("<?php echo get_home_url(); ?>");
-                }, 3000);
+                }, 6000);
             })
         </script> 
     </body>
