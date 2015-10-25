@@ -1,5 +1,4 @@
 /* CSS Document */
-
 a.overlay-container:hover { 
     text-decoration: none;
 }
@@ -8,7 +7,6 @@ article {
   font-size: 20px;
   color: #404040;
 }
-
 .intro-header {
   background-color: #808080;
   background: no-repeat center center;
@@ -114,7 +112,6 @@ article hr.small {
   border-width: 4px;
   border-color: white;
 }
-
 .first-character:first-letter {
     float: left; 
     color: #903; 
@@ -125,7 +122,6 @@ article hr.small {
     padding-left: 3px; 
     font-family: Georgia;
 }
-
 /* Thumbnails */
 .overlay-container {
     position: relative;
@@ -163,12 +159,10 @@ article hr.small {
           filter: url(filters.svg#grayscale); /* Firefox 4+ */
           filter: none; /* IE 6-9 */
 }
-
 /* Overwrite text-centre applied to form-control-static */
 .form-control-static {
     text-align: left;
 }
-
 /* Styling for loading-div while ajax loads */
 .loading-div {
     position: absolute;
@@ -178,14 +172,12 @@ article hr.small {
     z-index: 9;
     background: rgba(0,0,0,0.5) no-repeat center;
 }
-
 .align-center {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
-
 /* Styling to align chart */
 .align-chart {
     position: absolute;
@@ -193,25 +185,21 @@ article hr.small {
     left: 50%;
     transform: translate(-50%, -50%);
 }
-
 /* Styling to remove default text-shadow */
 .highcharts-drilldown-data-label tspan {
     text-shadow: 0px 0px 0px #000;
     font-size: 100%;
 }
-
 /* Center col */
 .centered {
     float: none;
     margin: 0 auto;
 }
-
 /* Scrollable menu for dropdown */
 .scrollable-menu {
     max-height: 250px;
     overflow-x: hidden;
 }
-
 /* Set City Expense labels to align left when screen width less than 768px */
 @media (min-width: 244px) {
     .control-label {
@@ -219,7 +207,6 @@ article hr.small {
         padding-top: 7px;
     }
 }
-
 /* Extra screen width declaration for col-xs */
 @media (min-width: 450px) and (max-width: 537px) {
     .col-xs-E-6 {
@@ -228,7 +215,7 @@ article hr.small {
     }
 }
 @media (min-width: 538px) and (max-width: 767px) {
-    .col-xs-E-12, .col-xs-E-6 {
+    .col-xs-E-6 {
         float: left;
         padding-left: 10px; 
         padding-right: 10px;
@@ -243,14 +230,12 @@ article hr.small {
         height: 300px;
     }
 }
-
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1400px) { 
     #chart-div {
         height: 400px;
     }
 }
-
 /* Extra large devices (my monitor, 1600px and up) */
 @media (min-width: 1800px) {
     #chart-div {
