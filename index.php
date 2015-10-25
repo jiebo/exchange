@@ -22,22 +22,22 @@ get_header(); ?>
         <ul class="sidebar-nav">
             <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
             <li class="sidebar-brand">
-                <a href="#top"  onclick = $("#menu-close").click(); >Europe 2015</a>
+                <a href="#top" onclick=$("#menu-close").click(); >Europe 2015</a>
             </li>
             <li>
-                <a href="#top" onclick = $("#menu-close").click(); >Home</a>
+                <a href="#top" onclick=$("#menu-close").click(); >Home</a>
             </li>
             <li>
-                <a href="#predeparture" onclick = $("#menu-close").click(); >Pre-departure</a>
+                <a href="#predeparture" onclick=$("#menu-close").click(); >Pre-departure</a>
             </li>
             <li>
-                <a href="#travel" onclick = $("#menu-close").click(); >City Guides</a>
+                <a href="#travel" onclick=$("#menu-close").click(); >City Guides</a>
             </li>
             <li>
-                <a href="#expense" onclick = $("#menu-close").click(); >Expense Guide</a>
+                <a href="#expense" onclick=$("#menu-close").click(); >Expense Guide</a>
             </li>
             <li>
-                <a href="#contact" onclick = $("#menu-close").click(); >Contact</a>
+                <a href="#contact" onclick=$("#menu-close").click(); >Contact</a>
             </li>
         </ul>
     </nav>
@@ -45,10 +45,11 @@ get_header(); ?>
     <!-- Header -->
     <header id="top" class="header">
         <div class="text-vertical-center">
-            <h1>Europe 2015</h1>
-            <h3>1 Exchange, 9 Countries, 22 Cities</h3>
-            <br>
-            <a href="#about" class="btn btn-dark btn-lg">Find Out More</a>
+            <h1>Europe SEP</h1>
+            <blockquote>
+                <h3><em>“Traveling – it leaves you speechless, then turns you into a storyteller.”</em></h3>
+            </blockquote>
+            <a href="#about" class="btn btn-dark btn-lg">Discover More</a>
         </div>
     </header>
 
