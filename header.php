@@ -132,7 +132,8 @@
         display: none;
     }
     .social-media-sidebar ul {
-        transform: translate(-242px, 0);
+        transform: translate(-72px, 0);
+        padding: 0px;
     }
     .social-media-sidebar a:hover {
         text-decoration: none;
@@ -140,7 +141,7 @@
     .social-media-sidebar ul li {
         color: #FFF;
         display: block;
-        width: 250px;
+        width: 120px;
         background: rgba(0,0,0,0.36);
         text-align: right;
         padding: 10px;
@@ -153,6 +154,7 @@
            -moz-transition: -moz-transform 0.3s ease-in;
              -o-transition: -o-transform 0.5s ease-in;
                 transition: transform 0.3s ease-in;
+                z-index: -1;
     }
     .social-media-sidebar ul li:hover,
     .social-media-sidebar ul li:focus {
@@ -165,6 +167,7 @@
            -moz-transition: -moz-transform 0.3s ease-in;
              -o-transition: -o-transform 0.3s ease-in;
                 transition: transform 0.3s ease-in;
+                z-index: 99;
     }
     .social-media-sidebar ul li i {
         margin-left: 10px; /* Margin between <i> and <span> */
