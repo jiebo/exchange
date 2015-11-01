@@ -163,25 +163,25 @@ get_header(); ?>
                             <form class="form-horizontal col-lg-6 col-lg-offset-1 col-md-8 col-sm-8" style="font-size: 18px;"> 
                                 <div class="form-group">
                                     <label class="col-sm-6 control-label">Average Meal</label>
-                                    <div class="col-sm-6">
+                                    <div class="col-sm-6 col-xs-12">
                                         <p class="form-control-static"></p>
                                     </div>
                                 </div>        
                                 <div class="form-group">
                                     <label class="col-sm-6 control-label">Transportation / Day</label>
-                                    <div class="col-sm-6">
+                                    <div class="col-sm-6 col-xs-12">
                                         <p class="form-control-static"></p>
                                     </div>
                                 </div>                     
                                 <div class="form-group">
                                     <label class="col-sm-6 control-label">Accommodation / Night</label>
-                                    <div class="col-sm-6">
+                                    <div class="col-sm-6 col-xs-12">
                                         <p class="form-control-static"></p>
                                     </div>
                                 </div>                       
                                 <div class="form-group">
                                     <label class="col-sm-6 control-label">Est. Local Currency required</label>
-                                    <div class="col-sm-6">
+                                    <div class="col-sm-6 col-xs-12">
                                         <p class="form-control-static"></p>
                                     </div>
                                 </div>  
