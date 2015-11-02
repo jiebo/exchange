@@ -46,9 +46,16 @@ get_header(); ?>
     <header id="top" class="header">
         <div class="text-vertical-center">
             <h1>Europe SEP</h1>
-            <blockquote>
+            <div class="blockquotes">
                 <h3><em>“Traveling – it leaves you speechless, then turns you into a storyteller.”</em></h3>
-            </blockquote>
+            </div>
+            <style>
+                .blockquotes {
+                    padding: 10px 20px;
+                    margin: 0px 0px 20px;
+                    font-size: 17.5px;  
+                }
+            </style>
             <a href="#about" class="btn btn-dark btn-lg">Discover More</a>
         </div>
     </header>
