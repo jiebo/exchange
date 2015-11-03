@@ -159,7 +159,7 @@ get_header(); ?>
                                         }
                                     ?>
                                     </button>
-                                    <button class="btn btn-light less-padding disabled" data-toggle="" data-target="#map"><i class="fa fa-globe fa-lg"></i></button>
+                                    <button class="btn btn-light less-padding disabled hidden-xs hidden-sm" data-toggle="modal" data-target="#map"><i class="fa fa-globe fa-lg"></i></button>
                                 </li>
                             </ul>
 
@@ -368,21 +368,24 @@ get_header(); ?>
 </div>
 <!-- Modal -->
 <div class="modal fade" id="map" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
+  <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title" id="myModalLabel">Modal title</h4>
       </div>
-      <div class="modal-body">
-        ...
+      <div class="modal-body" style="width: 100%;">
+          <div id="map-canvas" style="height: 400px; display: block;"></div>
+    <script>
+
+    </script>
+
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
     </div>
   </div>
+</div>
 </div>
 <?php get_footer(); ?>
 <?php
