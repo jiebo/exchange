@@ -1,12 +1,9 @@
 <?php
 /**
- * The Header template for our theme
- *
  * Displays all of the <head> section and everything up till <body>
  *
  * @package WordPress
  * @subpackage exchange
- * @since exchange 1.0
  */
 ?><!DOCTYPE html>
 <!--[if IE 7]>
@@ -65,15 +62,15 @@
 	<?php endif; ?>
 	
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-	<link rel="shortcut icon" type="image/png" href="<?php bloginfo('template_directory'); ?>/img/favicon.gif">
+	<link rel="shortcut icon" type="image/gif" href="http://res.cloudinary.com/eu-sep/image/upload/v1446736601/favicon_spx3mi.gif">
 	<!--[if lt IE 9]>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/html5.js"></script>
 	<![endif]-->
         
         <!-- Bootstrap Core CSS -->
-        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-        <link href="<?php bloginfo('template_directory'); ?>/css/stylish-portfolio.css" rel="stylesheet">
+        <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="<?php bloginfo('template_directory'); ?>/css/stylish-portfolio.min.css" rel="stylesheet">
         
         <?php 
         if(is_single() || is_home()) : ?>
@@ -82,13 +79,13 @@
         
         <?php
         if(is_page()) : ?>
-            <link href="<?php bloginfo('template_directory'); ?>/css/article.css" rel="stylesheet">
+            <link href="<?php bloginfo('template_directory'); ?>/css/article.min.css" rel="stylesheet">
             <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
         <?php endif; ?>
         
         <?php 
         if(is_home()) : ?>
-            <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/owl-carousel/owl.carousel.css">
+            <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/owl-carousel/owl.carousel.min.css">
             <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/owl-carousel/owl.theme.css">
         <?php endif; ?>
         

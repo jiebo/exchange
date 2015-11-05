@@ -11,7 +11,7 @@ get_header(); ?>
     <div class="container">
         <div id="content" class="site-content align-center" role="main">
             <div class="col-sm-4 centered">
-            <img src="<?php bloginfo('template_directory'); ?>/img/404.jpg" style="height: 400px; margin: 0 auto;" class="centered" />
+            <img src="http://res.cloudinary.com/eu-sep/image/upload/v1446736646/404_yqzrtf.jpg" style="height: 400px; margin: 0 auto;" class="centered" />
             </div>
                 <header class="page-header">
                     <h1 class="page-title">Are you sure you got the right place?</h1>
