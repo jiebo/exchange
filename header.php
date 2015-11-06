@@ -35,7 +35,7 @@
 	<meta property="og:url"                content="http://eu-sep.com" />
 	<meta property="og:title"              content="A comprehensive guide to exchange in Europe" />
 	<meta property="og:description"        content="This website houses my entire exchange experience in Stockholm. It includes important pre-departure info to city guides, as well as an expense estimator for the cost conscious student." />
-	<meta property="og:image"              content="<?php bloginfo('template_directory'); ?>/img/screenshot.png" />
+	<meta property="og:image"              content="http://res.cloudinary.com/eu-sep/image/upload/v1446804093/screenshot_wj5ajj.jpg" />
 	<?php else : ?>
 	<meta property="og:url"                content="<?php echo get_permalink(); ?>" />
 	<meta property="og:type"               content="article" />
@@ -44,7 +44,7 @@
         <?php if(is_single()) : ?>
         <meta property="og:image"          content="<?php echo get_post_meta(get_the_ID(), 'Banner photo', TRUE) ?>" />
         <?php else : ?>
-        <meta property="og:image"          content="<?php bloginfo('template_directory'); ?>/img/screenshot.png" />
+        <meta property="og:image"          content="http://res.cloudinary.com/eu-sep/image/upload/v1446804093/screenshot_wj5ajj.jpg" />
         <?php endif; ?>
 	<?php endif; ?>
 	
@@ -54,7 +54,7 @@
 	<?php if(!(is_single() || is_page())) : ?>
 	<meta name="twitter:title" content="A comprehensive guide to exchange in Europe">
 	<meta name="twitter:description" content="This website houses my entire exchange experience in Stockholm, from pre-departure to my final day in Sweden.">
-	<meta name="twitter:image" content="<?php bloginfo('template_directory'); ?>/img/screenshot.png">
+	<meta name="twitter:image" content="http://res.cloudinary.com/eu-sep/image/upload/v1446804093/screenshot_wj5ajj.jpg">
         <?php else : ?>
 	<meta name="twitter:title" content="Guide to <?php echo get_the_title(); ?>">
 	<meta name="twitter:description" content="<?php echo get_post_meta(get_the_ID(), 'Subheading', TRUE) ?>">
