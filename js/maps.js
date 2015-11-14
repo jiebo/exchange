@@ -1,25 +1,30 @@
 var map;
-function initMap() {
-  var myLatLng = {lat: 59.331, lng: 18.071};
 
-  map = new google.maps.Map(document.getElementById('map-canvas'), {
-    center: myLatLng,
-    zoom: 12
-  });
-  var marker = new google.maps.Marker({
-    map: map,
-    position: myLatLng
-  });
-}
 $('#map').on('shown.bs.modal', function() {
-  var myLatLng = {lat: 59.331, lng: 18.071};
+    if(!$("#map-canvas").hasClass('map-constructed')) {
+        $("#map-canvas").addClass('map-constructed');
+        var centre = {lat: locations[0][1] , lng: locations[0][2]};
+        
+        map = new google.maps.Map(document.getElementById('map-canvas'), {
+            center: centre,
+            zoom: Number(locations[0][0])
+        });
 
-  map = new google.maps.Map(document.getElementById('map-canvas'), {
-    center: myLatLng,
-    zoom: 12
-  });
-  var marker = new google.maps.Marker({
-    map: map,
-    position: myLatLng
-  });
+        var infowindow = new google.maps.InfoWindow();
+
+        var marker, i;
+
+        for(i=1; i<locations.length; i++) {
+            marker = new google.maps.Marker({
+                position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+                map: map
+            });
+            google.maps.event.addListener(marker, 'click', (function(marker, i) {
+                return function() {
+                    infowindow.setContent(locations[i][0]);
+                    infowindow.open(map, marker);
+                }
+            })(marker, i));
+        };
+    } 
 });

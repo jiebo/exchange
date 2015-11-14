@@ -110,8 +110,8 @@
         <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
         
-<?php if(false) : ?>
-        <script defer src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBLtzqmB9thtme1YsvAraa4XN4AyE9XdOU"></script>
+<?php if(true) : ?>
+        <script defer src="https://maps.googleapis.com/maps/api/js?sensor=true&v=3"></script>
         <script async defer src="<?php bloginfo('template_directory'); ?>/js/maps.js" type="text/javascript" ></script>
 <?php endif; ?>   
 <?php if(is_home()) : ?>
@@ -425,6 +425,22 @@
         });
 
         </script> 
+    <?php endif; ?>
+    <?php  if(is_single()) : ?>
+        <script>
+          var locations;
+          $.ajax({
+              method: 'GET',
+              contentType: 'application/json',
+              url: '<?php bloginfo("template_directory"); ?>/ajax-markers.php',
+              dataType: 'json',
+              data: {'Name': '<?php echo get_the_ID(); ?>'},
+              success: function( markers ) {
+                locations = markers;
+            }
+          })
+        
+        </script>
     <?php endif; ?>
     <?php wp_footer(); ?>
 </body>
