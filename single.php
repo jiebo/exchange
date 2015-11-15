@@ -368,20 +368,18 @@ get_header(); ?>
 </div>
 <!-- Modal -->
 <div class="modal fade" id="map" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel"><?php echo get_the_title(); ?></h4>
-      </div>
-      <div class="modal-body" style="width: 100%;">
-          <div id="map-canvas" style="height: 500px; display: block;"></div>
-      </div>
-      <div class="modal-footer">
-          <p class="small"><em>Click on the pins</em></p>
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel"><?php echo get_the_title(); ?></h4>
+            </div>
+            <div class="modal-body" style="width: 100%;">
+                <div id="map-canvas" style="height: 500px; display: block;"></div>
+            </div>
+            <div class="modal-footer"></div>
+        </div>
     </div>
-  </div>
-</div>
 </div>
 <?php get_footer(); ?>
 <?php

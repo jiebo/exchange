@@ -25,6 +25,13 @@ $('#map').on('shown.bs.modal', function() {
                     infowindow.open(map, marker);
                 }
             })(marker, i));
+            if(i === 1) {
+                infowindow.setContent(locations[i][0]);
+                infowindow.open(map, marker);
+                setTimeout(function() {
+                    infowindow.close();
+                }, 3500);
+            }
         };
     } 
 });
