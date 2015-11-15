@@ -254,24 +254,23 @@
     </script>
 <?php  elseif(is_single()) : ?>
     <script>
-      var locations;
-      $(document).ready(function() {
-        $.ajax({
-            method: 'GET',
-            contentType: 'application/json',
-            url: '<?php bloginfo("template_directory"); ?>/ajax-markers.php',
-            dataType: 'json',
-            data: {'Name': '<?php echo get_the_ID(); ?>'}
-        })
-        .done(function( markers ) {
-            locations = markers;
-        })
-        .fail(function() {
-            $("#map-trigger").hide();
-        })
-
+    var locations;
+    $(document).ready(function() {
+      $.ajax({
+          method: 'GET',
+          contentType: 'application/json',
+          url: '<?php bloginfo("template_directory"); ?>/ajax-markers.php',
+          dataType: 'json',
+          data: {'Name': '<?php echo get_the_ID(); ?>'}
+      })
+      .done(function( markers ) {
+          locations = markers;
+      })
+      .fail(function() {
+          $("#map-trigger").hide();
       })
 
+    })
     </script>
 <?php endif; ?>
 <?php wp_footer(); ?>
