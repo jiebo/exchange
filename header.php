@@ -41,11 +41,11 @@
 	<meta property="og:type"               content="article" />
 	<meta property="og:title"              content="Guide to <?php echo get_the_title(); ?>" />
 	<meta property="og:description"        content="<?php echo get_post_meta(get_the_ID(), 'Subheading', TRUE) ?>" />
-        <?php if(is_single()) : ?>
-        <meta property="og:image"          content="<?php echo get_post_meta(get_the_ID(), 'Banner photo', TRUE) ?>" />
-        <?php else : ?>
-        <meta property="og:image"          content="http://res.cloudinary.com/eu-sep/image/upload/v1446804093/screenshot_wj5ajj.jpg" />
-        <?php endif; ?>
+            <?php if(is_single()) : ?>
+            <meta property="og:image"          content="<?php echo get_post_meta(get_the_ID(), 'Banner photo', TRUE) ?>" />
+            <?php else : ?>
+            <meta property="og:image"          content="http://res.cloudinary.com/eu-sep/image/upload/v1446804093/screenshot_wj5ajj.jpg" />
+            <?php endif; ?>
 	<?php endif; ?>
 	
 	<!-- Twitter Cards Meta -->
@@ -72,13 +72,9 @@
         <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
         <link href="<?php bloginfo('template_directory'); ?>/css/stylish-portfolio.min.css" rel="stylesheet">
         
-        <?php 
-        if(is_single() || is_home()) : ?>
-            <link href="<?php bloginfo('template_directory'); ?>/css/custom.css" rel="stylesheet">
-        <?php endif; ?>
-        
-        <?php
-        if(is_page()) : ?>
+        <?php if(is_single() || is_home()) : ?>
+            <link href="<?php bloginfo('template_directory'); ?>/css/custom.min.css" rel="stylesheet">
+        <?php elseif(is_page()) : ?>
             <link href="<?php bloginfo('template_directory'); ?>/css/article.min.css" rel="stylesheet">
         <?php endif; ?>
         
@@ -97,7 +93,6 @@
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->    
         
-	<?php //wp_head(); ?>
     </head>
 
 <body>
