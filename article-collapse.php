@@ -69,19 +69,20 @@ get_header(); ?>
     <div class="container" style="padding-top: 100px;" >
         <article class="row">
             <div class="col-lg-8 centered">
-                <h1 class="post-title"><i class="fa fa-<?php echo $page_icon ?> fa-1x hidden-xs"></i> <?php echo $page_title; ?> <i class="fa fa-<?php echo $page_icon ?> fa-1x hidden-xs"></i></h1>
+                <h1 class="post-title"><i class="fa fa-<?php echo $page_icon ?> hidden-xs"></i> <?php echo $page_title; ?> <i class="fa fa-<?php echo $page_icon ?> hidden-xs"></i></h1>
                 <hr class="star-primary" style="margin: 50px auto;">
                 
                 <style>
                     .post-title {
                         text-transform: uppercase;
-                        font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+                        font-family: Source Sans Pro,"Helvetica Neue",Helvetica,Arial,sans-serif;
                         font-weight: 700;
                         text-align: center;
                         color: #2C3E50;
+                        font-size: 3.5em;
                     }
-                    h1.post-title {
-                        font-size: 3em;
+                    h1.post-title i {
+                        font-size: 0.9em;
                     }
                 </style>
                 <p><?php echo $page_intro; ?></p>

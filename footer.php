@@ -110,11 +110,10 @@
         <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
         
-<?php if(true) : ?>
+<?php if(is_single()) : ?>
         <script defer src="https://maps.googleapis.com/maps/api/js?sensor=true&v=3"></script>
-        <script async defer src="<?php bloginfo('template_directory'); ?>/js/maps.js" type="text/javascript" ></script>
-<?php endif; ?>   
-<?php if(is_home()) : ?>
+        <script async defer src="<?php bloginfo('template_directory'); ?>/js/maps.js" type="text/javascript" ></script>  
+<?php elseif(is_home()) : ?>
         <!-- HighCharts component -->
         <script src="http://code.highcharts.com/highcharts.js" charset="utf-8"></script>
         <script src="http://code.highcharts.com/modules/drilldown.js" defer></script>

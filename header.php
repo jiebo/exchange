@@ -80,7 +80,6 @@
         <?php
         if(is_page()) : ?>
             <link href="<?php bloginfo('template_directory'); ?>/css/article.min.css" rel="stylesheet">
-            <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
         <?php endif; ?>
         
         <?php 
