@@ -374,6 +374,7 @@ get_header(); ?>
                 <h4 class="modal-title" id="myModalLabel"><?php echo get_the_title(); ?></h4>
             </div>
             <div class="modal-body" style="width: 100%;">
+                <div class="align-center"><i class="fa fa-refresh fa-spin fa-5x"></i></div>
                 <div id="map-canvas" style="height: 500px; display: block;"></div>
             </div>
             <div class="modal-footer"></div>
