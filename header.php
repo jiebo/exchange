@@ -62,7 +62,7 @@
 	<?php endif; ?>
 	
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-	<link rel="shortcut icon" type="image/gif" href="http://res.cloudinary.com/eu-sep/image/upload/v1446736601/favicon_spx3mi.gif">
+	<link rel="shortcut icon" type="image/gif" href="http://res.cloudinary.com/eu-sep/image/upload/v1447850446/favicon_2_i11yvb.gif">
 	<!--[if lt IE 9]>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/html5.js"></script>
 	<![endif]-->
