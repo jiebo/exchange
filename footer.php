@@ -107,8 +107,8 @@
 <?php endif; ?>
 
 <!-- Bootstrap Core JavaScript -->
-<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.4.min.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.5/bootstrap.min.js"></script>
         
 <?php if(is_single()) : ?>
     <script defer src="https://maps.googleapis.com/maps/api/js?sensor=true&v=3"></script>
@@ -119,12 +119,10 @@
         var loadExpense = "<?php bloginfo('template_directory'); ?>/ajax-load-expense.php";
         var sendMsg  = "<?php bloginfo("template_directory"); ?>/contact.php";
     </script>
-    <!-- HighCharts component -->
-    <script src="http://code.highcharts.com/highcharts.js" charset="utf-8"></script>
-    <script src="http://code.highcharts.com/modules/drilldown.js" defer></script>
-
     <!-- Javascript for Owl Carousel -->
     <script defer src="<?php bloginfo('template_directory'); ?>/owl-carousel/owl.carousel.min.js"></script>
+    <!-- HighCharts component -->
+    <script defer src="<?php bloginfo('template_directory'); ?>/highcharts/highcharts.js" charset="utf-8"></script>
 
     <script src="<?php bloginfo('template_directory'); ?>/exchange-expense-chart.php" type="text/javascript"></script>
     <script defer src="<?php bloginfo('template_directory'); ?>/js/home.min.js" type="text/javascript"></script>
@@ -271,6 +269,18 @@
       })
 
     })
+    $(window).resize(function() {
+    var list, i;
+    if($(window).width() < 751) {
+        list = document.getElementsByClassName('btn-tooltip');
+        for( i=0; i<list.length; i++ ) 
+            list[i].setAttribute('data-trigger', 'click');
+    } else {
+        list = document.getElementsByClassName('btn-tooltip');
+        for( i=0; i<list.length; i++ ) 
+            list[i].setAttribute('data-trigger', 'hover');
+    }
+});
     </script>
 <?php endif; ?>
 <?php wp_footer(); ?>

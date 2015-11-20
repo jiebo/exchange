@@ -20,46 +20,44 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="An exchange guide that houses my Stockholm Exchange experience">
 	<meta name="author" content="Ti Jie Bo">
-	<?php 
-	if(!is_home() && !is_404()) {
-		echo '<title>'.get_the_title(get_the_ID()).' - Europe 2015</title>';
-	} else {
-		echo '<title>Europe 2015</title>';
-	}
-	?>
+    <?php  if(!is_home() && !is_404()) {
+        echo '<title>'.get_the_title(get_the_ID()).' - Europe 2015</title>';
+    } else {
+        echo '<title>Europe 2015</title>';
+    } ?>
 	
 	<!-- Facebook Open Graph Meta -->
 	<meta property="og:site_name" content="EU-SEP" />
 	<meta property="fb:app_id" content="181914305480369" />
-	<?php if(!(is_single() || is_page())) : ?>
+    <?php if(!(is_single() || is_page())) : ?>
 	<meta property="og:url"                content="http://eu-sep.com" />
 	<meta property="og:title"              content="A comprehensive guide to exchange in Europe" />
 	<meta property="og:description"        content="This website houses my entire exchange experience in Stockholm. It includes important pre-departure info to city guides, as well as an expense estimator for the cost conscious student." />
 	<meta property="og:image"              content="http://res.cloudinary.com/eu-sep/image/upload/v1446804093/screenshot_wj5ajj.jpg" />
-	<?php else : ?>
+    <?php else : ?>
 	<meta property="og:url"                content="<?php echo get_permalink(); ?>" />
 	<meta property="og:type"               content="article" />
 	<meta property="og:title"              content="Guide to <?php echo get_the_title(); ?>" />
 	<meta property="og:description"        content="<?php echo get_post_meta(get_the_ID(), 'Subheading', TRUE) ?>" />
-            <?php if(is_single()) : ?>
+        <?php if(is_single()) : ?>
             <meta property="og:image"          content="<?php echo get_post_meta(get_the_ID(), 'Banner photo', TRUE) ?>" />
-            <?php else : ?>
+        <?php else : ?>
             <meta property="og:image"          content="http://res.cloudinary.com/eu-sep/image/upload/v1446804093/screenshot_wj5ajj.jpg" />
-            <?php endif; ?>
-	<?php endif; ?>
+        <?php endif; ?>
+    <?php endif; ?>
 	
 	<!-- Twitter Cards Meta -->
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:site" content="@nusingapore">
-	<?php if(!(is_single() || is_page())) : ?>
+    <?php if(!(is_single() || is_page())) : ?>
 	<meta name="twitter:title" content="A comprehensive guide to exchange in Europe">
 	<meta name="twitter:description" content="This website houses my entire exchange experience in Stockholm, from pre-departure to my final day in Sweden.">
 	<meta name="twitter:image" content="http://res.cloudinary.com/eu-sep/image/upload/v1446804093/screenshot_wj5ajj.jpg">
-        <?php else : ?>
+    <?php else : ?>
 	<meta name="twitter:title" content="Guide to <?php echo get_the_title(); ?>">
 	<meta name="twitter:description" content="<?php echo get_post_meta(get_the_ID(), 'Subheading', TRUE) ?>">
 	<meta name="twitter:image" content="<?php echo get_post_meta(get_the_ID(), 'Banner photo', TRUE) ?>">
-	<?php endif; ?>
+    <?php endif; ?>
 	
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<link rel="shortcut icon" type="image/gif" href="http://res.cloudinary.com/eu-sep/image/upload/v1447850446/favicon_2_i11yvb.gif">
@@ -68,7 +66,7 @@
 	<![endif]-->
         
         <!-- Bootstrap Core CSS -->
-        <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+        <link href="http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
         <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
         <link href="<?php bloginfo('template_directory'); ?>/css/stylish-portfolio.min.css" rel="stylesheet">
         
@@ -92,7 +90,6 @@
             <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->    
-        
     </head>
 
 <body>

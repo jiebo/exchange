@@ -113,17 +113,17 @@ get_header(); ?>
 
                                 <!-- All pull right elements are here -->
                                 <li class="pull-right" style="line-height: 225%;">
-                                    <style>
-                                        /* Adjust the left/right padding of the fa icons in posts */
-                                        .less-padding {
-                                            padding: 6px 8px;
-                                        }
-                                    </style>
-                                    <button class="btn btn-light less-padding" data-toggle="tooltip" data-html="true" data-placement="top" data-trigger="hover click" title="<?php
+                                <style>
+                                    /* Adjust the left/right padding of the fa icons in posts */
+                                    .less-padding {
+                                        padding: 6px 8px;
+                                    }
+                                </style>
+                                    <button class="btn btn-light less-padding btn-tooltip" data-toggle="tooltip" data-html="true" data-placement="top" title="<?php
                                     echo 'Min. Spending : ' . $vat_values[0];
                                     echo '</br>VAT Rate : ' . $vat_values[1];
                                     ?>"><i class="fa fa-shopping-cart fa-lg"></i></button>
-                                    <button class="btn btn-light less-padding" data-toggle="tooltip" data-placement="bottom" data-trigger="hover click" title="<?php
+                                    <button class="btn btn-light less-padding btn-tooltip" data-toggle="tooltip" data-placement="bottom" title="<?php
                                                 switch ($moneyscale) :
                                                     case(1): 
                                                         echo 'Cheaper than Singapore';
@@ -147,18 +147,18 @@ get_header(); ?>
                                     </button>
                                     <?php 
                                     if($water_boo) : ?>
-                                    <button class="btn btn-light less-padding" data-toggle="tooltip" data-placement="top" data-trigger="hover click" title="Tap water is potable">
+                                    <button class="btn btn-light less-padding btn-tooltip" data-toggle="tooltip" data-placement="top" title="Tap water is potable">
                                         <i class="fa fa-tint fa-lg"></i>
                                     </button>
                                     <?php else : ?>
-                                    <button class="btn btn-light less-padding" data-toggle="tooltip" data-placement="top" data-trigger="hover click" title="Tap water is not potable">
+                                    <button class="btn btn-light less-padding btn-tooltip" data-toggle="tooltip" data-placement="top" title="Tap water is not potable">
                                         <span class="fa-stack">
                                             <i class="fa fa-tint fa-stack-1x"></i>
                                             <i class="fa fa-ban fa-stack-2x"></i>
                                         </span>
                                     </button>                                
                                     <?php endif; ?>
-                                    <button id="map-trigger" class="btn btn-light less-padding hidden-xs hidden-sm" data-toggle="modal" data-target="#map"><i class="fa fa-map-pin fa-lg"></i></button>
+                                    <button id="map-trigger" class="btn btn-light less-padding btn-tooltip hidden-xs hidden-sm" data-toggle="modal" data-target="#map"><i class="fa fa-map-pin fa-lg"></i></button>
                                 </li>
                             </ul>
 
