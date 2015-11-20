@@ -15,7 +15,7 @@ get_header(); ?>
     <ul class="sidebar-nav">
         <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
         <li class="sidebar-brand">
-            <a href="<?php echo home_url(); ?>/#travel"  onclick = $("#menu-close").click(); ><i class="glyphicon glyphicon-arrow-left"></i>&nbsp;&nbsp;Home</a>
+            <a href="<?php echo home_url(); ?>/#travel"  onclick = $("#menu-close").click(); ><i class="fa fa-long-arrow-left"></i>&nbsp;&nbsp;Home</a>
         </li>
         <?php 
         $post_sel_array = array (
