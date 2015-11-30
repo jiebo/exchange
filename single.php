@@ -158,7 +158,7 @@ get_header(); ?>
                                         </span>
                                     </button>                                
                                     <?php endif; ?>
-                                    <button id="map-trigger" class="btn btn-light less-padding btn-tooltip hidden-xs hidden-sm" data-toggle="modal" data-target="#map"><i class="fa fa-map-pin fa-lg"></i></button>
+                                <button style="display: none;" id="map-trigger" class="btn btn-light less-padding btn-tooltip hidden-xs hidden-sm" data-toggle="modal" data-target="#map"><i class="fa fa-map-pin fa-lg"></i></button>
                                 </li>
                             </ul>
 

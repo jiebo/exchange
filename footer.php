@@ -263,6 +263,7 @@
       })
       .done(function( markers ) {
           locations = markers;
+          $("#map-trigger").show(0);
       })
       .fail(function() {
           $("#map-trigger").hide();
