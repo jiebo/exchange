@@ -30,7 +30,7 @@ $('#map').on('shown.bs.modal', function() {
                 infowindow.open(map, marker);
                 setTimeout(function() {
                     infowindow.close();
-                }, 3500);
+                }, 2500);
             }
         };
     } 
