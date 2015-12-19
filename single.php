@@ -78,7 +78,13 @@ get_header(); ?>
                     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                         <div class="post-heading">
                             <h1 itemprop="name"><?php echo get_the_title( $postid ); ?></h1>
+                            <?php 
+                            $subheader = get_post_meta($postid, $subheading_key, true);
+                            if(strcmp($subheader, "I amsterdam") == 0) : ?>
+                            <h2 class="subheading" itemprop="headline"><span style="color: red;">I am</span>sterdam</h2>
+                            <?php else : ?>
                             <h2 class="subheading" itemprop="headline"><?php echo get_post_meta($postid, $subheading_key, true) ; ?></h2>
+                            <?php endif; ?>
                             <span class="meta">Last modified on <?php echo the_modified_date() ;?></span>
                         </div>
                     </div>
@@ -124,20 +130,20 @@ get_header(); ?>
                                     echo '</br>VAT Rate : ' . $vat_values[1];
                                     ?>"><i class="fa fa-shopping-cart fa-lg"></i></button>
                                     <button class="btn btn-light less-padding btn-tooltip" data-toggle="tooltip" data-placement="bottom" title="<?php
-                                                switch ($moneyscale) :
-                                                    case(1): 
-                                                        echo 'Cheaper than Singapore';
-                                                        break;
-                                                    case(2): 
-                                                        echo 'Similar to Singapore';
-                                                        break;
-                                                    case(3):
-                                                        echo 'Normal European city';
-                                                        break;
-                                                    case(4): 
-                                                        echo 'Wow, it\'s expensive';
-                                                        break;
-                                                endswitch;
+                                        switch ($moneyscale) :
+                                            case(1): 
+                                                echo 'Cheaper than Singapore';
+                                                break;
+                                            case(2): 
+                                                echo 'Similar to Singapore';
+                                                break;
+                                            case(3):
+                                                echo 'Normal European city';
+                                                break;
+                                            case(4): 
+                                                echo 'Wow, it\'s expensive';
+                                                break;
+                                        endswitch;
                                     ?>">
                                     <?php
                                         for ($i = 0; $i < $moneyscale; $i++) {
