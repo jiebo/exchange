@@ -88,7 +88,7 @@
                     <p style="line-height: 175%;" class="text-muted">
                         So the whole point of creating this was to catalogue my memories so I wouldn't forget my experience and to 
                         <em>maybe</em> help whoever stumbled onto this place. </p>
-                    <p class="text-muted"><br>Copyright &copy; 2015</p>
+                    <p class="text-muted"><br>Copyright &copy; <?php echo date("Y"); ?></p>
                 </div>
             </div>
         </div>
@@ -99,7 +99,7 @@
     <div class="container" id="contact">
         <div class="row">
             <div class="col-lg-10 col-lg-offset-1 text-center">
-                <p class="text-muted">EU-SEP.com<br>Copyright &copy; 2015</p>
+                <p class="text-muted">EU-SEP.com<br>Copyright &copy; <?php echo date("Y"); ?></p>
             </div>
         </div>
     </div>
