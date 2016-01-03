@@ -111,7 +111,7 @@
 <script src="http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.5/bootstrap.min.js"></script>
         
 <?php if(is_single()) : ?>
-    <script defer src="https://maps.googleapis.com/maps/api/js?sensor=true&v=3"></script>
+    <script defer src="https://maps.googleapis.com/maps/api/js?v=3"></script>
     <script async defer src="<?php bloginfo('template_directory'); ?>/js/maps.min.js" type="text/javascript" ></script>  
 <?php elseif(is_home()) : ?>
     <script>
