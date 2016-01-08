@@ -61,15 +61,11 @@ $total_amount   = number_format($total_amount, 2, ".", ",");
 ?>
 
 $(function () {
-
-    // Highcharts Options
     Highcharts.setOptions({
         lang: {
             drillUpText: '\u25c1 Back'
         }
     });
-    
-    // Create the chart
     $('#chart').highcharts({
         chart: {
             backgroundColor: null,
@@ -91,7 +87,6 @@ $(function () {
                 showInLegend: false
             }
         },
-
         tooltip: {
             enabled: false
         },
@@ -151,7 +146,6 @@ $(function () {
                 $arr_string = $array_query . $preDeparture_key . "' ORDER BY A.ex_amount DESC;";
                 $arr_resource = mysql_query ( $arr_string ) or die (mysql_error());
                 while ( $row = mysql_fetch_assoc ($arr_resource) ) {
-
                 ?>
                     ["<?php echo $row['ex_name']; ?>", parseFloat(<?php echo $row['ex_amount']; ?>)],
                 <?php
