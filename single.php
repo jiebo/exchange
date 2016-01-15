@@ -272,7 +272,7 @@ get_header(); ?>
                                         $accommodationstring = get_post_meta($postid, $accommodation_key, true);
 
                                         $accommodationarr = explode("|", $accommodationstring);
-                                        $numaccommodationrow = count($accommodationarr) / 4;
+                                        $numaccommodationrow = count($accommodationarr) / 3;
                                     ?>
                                     <div class="table-responsive">
                                         <table class="table">
