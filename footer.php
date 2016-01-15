@@ -35,7 +35,7 @@
                     <p style="line-height: 175%;" class="text-muted">
                         So the whole point of creating this was to catalogue my memories so I wouldn't forget my experience and to 
                         <em>maybe</em> help whoever stumbled onto this place. </p>
-                    <p class="text-muted"><br>Copyright &copy; 2015</p>
+                    <p class="text-muted"><br>Copyright &copy; <?php echo date("Y"); ?></p>
                 </div>
                 <div class="col-lg-6 col-lg-offset-1 col-md-6 col-md-offset-1">
                     <h3 class="row"><strong>Get in Touch</strong></h3>
