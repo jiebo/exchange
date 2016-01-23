@@ -70,8 +70,12 @@
 
         <!-- Bootstrap Core CSS -->
         <link href="http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
         <link href="<?php bloginfo('template_directory'); ?>/css/stylish-portfolio.min.css" rel="stylesheet">
+        <?php if(!is_home()) : ?>
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <?php else : ?>
+        <script src="http://use.fonticons.com/e2810944.js"></script>
+        <?php endif; ?>
         
         <?php if(is_single() || is_home()) : ?>
             <link href="<?php bloginfo('template_directory'); ?>/css/custom.min.css" rel="stylesheet">
@@ -96,8 +100,8 @@
     <div class="social-media-sidebar hidden-xs hidden-sm">
         <ul>
             <?php if(is_home()) : ?>
-                <li><a onclick="fbshare('https://www.facebook.com/dialog/feed?app_id=181914305480369&display=popup&link=http%3A%2F%2Feu-sep.com&redirect_uri=http%3A%2F%2Feu-sep.com');" href="javascript:void(0);" class="facebook-share"><span style="color: #FFF; font-weight: bold;">Share</span> <i class="fa fa-facebook text-primary"></i></a></li>
-                <li><a href="https://twitter.com/intent/tweet?text=To%20All%20Europe%20Exchangers%21&url=http%3A%2F%2Feu-sep.com" data-via="TiJieBo" target="_blank"><span style="color: #FFF; font-weight: bold;">Tweet</span> <i class="fa fa-twitter text-primary"></i></a></li>
+                <li><a onclick="fbshare('https://www.facebook.com/dialog/feed?app_id=181914305480369&display=popup&link=http%3A%2F%2Feu-sep.com&redirect_uri=http%3A%2F%2Feu-sep.com');" href="javascript:void(0);" class="facebook-share"><span style="color: #FFF; font-weight: bold;">Share</span> <i class="icon icon-facebook text-primary"></i></a></li>
+                <li><a href="https://twitter.com/intent/tweet?text=To%20All%20Europe%20Exchangers%21&url=http%3A%2F%2Feu-sep.com" data-via="TiJieBo" target="_blank"><span style="color: #FFF; font-weight: bold;">Tweet</span> <i class="icon icon-twitter text-primary"></i></a></li>
             <?php else : ?>
                 <li><a onclick="fbshare('https://www.facebook.com/dialog/feed?app_id=181914305480369&display=popup&link=http%3A%2F%2Feu-sep.com%2F<?php echo get_the_title(); ?>&redirect_uri=http%3A%2F%2Feu-sep.com%2F<?php echo get_the_title(); ?>')" href="javascript:void(0);" class="facebook-share"><span style="color: #FFF; font-weight: bold;">Share</span> <i class="fa fa-facebook text-primary"></i></a></li>
                 <li><a href="https://twitter.com/intent/tweet?text=To%20All%20Exchangers%21&url=http%3A%2F%2Feu-sep.com%2F<?php echo get_the_title(); ?>" data-via="TiJieBo" target="_blank"><span style="color: #FFF; font-weight: bold;">Tweet</span> <i class="fa fa-twitter text-primary"></i></a></li>

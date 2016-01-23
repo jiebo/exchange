@@ -17,10 +17,10 @@
 get_header(); ?>
 
     <!-- Navigation -->        
-    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="icon icon-bars"></i></a>
     <nav id="sidebar-wrapper">
         <ul class="sidebar-nav">
-            <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+            <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="icon icon-times"></i></a>
             <li class="sidebar-brand">
                 <a href="#top" onclick=$("#menu-close").click(); >Europe 2015</a>
             </li>
@@ -95,9 +95,9 @@ get_header(); ?>
                         ?>
                         <div class="col-xs-E-6 col-xs-12 col-md-3 col-sm-4">
                             <a href="<?php echo get_page_link($page -> ID); ?>" class="service-item">
-                                <span class="fa-stack fa-4x">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-<?php echo $page_icon; ?> fa-stack-1x text-primary"></i>
+                                <span class="icon-stack icon-4x">
+                                    <i class="icon icon-circle icon-stack-2x"></i>
+                                    <i class="icon icon-<?php echo $page_icon; ?> icon-stack-1x text-primary"></i>
                                 </span>
                                 <h4><strong><?php echo $page -> post_title; ; ?></strong></h4>
                                 <p><?php echo $page_subheading; ?></p>
@@ -135,6 +135,7 @@ get_header(); ?>
                             
                             foreach ($posts_array as $postid) {
                                
+                                // This doesn't work for ajax-load-more
                                 $thumbnail_array = get_post_meta($postid, $thumbnail_key);
                                 $thumbnail_url = $thumbnail_array[rand(0, count($thumbnail_array)-1)];
                         ?>
@@ -152,7 +153,7 @@ get_header(); ?>
                         <div id="ajax-city-display"></div>
                     </div>
                     <a id="ajax-button" class="btn btn-dark">View More Items</a>
-                    <span id="ajax-load-sm" class="fa fa-refresh fa-spin fa-4x"></span>
+                    <span id="ajax-load-sm" class="icon icon-refresh icon-spin icon-4x"></span>
                 </div>
             </div>
         </div>
@@ -160,7 +161,7 @@ get_header(); ?>
     
     <!-- Expense Guide -->
     <aside class="call-to-action bg-primary" style="position: relative;" id="expense">
-        <div class="loading-div" id="ajax-loading"><div class="align-center"><i class="fa fa-refresh fa-spin fa-5x"></i></div></div>
+        <div class="loading-div" id="ajax-loading"><div class="align-center"><i class="icon icon-refresh icon-spin icon-5x"></i></div></div>
         <div class="container ">
             <div class="col-lg-12 text-center centered">
                 <h2>Expenses</h2>

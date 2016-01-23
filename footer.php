@@ -45,7 +45,7 @@
                             <div class="col-lg-6 col-md-6 col-sm-5 col-xs-8">
                                 <div class="input-group">
                                     <input type="text" title="Name" class="form-control" id="contact-name">
-                                    <span class="input-group-addon"><i class="fa fa-user text-primary"></i></span>
+                                    <span class="input-group-addon"><i class="icon icon-user text-primary"></i></span>
                                 </div>
                             </div>
                         </div>
@@ -54,7 +54,7 @@
                             <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
                                 <div class="input-group">
                                     <input type="email" title="Email" class="form-control" id="contact-email" required>
-                                    <span class="input-group-addon"><i class="fa fa-envelope text-primary"></i></span>
+                                    <span class="input-group-addon"><i class="icon icon-envelope text-primary"></i></span>
                                 </div>
                             </div>
                         </div>
