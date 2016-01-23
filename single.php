@@ -160,7 +160,7 @@ get_header(); ?>
                                     <button class="btn btn-light less-padding btn-tooltip" data-toggle="tooltip" data-placement="top" title="Tap water is not potable">
                                         <span class="fa-stack">
                                             <i class="fa fa-tint fa-stack-1x"></i>
-                                            <i class="fa fa-ban fa-stack-2x"></i>
+                                            <i class="fa fa-ban fa-stack-2x text-danger"></i>
                                         </span>
                                     </button>                                
                                     <?php endif; ?>
