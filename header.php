@@ -74,7 +74,7 @@
         <?php if(!is_home()) : ?>
         <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
         <?php else : ?>
-        <script src="http://use.fonticons.com/e2810944.js"></script>
+        <script async defer src="http://use.fonticons.com/e2810944.js"></script>
         <?php endif; ?>
         
         <?php if(is_single() || is_home()) : ?>
