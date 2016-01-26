@@ -56,7 +56,7 @@ get_header(); ?>
                     font-size: 17.5px;  
                 }
             </style>
-            <a href="#about" class="btn btn-dark btn-lg">Discover More</a>
+            <a href="#travel" class="btn btn-dark btn-lg">Start Traveling</a>
         </div>
     </header>
 
@@ -118,7 +118,7 @@ get_header(); ?>
             <div class="row">
                 <div class="col-lg-10 centered text-center">
                     <h2>City Guide</h2>
-                    <hr class="small">
+                    <hr class="small" style="padding-bottom: 15px;">
                     <div class="row">
                         <?php 
                             /* Get all Primary post IDs */

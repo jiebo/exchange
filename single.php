@@ -383,7 +383,6 @@ get_header(); ?>
                 <div class="align-center"><i class="fa fa-refresh fa-spin fa-5x"></i></div>
                 <div id="map-canvas" style="height: 500px; display: block;"></div>
             </div>
-            <div class="modal-footer"></div>
         </div>
     </div>
 </div>
