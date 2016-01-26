@@ -10,12 +10,12 @@
 get_header(); ?>
 
 <!-- Navigation -->
-<a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+<a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="icon icon-bars"></i></a>
 <nav id="sidebar-wrapper">
     <ul class="sidebar-nav">
-        <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+        <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="icon icon-times"></i></a>
         <li class="sidebar-brand">
-            <a href="<?php echo home_url(); ?>/#travel"  onclick = $("#menu-close").click(); ><i class="fa fa-long-arrow-left"></i>&nbsp;&nbsp;Home</a>
+            <a href="<?php echo home_url(); ?>/#travel"  onclick = $("#menu-close").click(); ><i class="icon icon-long-arrow-left"></i>&nbsp;&nbsp;Home</a>
         </li>
         <?php 
         $post_sel_array = array (
@@ -128,7 +128,7 @@ get_header(); ?>
                                     <button class="btn btn-light less-padding btn-tooltip" data-toggle="tooltip" data-html="true" data-placement="top" title="<?php
                                     echo 'Min. Spending : ' . $vat_values[0];
                                     echo '</br>VAT Rate : ' . $vat_values[1];
-                                    ?>"><i class="fa fa-shopping-cart fa-lg"></i></button>
+                                    ?>"><i class="icon icon-shopping-cart icon-lg"></i></button>
                                     <button class="btn btn-light less-padding btn-tooltip" data-toggle="tooltip" data-placement="bottom" title="<?php
                                         switch ($moneyscale) :
                                             case(1): 
@@ -147,24 +147,24 @@ get_header(); ?>
                                     ?>">
                                     <?php
                                         for ($i = 0; $i < $moneyscale; $i++) {
-                                            echo '<i class="fa fa-usd"></i>';
+                                            echo '<i class="icon icon-usd"></i>';
                                         }
                                     ?>
                                     </button>
                                     <?php 
                                     if($water_boo) : ?>
                                     <button class="btn btn-light less-padding btn-tooltip" data-toggle="tooltip" data-placement="top" title="Tap water is potable">
-                                        <i class="fa fa-tint fa-lg"></i>
+                                        <i class="icon icon-tint icon-lg"></i>
                                     </button>
                                     <?php else : ?>
                                     <button class="btn btn-light less-padding btn-tooltip" data-toggle="tooltip" data-placement="top" title="Tap water is not potable">
-                                        <span class="fa-stack">
-                                            <i class="fa fa-tint fa-stack-1x"></i>
-                                            <i class="fa fa-ban fa-stack-2x text-danger"></i>
+                                        <span class="icon-stack">
+                                            <i class="icon icon-tint icon-stack-1x"></i>
+                                            <i class="icon icon-ban icon-stack-2x text-danger"></i>
                                         </span>
                                     </button>                                
                                     <?php endif; ?>
-                                <button style="display: none;" id="map-trigger" class="btn btn-light less-padding btn-tooltip hidden-xs hidden-sm" data-toggle="modal" data-target="#map"><i class="fa fa-map-pin fa-lg"></i></button>
+                                <button style="display: none;" id="map-trigger" class="btn btn-light less-padding btn-tooltip hidden-xs hidden-sm" data-toggle="modal" data-target="#map"><i class="icon icon-map-marker icon-lg"></i></button>
                                 </li>
                             </ul>
 
@@ -206,7 +206,7 @@ get_header(); ?>
                                                     echo "<td rowspan=\"".determineRowSpanValueDriver($i*4+$j, $postarr, 4)."\" style=\"border-left-style: none; \">";
                                                     if(!empty($postarr[$i*4+3])) {
                                                         echo "<a href=\"".$postarr[$i*4+3]."\" target=\"_blank\" >";
-                                                        echo '<i class="fa fa-external-link pull-right" style="line-height: 150%;"></i></a>';
+                                                        echo '<i class="icon icon-external-link pull-right" style="line-height: 150%;"></i></a>';
                                                     }
                                                     echo '</td>';
                                                 }
@@ -252,7 +252,7 @@ get_header(); ?>
                                                     <?php 
                                                     if(!empty($foodarr[$i*4+3])) {
                                                         echo "<a href=\"". $foodarr[$i*4+3]."\" target=\"_blank\">";?>
-                                                        <i class="fa fa-external-link pull-right" style="line-height: 150%"></i>
+                                                        <i class="icon icon-external-link pull-right" style="line-height: 150%"></i>
                                                         <?php echo "</a>";
                                                     }
                                                     ?>
@@ -294,7 +294,7 @@ get_header(); ?>
                                                 echo "<td>";
                                                 if(!empty($accommodationarr[$i*3+2])) {
                                                     echo "<a href=\"".$accommodationarr[$i*3+2]."\" target=\"_blank\" >";
-                                                    echo '<i class="fa fa-external-link pull-right" style="line-height: 150%;"></i></a>';
+                                                    echo '<i class="icon icon-external-link pull-right" style="line-height: 150%;"></i></a>';
                                                 }
                                                 echo '</td>';
                                                 echo '</tr>';
@@ -342,7 +342,7 @@ get_header(); ?>
                                                         echo "<td rowspan=\"".determineRowSpanValueDriver($i*4+$j, $transportarr, 4)."\">";
                                                         if(!empty($transportarr[$i*4+3])) {
                                                             echo "<a href=\"".$transportarr[$i*4+3]."\" target=\"_blank\" >";
-                                                            echo '<i class="fa fa-external-link pull-right" style="line-height: 150%;"></i></a>';
+                                                            echo '<i class="icon icon-external-link pull-right" style="line-height: 150%;"></i></a>';
                                                         }
                                                         echo '</td>';
                                                     }
@@ -380,7 +380,7 @@ get_header(); ?>
                 <h4 class="modal-title"><?php echo get_the_title(); ?></h4>
             </div>
             <div class="modal-body" style="width: 100%;">
-                <div class="align-center"><i class="fa fa-refresh fa-spin fa-5x"></i></div>
+                <div class="align-center"><i class="icon icon-refresh icon-spin icon-5x"></i></div>
                 <div id="map-canvas" style="height: 500px; display: block;"></div>
             </div>
         </div>

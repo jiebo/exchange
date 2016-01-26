@@ -42,10 +42,10 @@
                     <form action="<?php bloginfo('template_directory'); ?>/contact.php" class="form-horizontal" style="padding-top: 1em;" id="ajax-contact-footer" method="post">
                         <div class="form-group">
                             <label class="col-lg-3 col-md-3 col-sm-2 col-xs-2 control-label hidden-xs">Name</label>
-                            <div class="col-lg-6 col-md-6 col-sm-5 col-xs-8">
+                            <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
                                 <div class="input-group">
                                     <input type="text" title="Name" class="form-control" id="contact-name">
-                                    <span class="input-group-addon"><i class="icon icon-user text-primary"></i></span>
+                                    <span class="input-group-addon"><i class="icon icon-user text-primary" style="width: 14px;"></i></span>
                                 </div>
                             </div>
                         </div>
@@ -166,19 +166,19 @@
         $("#hide-all-button").hide();
         $(".social-media-sidebar").show();
         $("#panel1").slideDown('slow');
-        $("#toggle1 i").toggleClass("fa-caret-right").toggleClass("fa-caret-down");
+        $("#toggle1 i").toggleClass("icon-caret-right").toggleClass("icon-caret-down");
     });
     function triggerToggle(toggleIndex) {
         $("#panel" + toggleIndex).toggle('fast');
-        $("#toggle" + toggleIndex + " i").toggleClass("fa-caret-right").toggleClass("fa-caret-down");
+        $("#toggle" + toggleIndex + " i").toggleClass("icon-caret-right").toggleClass("icon-caret-down");
     }
     $("#show-all-button").click( function showAll() {
         $(".collapse-panel").show();
         $(".toggle-btn").toggle();
         var elements = document.getElementsByClassName("rotate");
         for(var i=0; i<elements.length; i++) {
-            if(elements[i].classList.contains("fa-caret-right")) {
-                $("#toggle" + (i+1) + " i").toggleClass("fa-caret-right").toggleClass("fa-caret-down");
+            if(elements[i].classList.contains("icon-caret-right")) {
+                $("#toggle" + (i+1) + " i").toggleClass("icon-caret-right").toggleClass("icon-caret-down");
             }
         }
     });
@@ -187,8 +187,8 @@
         $(".toggle-btn").toggle();
         var elements = document.getElementsByClassName("rotate");
         for(var i=0; i<elements.length; i++) {
-            if(elements[i].classList.contains("fa-caret-down")) {
-                $("#toggle" + (i+1) + " i").toggleClass("fa-caret-right").toggleClass("fa-caret-down");
+            if(elements[i].classList.contains("icon-caret-down")) {
+                $("#toggle" + (i+1) + " i").toggleClass("icon-caret-right").toggleClass("icon-caret-down");
             }
         }
     });
@@ -238,8 +238,8 @@
     }
     function toggleCheckBox(id) {
         id= ".categoryToggle" + id + " i";
-        $(id).toggleClass("fa-square-o");
-        $(id).toggleClass("fa-check-square-o");
+        $(id).toggleClass("icon-square-o");
+        $(id).toggleClass("icon-check-square-o");
     }
     $(".uncheck-all").click(function() {
         var elements = document.getElementsByClassName("category-added");

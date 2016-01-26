@@ -15,10 +15,10 @@
 get_header(); ?>
 
     <!-- Navigation -->
-    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="icon icon-bars"></i></a>
     <nav id="sidebar-wrapper">
         <ul class="sidebar-nav">
-            <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+            <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="icon icon-times"></i></a>
             <li class="sidebar-brand">
                 <a href="<?php echo home_url(); ?>"  onclick = $("#menu-close").click(); >Europe 2015</a>
             </li>
@@ -39,7 +39,7 @@ get_header(); ?>
             foreach( $pages_array as $page ) {
             ?>
             <li>
-                <a href="<?php echo get_page_link($page -> ID); ?>" onclick= $("#menu-close").click(); ><i class="fa fa-<?php echo get_post_meta($page -> ID, "Thumbnail", true) ?>"></i>&nbsp;&nbsp;<?php echo $page -> post_title; ?></a>
+                <a href="<?php echo get_page_link($page -> ID); ?>" onclick= $("#menu-close").click(); ><i class="icon icon-<?php echo get_post_meta($page -> ID, "Thumbnail", true) ?>"></i>&nbsp;&nbsp;<?php echo $page -> post_title; ?></a>
             </li>    
             <?php    
             }
@@ -79,7 +79,7 @@ get_header(); ?>
     <div class="container" style="padding-top: 100px;" >
         <article class="row">
             <div class="col-lg-8 centered">
-                <h1 class="post-title"><i class="fa fa-<?php echo $page_icon ?> fa-1x hidden-xs"></i> <?php echo $page_title; ?> <i class="fa fa-<?php echo $page_icon ?> fa-1x hidden-xs"></i></h1>
+                <h1 class="post-title"><i class="icon icon-<?php echo $page_icon ?> icon-1x hidden-xs"></i> <?php echo $page_title; ?> <i class="icon icon-<?php echo $page_icon ?> icon-1x hidden-xs"></i></h1>
                 <hr class="star-primary" style="margin: 50px auto;">
                 
                 <style>
@@ -121,7 +121,7 @@ get_header(); ?>
                                     }
                                 </style>
                                 <button class="btn btn-light less-padding uncheck-all">
-                                    Uncheck All <i class="fa fa-square-o"></i>
+                                    Uncheck All <i class="icon icon-square-o"></i>
                                 </button>
                             </li>
                         </ul>
@@ -131,7 +131,7 @@ get_header(); ?>
                                 foreach($essential_records as $record) {
                                 ?>
                                 <div class="col-md-4 col-sm-4">
-                                    <button class="btn btn-light btn-lg categoryToggle<?php echo $record; ?>" onclick="ajaxLoadPackingCategory('<?php echo $record; ?>');"><i class="fa fa-square-o"></i> <?php echo $record; ?></button>
+                                    <button class="btn btn-light btn-lg categoryToggle<?php echo $record; ?>" onclick="ajaxLoadPackingCategory('<?php echo $record; ?>');"><i class="icon icon-square-o"></i> <?php echo $record; ?></button>
                                 </div>
                                 <?php } ?>
                             </div>
@@ -140,7 +140,7 @@ get_header(); ?>
                                 foreach($good_to_have_records as $record) {
                                 ?>
                                 <div class="col-md-4 col-sm-4">
-                                    <button class="btn btn-light btn-lg categoryToggle<?php echo $record; ?>" onclick="ajaxLoadPackingCategory('<?php echo $record; ?>');"><i class="fa fa-square-o"></i> <?php echo $record; ?></button>
+                                    <button class="btn btn-light btn-lg categoryToggle<?php echo $record; ?>" onclick="ajaxLoadPackingCategory('<?php echo $record; ?>');"><i class="icon icon-square-o"></i> <?php echo $record; ?></button>
                                 </div>
                                 <?php } ?>
 
@@ -150,7 +150,7 @@ get_header(); ?>
                                 foreach($depends_records as $record) {
                                 ?>
                                 <div class="col-md-4 col-sm-4">
-                                    <button class="btn btn-light btn-lg categoryToggle<?php echo $record; ?>" onclick="ajaxLoadPackingCategory('<?php echo $record; ?>');"><i class="fa fa-square-o"></i> <?php echo $record; ?></button>
+                                    <button class="btn btn-light btn-lg categoryToggle<?php echo $record; ?>" onclick="ajaxLoadPackingCategory('<?php echo $record; ?>');"><i class="icon icon-square-o"></i> <?php echo $record; ?></button>
                                 </div>
                                 <?php } ?>
 
@@ -169,7 +169,7 @@ get_header(); ?>
                                 <tbody id="packing-list-container"></tbody>
                             </table>
                         </div>
-                        <button style="margin: 20px 5px; cursor: not-allowed;" type="submit" class="btn btn-default pull-right row disabled" onclick=""><i class="fa fa-download"></i> Export</button>
+                        <button style="margin: 20px 5px; cursor: not-allowed;" type="submit" class="btn btn-default pull-right row disabled" onclick=""><i class="icon icon-download"></i> Export</button>
                     </div>
                 </form>
             </div>

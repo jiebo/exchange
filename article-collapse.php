@@ -15,10 +15,10 @@
 get_header(); ?>
 
     <!-- Navigation -->
-    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="icon icon-bars"></i></a>
     <nav id="sidebar-wrapper">
         <ul class="sidebar-nav">
-            <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+            <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="icon icon-times"></i></a>
             <li class="sidebar-brand">
                 <a href="<?php echo home_url(); ?>"  onclick = $("#menu-close").click(); >Europe 2015</a>
             </li>
@@ -39,7 +39,7 @@ get_header(); ?>
             foreach( $pages_array as $page ) {
             ?>
             <li>
-                <a href="<?php echo get_page_link($page -> ID); ?>" onclick= $("#menu-close").click(); ><i class="fa fa-<?php echo get_post_meta($page -> ID, "Thumbnail", true) ?>"></i>&nbsp;&nbsp;<?php echo $page -> post_title; ?></a>
+                <a href="<?php echo get_page_link($page -> ID); ?>" onclick= $("#menu-close").click(); ><i class="icon icon-<?php echo get_post_meta($page -> ID, "Thumbnail", true) ?>"></i>&nbsp;&nbsp;<?php echo $page -> post_title; ?></a>
             </li>    
             <?php    
             }
@@ -69,7 +69,7 @@ get_header(); ?>
     <div class="container" style="padding-top: 100px;" >
         <article class="row">
             <div class="col-lg-8 centered">
-                <h1 class="post-title"><i class="fa fa-<?php echo $page_icon ?> hidden-xs"></i> <?php echo $page_title; ?> <i class="fa fa-<?php echo $page_icon ?> hidden-xs"></i></h1>
+                <h1 class="post-title"><i class="icon icon-<?php echo $page_icon ?> hidden-xs"></i> <?php echo $page_title; ?> <i class="icon icon-<?php echo $page_icon ?> hidden-xs"></i></h1>
                 <hr class="star-primary" style="margin: 50px auto;">
                 
                 <style>
@@ -114,9 +114,9 @@ get_header(); ?>
                         // Is the list ordered or unordered?
                         if( $order ) : 
                         ?>
-                        <td><?php echo $count.'. '.$factor_header;?><i style="line-height: 150%;" class="fa fa-caret-right pull-right rotate"></i></td>
+                        <td><?php echo $count.'. '.$factor_header;?><i style="line-height: 150%;" class="icon icon-caret-right pull-right rotate"></i></td>
                         <?php else : ?>
-                        <td><?php echo $factor_header;?><i style="line-height: 150%;" class="fa fa-caret-right pull-right rotate"></i></td>
+                        <td><?php echo $factor_header;?><i style="line-height: 150%;" class="icon icon-caret-right pull-right rotate"></i></td>
                         <?php endif; ?>
                         </tr>
                         <tr>
@@ -146,8 +146,8 @@ get_header(); ?>
                         }
                     </style>
                 </div>
-                <button id="show-all-button" class="btn btn-default pull-right toggle-btn"><i class="fa fa-eye"></i> Show All</button>
-                <button id="hide-all-button" class="btn btn-default pull-right toggle-btn"><i class="fa fa-eye-slash"></i> Hide All</button>
+                <button id="show-all-button" class="btn btn-default pull-right toggle-btn"><i class="icon icon-eye"></i> Show All</button>
+                <button id="hide-all-button" class="btn btn-default pull-right toggle-btn"><i class="icon icon-eye-slash"></i> Hide All</button>
             </div>
         </article>
         <hr>

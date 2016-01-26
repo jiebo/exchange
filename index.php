@@ -22,7 +22,7 @@ get_header(); ?>
         <ul class="sidebar-nav">
             <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="icon icon-times"></i></a>
             <li class="sidebar-brand">
-                <a href="#top" onclick=$("#menu-close").click(); >Europe 2015</a>
+                <a href="#top" onclick=$("#menu-close").click(); >Europe Exchange</a>
             </li>
             <li>
                 <a href="#top" onclick=$("#menu-close").click(); >Home</a>
