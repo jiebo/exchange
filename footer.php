@@ -124,7 +124,7 @@
     <!-- HighCharts component -->
     <script defer src="<?php bloginfo('template_directory'); ?>/highcharts/highcharts.js" charset="utf-8"></script>
 
-    <script src="<?php bloginfo('template_directory'); ?>/exchange-expense-chart.php" type="text/javascript"></script>
+    <script defer async src="<?php bloginfo('template_directory'); ?>/js/exchange-expense-chart.js" type="text/javascript"></script>
     <script defer src="<?php bloginfo('template_directory'); ?>/js/home.min.js" type="text/javascript"></script>
     <?php endif; ?>
 
