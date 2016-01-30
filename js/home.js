@@ -11,6 +11,16 @@ $(document).ready( function() {
     });
     $("#ajax-loading").hide();
     $("#ajax-load-sm").hide();
+    if(document.createStyleSheet) {
+        document.createStyleSheet(src1);
+        document.createStyleSheet(src2);
+    } else {
+         $("head").append($("<link rel='stylesheet' href='" + src1 + "' type='text/css' media='screen' />"));
+         $("head").append($("<link rel='stylesheet' href='" + src2 + "' type='text/css' media='screen' />"));
+         $("head").append($("<link rel='stylesheet' href='" + src3 + "' type='text/css' media='screen' />"));
+    }
+    $("head").append(src1);
+    $("head").append(src2);
 });
 
 // Script for ajax loading of City Guide thumbnails
