@@ -73,16 +73,10 @@
         <link href="<?php bloginfo('template_directory'); ?>/css/stylish-portfolio.min.css" rel="stylesheet">
         <script async defer src="http://use.fonticons.com/e2810944.js"></script>
         
-        <?php if(is_single() || is_home()) : ?>
+        <?php if(is_single()): ?>
             <link href="<?php bloginfo('template_directory'); ?>/css/custom.min.css" rel="stylesheet">
         <?php elseif(is_page()) : ?>
             <link href="<?php bloginfo('template_directory'); ?>/css/article.min.css" rel="stylesheet">
-        <?php endif; ?>
-        
-        <?php 
-        if(is_home()) : ?>
-            <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/owl-carousel/owl.carousel.min.css">
-            <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/owl-carousel/owl.theme.css">
         <?php endif; ?>
         
         <!--[if lt IE 9]>

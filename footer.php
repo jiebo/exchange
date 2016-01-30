@@ -118,6 +118,9 @@
         var loadCity = "<?php bloginfo('template_directory'); ?>/ajax-load-more.php";
         var loadExpense = "<?php bloginfo('template_directory'); ?>/ajax-load-expense.php";
         var sendMsg  = "<?php bloginfo("template_directory"); ?>/contact.php";
+        var src1 = "<?php bloginfo('template_directory'); ?>/owl-carousel/owl.carousel.min.css";
+        var src2 = "<?php bloginfo('template_directory'); ?>/owl-carousel/owl.theme.css";
+        var src3 = "<?php bloginfo('template_directory'); ?>/css/custom.min.css";
     </script>
     <!-- Javascript for Owl Carousel -->
     <script defer src="<?php bloginfo('template_directory'); ?>/owl-carousel/owl.carousel.min.js"></script>
