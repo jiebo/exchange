@@ -30,7 +30,7 @@
                 <hr class="small">
                 <div class="col-lg-5 col-md-5 hidden-sm hidden-xs">
                     <h3><strong>About Me</strong></h3>
-                    <p style="line-height: 175%; padding-top: 1em;" class="text-muted">I am a Year 4 Computing student at NUS and I went for my Student Exchange in 2015 (Y3S2)
+                    <p style="line-height: 175%; padding-top: 1em;" class="text-muted">I am a Year 4 Computing student at NUS (<a href="http://comp.nus.edu.sg/~jiebo"><em>my NUS page</em></a>) and I went for my Student Exchange in 2015
                         at Stockholm University.</p>
                     <p style="line-height: 175%;" class="text-muted">
                         So the whole point of creating this was to catalogue my memories so I wouldn't forget my experience and to 
