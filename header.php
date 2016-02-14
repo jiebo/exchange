@@ -21,9 +21,9 @@
 	<meta name="description" content="An exchange guide that houses my Stockholm Exchange experience">
 	<meta name="author" content="Ti Jie Bo">
     <?php  if(!is_home() && !is_404()) {
-        echo '<title>'.get_the_title(get_the_ID()).' - Europe SEP</title>';
+        echo '<title>'.get_the_title(get_the_ID()).' - Europe Exchange</title>';
     } else {
-        echo '<title>Europe SEP</title>';
+        echo '<title>Europe Exchange</title>';
     } ?>
 	
 	<!-- Facebook Open Graph Meta -->

@@ -45,7 +45,7 @@ get_header(); ?>
     <!-- Header -->
     <header id="top" class="header">
         <div class="text-vertical-center">
-            <h1>Europe SEP</h1>
+            <h1>Europe Exchange</h1>
             <div class="blockquotes">
                 <h3><em>“Traveling – it leaves you speechless, then turns you into a storyteller.”</em></h3>
             </div>
