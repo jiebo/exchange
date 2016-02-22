@@ -149,13 +149,19 @@
     });
 
     // Make social-media-sidebar appear after scroll
+    var boo = true;
     $(document).scroll(function() {
-        var div = $("header").height();
+        var header = $("header").height();
         var win = $(window).scrollTop();
-        if(div -75 < win) {
+        var guide = $("#predeparture").height();
+        if(header -75 < win) {
             $(".social-media-sidebar").fadeIn('fast');
         } else {
             $(".social-media-sidebar").fadeOut('fast');
+        }
+        if(guide < win && boo) {
+            $("#ajax-button").trigger("click");
+            boo = false;
         }
     });
     </script>
