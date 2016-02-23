@@ -82,32 +82,11 @@ get_header(); ?>
                 <h1 class="post-title"><i class="icon icon-<?php echo $page_icon ?> icon-1x hidden-xs"></i> <?php echo $page_title; ?> <i class="icon icon-<?php echo $page_icon ?> icon-1x hidden-xs"></i></h1>
                 <hr class="star-primary" style="margin: 50px auto;">
                 
-                <style>
-                    .post-title {
-                        text-transform: uppercase;
-                        font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-                        font-weight: 700;
-                        text-align: center;
-                        color: #2C3E50;
-                    }
-                    h1.post-title {
-                        font-size: 3em;
-                    }
-                </style>
+                <style>.post-title{text-transform:uppercase;font-family:Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:700;text-align:center;color:#2C3E50}h1.post-title{font-size:3em}</style>
                 <p><?php echo $page_intro; ?></p>
                 <form onsubmit="return false;">
                     <div class="tabs">
-                        <style>
-                            .tabs {
-                                font-size: 18px;
-                            }
-                            .tabs a {
-                                text-decoration: none;
-                            }
-                            .tab-content {
-                                padding: 10px;
-                            }
-                        </style>
+                        <style>.tabs{font-size:18px}.tabs a{text-decoration:none}.tab-content{padding:10px}</style>
                         <ul class="nav nav-tabs" role="tablist">	<!-- Tab Navigation -->
                             <li class="active"><a href="#essential" data-toggle="tab">Essential</a></li>
                             <li ><a href="#good-to-have" data-toggle="tab">Good to have</a></li>
@@ -115,10 +94,8 @@ get_header(); ?>
                             <li ><a href="#showall" data-toggle="tab">Show All</a></li>
                             <li class="pull-right" style="line-height: 225%;">
                                 <style>
-                                    /* Adjust the left/right padding of the fa icons in posts */
-                                    .less-padding {
-                                        padding: 6px 3px;
-                                    }
+/* Adjust the left/right padding of the fa icons in posts */
+.less-padding{padding:6px 3px}
                                 </style>
                                 <button class="btn btn-light less-padding uncheck-all">
                                     Uncheck All <i class="icon icon-square-o"></i>
@@ -161,11 +138,7 @@ get_header(); ?>
                         </div>
                         <div class="row table-responsive" style="margin-top: 25px;">
                             <table class="table-striped table-hover" style="width: 100%;">
-                                <style>
-                                    .category-added td {
-                                            line-height: 300%;
-                                    }
-                                </style>
+                                <style>.category-added td{line-height:300%}</style>
                                 <tbody id="packing-list-container"></tbody>
                             </table>
                         </div>

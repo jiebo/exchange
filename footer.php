@@ -72,12 +72,7 @@
                                 <button type="submit" class="btn btn-primary hidden-sm">Send</button>
                             </div>
                         </div>
-                        <style>
-                            .form-group.required .control-label:after {
-                                content:"*";
-                                color:red;
-                            }
-                        </style>
+                        <style>.form-group.required .control-label:after{content:"*";color:red}</style>
                     </form>
                 </div>
                 <div class="col-lg-5 col-md-5 visible-sm visible-xs">
@@ -131,43 +126,24 @@
 
     <!-- JavaScript -->
     <script>
-    // Closes the sidebar menu
-    $("#menu-close").click(function(e) {
-        e.preventDefault();
-        $("#sidebar-wrapper").toggleClass("active");
-    });
+// Closes the sidebar menu
+$("#menu-close").click(function(e){e.preventDefault(),$("#sidebar-wrapper").toggleClass("active")});
 
-    // Opens the sidebar menu
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#sidebar-wrapper").toggleClass("active");
-    });
+// Opens the sidebar menu
+$("#menu-toggle").click(function(e){e.preventDefault(),$("#sidebar-wrapper").toggleClass("active")});
 
-    // Tooltip
-    $(function () {
-        $('[data-toggle="tooltip"]').tooltip();
-    });
-
-    // Make social-media-sidebar appear after scroll
-    var boo = true;
-    $(document).scroll(function() {
-        var header = $("header").height();
-        var win = $(window).scrollTop();
-        var guide = $("#predeparture").height();
-        if(header -75 < win) {
-            $(".social-media-sidebar").fadeIn('fast');
-        } else {
-            $(".social-media-sidebar").fadeOut('fast');
-        }
-        if(guide < win && boo) {
-            $("#ajax-button").trigger("click");
-            boo = false;
-        }
-    });
+// Tooltip
+$(function(){$('[data-toggle="tooltip"]').tooltip()});
+    
+// Make social-media-sidebar appear after scroll
+var boo=!0;$(document).scroll(function(){var a=$("header").height(),e=$(window).scrollTop(),o=$("#predeparture").height();e>a-75?$(".social-media-sidebar").fadeIn("fast"):$(".social-media-sidebar").fadeOut("fast"),e>o&&boo&&($("#ajax-button").trigger("click"),boo=!1)});
     </script>
 <?php if(is_page_template('article-collapse.php')): ?>
     <!-- Scripts for article-collapse -->
     <script>
+function triggerToggle(t){$("#panel"+t).toggle("fast"),$("#toggle"+t+" i").toggleClass("icon-caret-right").toggleClass("icon-caret-down")}$(document).ready(function(){$(".collapse-panel").hide(),$("#hide-all-button").hide(),$(".social-media-sidebar").show(),$("#panel1").slideDown("slow"),$("#toggle1 i").toggleClass("icon-caret-right").toggleClass("icon-caret-down")}),$("#show-all-button").click(function(){$(".collapse-panel").show(),$(".toggle-btn").toggle();for(var t=document.getElementsByClassName("rotate"),e=0;e<t.length;e++)t[e].classList.contains("icon-caret-right")&&$("#toggle"+(e+1)+" i").toggleClass("icon-caret-right").toggleClass("icon-caret-down")}),$("#hide-all-button").click(function(){$(".collapse-panel").hide(),$(".toggle-btn").toggle();for(var t=document.getElementsByClassName("rotate"),e=0;e<t.length;e++)t[e].classList.contains("icon-caret-down")&&$("#toggle"+(e+1)+" i").toggleClass("icon-caret-right").toggleClass("icon-caret-down")});
+</script>
+<?php /*
     $(document).ready(function() {
         $(".collapse-panel").hide();
         $("#hide-all-button").hide();
@@ -199,7 +175,7 @@
             }
         }
     });
-    </script>
+*/ ?>
 <?php elseif(is_page_template('article-tabs.php')): ?>
     <!-- Scripts for article-tabs -->
     <script>

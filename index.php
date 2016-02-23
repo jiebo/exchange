@@ -49,13 +49,7 @@ get_header(); ?>
             <div class="blockquotes">
                 <h3><em>“Traveling – it leaves you speechless, then turns you into a storyteller.”</em></h3>
             </div>
-            <style>
-                .blockquotes {
-                    padding: 10px 20px;
-                    margin: 0px 0px 20px;
-                    font-size: 17.5px;  
-                }
-            </style>
+            <style>.blockquotes{padding:10px 20px;margin:0 0 20px;font-size:17.5px}</style>
             <a href="#travel" class="btn btn-dark btn-lg">Start Traveling</a>
         </div>
     </header>
@@ -168,6 +162,7 @@ get_header(); ?>
                 <hr class="small">
                 <div id="swipe-div" class="owl-carousel">
                     <div class="this-div-is-for-the-carousel row">
+                    <style>#swipe-div h3 a{color:#fff}#swipe-div h3 a:hover{text-decoration:none;font-style:italic}</style>
                         <div id="ajax-expense-display">
                             <h3>City</h3>
                             <form class="form-horizontal col-lg-6 col-lg-offset-1 col-md-8 col-sm-8" style="font-size: 18px;"> 

@@ -72,19 +72,7 @@ get_header(); ?>
                 <h1 class="post-title"><i class="icon icon-<?php echo $page_icon ?> hidden-xs"></i> <?php echo $page_title; ?> <i class="icon icon-<?php echo $page_icon ?> hidden-xs"></i></h1>
                 <hr class="star-primary" style="margin: 50px auto;">
                 
-                <style>
-                    .post-title {
-                        text-transform: uppercase;
-                        font-family: Source Sans Pro,"Helvetica Neue",Helvetica,Arial,sans-serif;
-                        font-weight: 700;
-                        text-align: center;
-                        color: #2C3E50;
-                        font-size: 3.5em;
-                    }
-                    h1.post-title i {
-                        font-size: 0.9em;
-                    }
-                </style>
+                <style>.post-title{text-transform:uppercase;font-family:Source Sans Pro,"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:700;text-align:center;color:#2C3E50;font-size:3.5em}h1.post-title i{font-size:.9em}</style>
                 <p><?php echo $page_intro; ?></p>
                 <div class="table-responsive">
                     <table class="table table-striped">
@@ -103,7 +91,7 @@ get_header(); ?>
                         if( count($factorarr) < 2 ) :
                     ?>
                         <tr>
-                                <td><?php echo $factor_header; ?></td>
+                            <td><?php echo $factor_header; ?></td>
                         </tr>
                         <tr></tr>
                     <?php 
@@ -134,17 +122,7 @@ get_header(); ?>
                     }
                         ?>
                     </table>
-                    <style>
-                        .collapse-panel {
-                            font-size: 18px;
-                        }
-                        .collapse-panel li {
-                            line-height: 200%;
-                        }
-                        .toggleRow:hover {
-                            cursor: pointer;
-                        }
-                    </style>
+                    <style>.collapse-panel{font-size:18px}.collapse-panel li{line-height:200%}.toggleRow:hover{cursor:pointer}</style>
                 </div>
                 <button id="show-all-button" class="btn btn-default pull-right toggle-btn"><i class="icon icon-eye"></i> Show All</button>
                 <button id="hide-all-button" class="btn btn-default pull-right toggle-btn"><i class="icon icon-eye-slash"></i> Hide All</button>

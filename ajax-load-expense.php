@@ -79,7 +79,7 @@ $est_currency  = (float) $est_currency * $currency_rate / $city_meta['days'];
 
 // Build Result String
 $display_string = "";
-$display_string .= " <h3>$city_meta[city_name]</h3>";
+$display_string .= " <h3><a href=\"".get_home_url()."/".$city_meta[city_name]."\">$city_meta[city_name]</a></h3>";
 $display_string .= " <form class=\"form-horizontal col-lg-6 col-lg-offset-1 col-md-8 col-sm-8\" style=\"font-size: 18px;\">"; 
 $display_string .= " <div class=\"form-group\">";
 $display_string .= " <label class=\"col-sm-6 control-label\">Average Meal</label> ";

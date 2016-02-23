@@ -117,7 +117,9 @@
             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
         </ul>
     </div>
-    <style>
+    <style>.social-media-sidebar{position:fixed;top:50%;left:0;z-index:9999;display:none}.social-media-sidebar ul{transform:translate(-72px,0);padding:0}.social-media-sidebar a:hover{text-decoration:none}.social-media-sidebar ul li{color:#FFF;display:block;width:120px;background:rgba(0,0,0,.36);text-align:right;padding:10px;margin:5px;font-size:1.25em;-webkit-border-radius:0 30px 30px 0;-moz-border-radius:0 30px 30px 0;border-radius:0 30px 30px 0;-webkit-transition:-webkit-transform .5s ease-in;-moz-transition:-moz-transform .3s ease-in;-o-transition:-o-transform .5s ease-in;transition:transform .3s ease-in;z-index:-1}.social-media-sidebar ul li:focus,.social-media-sidebar ul li:hover{-webkit-transform:translate(60px,0);-moz-transform:translate(60px,0);-ms-transform:translate(60px,0);-o-transform:translate(60px,0);transform:translate(60px,0);-webkit-transition:-webkit-transform .3s ease-in;-moz-transition:-moz-transform .3s ease-in;-o-transition:-o-transform .3s ease-in;transition:transform .3s ease-in;z-index:99}.social-media-sidebar ul li i{margin-left:10px;width:2em;height:2em;padding:.5em;font-size:1em;background:#FFF;-webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%}</style>
+    <?php 
+    /*
     .social-media-sidebar {
         position: fixed;
         top: 50%;
@@ -144,7 +146,7 @@
         -webkit-border-radius: 0 30px 30px 0;
         -moz-border-radius: 0 30px 30px 0;
         border-radius: 0 30px 30px 0;
-        -webkit-transition: -webkit-transform 0.5s ease-in; /* Changed here */ 
+        -webkit-transition: -webkit-transform 0.5s ease-in; /* Changed here  
            -moz-transition: -moz-transform 0.3s ease-in;
              -o-transition: -o-transform 0.5s ease-in;
                 transition: transform 0.3s ease-in;
@@ -157,16 +159,16 @@
             -ms-transform: translate(60px, 0);
              -o-transform: translate(60px, 0);
                 transform: translate(60px, 0);
-        -webkit-transition: -webkit-transform 0.3s ease-in; /* Changed here */ 
+        -webkit-transition: -webkit-transform 0.3s ease-in; /* Changed here  
            -moz-transition: -moz-transform 0.3s ease-in;
              -o-transition: -o-transform 0.3s ease-in;
                 transition: transform 0.3s ease-in;
                 z-index: 99;
     }
     .social-media-sidebar ul li i {
-        margin-left: 10px; /* Margin between <i> and <span> */
-        width: 2em;        /* Size of the white circle of i */
-        height: 2em;       /* Size of the white circle of i */   
+        margin-left: 10px; /* Margin between <i> and <span> 
+        width: 2em;        /* Size of the white circle of i 
+        height: 2em;       /* Size of the white circle of i *  
         padding: 0.5em;
         font-size: 1em;
         background: #FFF;
@@ -174,4 +176,5 @@
         -moz-border-radius: 50%;
         border-radius: 50%;
     }
-    </style>
+     */
+    ?>

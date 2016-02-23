@@ -93,14 +93,7 @@ get_header(); ?>
             <div class="post-photo-location hidden-xs" itemprop="contentLocation">
                 <p><em><strong><?php echo get_post_meta($postid, $photo_location, true) ; ?></strong></em></p>
             </div>
-            <style>
-                .post-photo-location {
-                    position: absolute;
-                    bottom: 0%;
-                    right: 2.5%;
-                    color: #FFF;
-                }
-            </style>
+            <style>.post-photo-location{position:absolute;bottom:0;right:2.5%;color:#FFF}</style>
         </header>
 
         <!-- Post Content -->
@@ -120,10 +113,8 @@ get_header(); ?>
                                 <!-- All pull right elements are here -->
                                 <li class="pull-right" style="line-height: 225%;">
                                 <style>
-                                    /* Adjust the left/right padding of the fa icons in posts */
-                                    .less-padding {
-                                        padding: 6px 8px;
-                                    }
+/* Adjust the left/right padding of the fa icons in posts */
+.less-padding{padding:6px 8px}
                                 </style>
                                     <button class="btn btn-light less-padding btn-tooltip" data-toggle="tooltip" data-html="true" data-placement="top" title="<?php
                                     echo 'Min. Spending : ' . $vat_values[0];
