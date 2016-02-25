@@ -39,7 +39,7 @@
                 </div>
                 <div class="col-lg-6 col-lg-offset-1 col-md-6 col-md-offset-1">
                     <h3 class="row"><strong>Get in Touch</strong></h3>
-                    <form action="<?php bloginfo('template_directory'); ?>/contact.php" class="form-horizontal" style="padding-top: 1em;" id="ajax-contact-footer" method="post">
+                    <form action="<?php bloginfo('template_directory'); ?>/contact.php" class="form-horizontal" style="padding-top: 1em;" id="ajax-contact-footer" method="POST">
                         <div class="form-group">
                             <label class="col-lg-3 col-md-3 col-sm-2 col-xs-2 control-label hidden-xs">Name</label>
                             <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
@@ -106,23 +106,23 @@
 <script src="http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.5/bootstrap.min.js"></script>
         
 <?php if(is_single()) : ?>
-    <script defer src="https://maps.googleapis.com/maps/api/js?v=3"></script>
-    <script async defer src="<?php bloginfo('template_directory'); ?>/js/maps.min.js" type="text/javascript" ></script>  
+<script defer src="https://maps.googleapis.com/maps/api/js?v=3"></script>
+<script async defer src="<?php bloginfo('template_directory'); ?>/js/maps.min.js" type="text/javascript" ></script>  
 <?php elseif(is_home()) : ?>
-    <script>
-        var loadCity = "<?php bloginfo('template_directory'); ?>/ajax-load-more.php";
-        var loadExpense = "<?php bloginfo('template_directory'); ?>/ajax-load-expense.php";
-        var sendMsg  = "<?php bloginfo("template_directory"); ?>/contact.php";
-        var src2 = "<?php bloginfo('template_directory'); ?>/owl-carousel/owl.theme.css";
-    </script>
-    <!-- Javascript for Owl Carousel -->
-    <script defer src="<?php bloginfo('template_directory'); ?>/owl-carousel/owl.carousel.min.js"></script>
-    <!-- HighCharts component -->
-    <script defer src="<?php bloginfo('template_directory'); ?>/highcharts/highcharts.js" charset="utf-8"></script>
+<script>
+    var loadCity = "<?php bloginfo('template_directory'); ?>/ajax-load-more.php";
+    var loadExpense = "<?php bloginfo('template_directory'); ?>/ajax-load-expense.php";
+    var sendMsg  = "<?php bloginfo("template_directory"); ?>/contact.php";
+    var src2 = "<?php bloginfo('template_directory'); ?>/owl-carousel/owl.theme.css";
+</script>
+<!-- Javascript for Owl Carousel -->
+<script defer src="<?php bloginfo('template_directory'); ?>/owl-carousel/owl.carousel.min.js"></script>
+<!-- HighCharts component -->
+<script defer src="<?php bloginfo('template_directory'); ?>/highcharts/highcharts.js" charset="utf-8"></script>
 
-    <script defer async src="<?php bloginfo('template_directory'); ?>/js/exchange-expense-chart.js" type="text/javascript"></script>
-    <script defer src="<?php bloginfo('template_directory'); ?>/js/home.min.js" type="text/javascript"></script>
-    <?php endif; ?>
+<script defer async src="<?php bloginfo('template_directory'); ?>/js/exchange-expense-chart.js" type="text/javascript"></script>
+<script defer src="<?php bloginfo('template_directory'); ?>/js/home.min.js" type="text/javascript"></script>
+<?php endif; ?>
 
     <!-- JavaScript -->
     <script>
@@ -177,8 +177,9 @@ function triggerToggle(t){$("#panel"+t).toggle("fast"),$("#toggle"+t+" i").toggl
     });
 */ ?>
 <?php elseif(is_page_template('article-tabs.php')): ?>
+<script>function ajaxLoadPackingCategory(o){var e=document.getElementById(o);return null!==e?($("#"+o).remove(),void toggleCheckBox(o)):($(document).ajaxStart(function(){$(document.body).css({cursor:"wait"}),$(".nav-tabs button").css({cursor:"wait"}),$(".tab-content button").css({cursor:"wait"})}),$.ajax({url:"<?php bloginfo('template_directory'); ?>/ajax-load-packing-list.php",type:"GET",data:{Category:o},dataType:"html"}).done(function(e){$("#packing-list-container").prepend(e),toggleCheckBox(o)}).fail(function(){alert("error")}),void $(document).ajaxComplete(function(){$(document.body).css({cursor:"default"}),$(".nav-tabs button").css({cursor:"pointer"}),$(".tab-content button").css({cursor:"pointer"})}))}function toggleCheckBox(o){o=".categoryToggle"+o+" i",$(o).toggleClass("icon-square-o"),$(o).toggleClass("icon-check-square-o")}$(document).ready(function(){var o=$("#essential").clone(),e=$("#depends").clone(),t=$("#good-to-have").clone();$("#showall").html(o).append(t).append(e),ajaxLoadPackingCategory("Day-to-day"),$(".social-media-sidebar").show()}),$(".uncheck-all").click(function(){for(var o=document.getElementsByClassName("category-added"),e=0;e<o.length;e++)toggleCheckBox(o[e].id);$(".category-added").remove()});</script>
+<?php /*
     <!-- Scripts for article-tabs -->
-    <script>
     $(document).ready(function() {
         var $essential_div = $("#essential").clone();
         var $depends_div = $("#depends").clone();
@@ -231,10 +232,10 @@ function triggerToggle(t){$("#panel"+t).toggle("fast"),$("#toggle"+t+" i").toggl
         }
         $(".category-added").remove();
     });
-
-    </script>
+*/ ?>
 <?php  elseif(is_single()) : ?>
-    <script>
+<script>var locations;$(document).ready(function(){$.ajax({method:"GET",contentType:"application/json",url:'<?php bloginfo("template_directory"); ?>/ajax-markers.php',dataType:"json",data:{Name:"<?php echo get_the_ID(); ?>"}}).done(function(t){locations=t,$("#map-trigger").show(0)}).fail(function(){$("#map-trigger").hide()})}),$(window).resize(function(){var t,e;if($(window).width()<751)for(t=document.getElementsByClassName("btn-tooltip"),e=0;e<t.length;e++)t[e].setAttribute("data-trigger","click");else for(t=document.getElementsByClassName("btn-tooltip"),e=0;e<t.length;e++)t[e].setAttribute("data-trigger","hover")});</script>
+<?php /*
     var locations;
     $(document).ready(function() {
       $.ajax({
@@ -264,8 +265,8 @@ function triggerToggle(t){$("#panel"+t).toggle("fast"),$("#toggle"+t+" i").toggl
         for( i=0; i<list.length; i++ ) 
             list[i].setAttribute('data-trigger', 'hover');
     }
-});
-    </script>
+});*/
+?>
 <?php endif; ?>
 <?php wp_footer(); ?>
 </body>

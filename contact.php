@@ -9,7 +9,7 @@
         $message = trim($_POST["Message"]);
 
         // Set the recipient email address.
-        $recipient = "tijiebo@hotmail.com";
+        $recipient = "tijiebo@gmail.com";
 
         // Set the email subject.
         $subject = "New message from Exchange Blog";
