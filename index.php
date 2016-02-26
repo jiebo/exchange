@@ -201,16 +201,9 @@ get_header(); ?>
                                 <div class="btn-group pull-right dropup">     <!-- Button dropdown for Select City -->
                                     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">City Selector &nbsp; <span class="caret"></span>                        </button>
                                     <ul class="dropdown-menu scrollable-menu">
-                                    <?php
-                                    
-                                        foreach ( $city_array as $city ) {
-
-                                    ?>
+                                    <?php foreach ( $city_array as $city ) { ?>
                                         <li><a href="javascript:void(0);" onclick="ajaxLoadCityExpense('<?php echo $city; ?>');"><?php echo $city; ?></a></li>
-
-                                    <?php
-                                        }
-                                    ?>
+                                    <?php } ?>
                                     </ul>
                                 </div>
                             </form>  
