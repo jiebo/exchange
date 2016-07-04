@@ -241,7 +241,7 @@ get_header(); ?>
                                                 ?>
                                                     <td>
                                                     <?php 
-                                                    if(!empty($foodarr[$i*4+3])) {
+                                                    if(!empty($foodarr[$i*4+3]) && (strpos($foodarr[$i*4+3], 'tripadvisor') === false)) {
                                                         echo "<a href=\"". $foodarr[$i*4+3]."\" target=\"_blank\">";?>
                                                         <i class="icon icon-external-link pull-right" style="line-height: 150%"></i>
                                                         <?php echo "</a>";
