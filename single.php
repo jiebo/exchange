@@ -59,10 +59,10 @@ get_header(); ?>
 
             // Save potable boolean in variable $water_boo
             $water = get_post_meta($postid, $water_key, true);
-            if($water == "true") {
-                $water_boo = true;
-            } else {
+            if($water == "false") {
                 $water_boo = false;
+            } else {
+                $water_boo = true;
             }
         ?>
 
@@ -143,17 +143,17 @@ get_header(); ?>
                                     ?>
                                     </button>
                                     <?php 
-                                    if($water_boo) : ?>
-                                    <button class="btn btn-light less-padding btn-tooltip" data-toggle="tooltip" data-placement="top" title="Tap water is potable">
-                                        <i class="icon icon-tint icon-lg"></i>
-                                    </button>
-                                    <?php else : ?>
+                                    if(!$water_boo) : ?>
                                     <button class="btn btn-light less-padding btn-tooltip" data-toggle="tooltip" data-placement="top" title="Tap water is not potable">
                                         <span class="icon-stack">
                                             <i class="icon icon-tint icon-stack-1x"></i>
                                             <i class="icon icon-ban icon-stack-2x text-danger"></i>
                                         </span>
-                                    </button>                                
+                                    </button>    
+                                    <?php else : ?>     
+                                    <button class="btn btn-light less-padding btn-tooltip" data-toggle="tooltip" data-placement="top" title="Tap water is potable">
+                                        <i class="icon icon-tint icon-lg"></i>
+                                    </button>                       
                                     <?php endif; ?>
                                 <button style="display: none;" id="map-trigger" class="btn btn-light less-padding btn-tooltip hidden-xs hidden-sm" data-toggle="modal" data-target="#map"><i class="icon icon-map-marker icon-lg"></i></button>
                                 </li>
