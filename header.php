@@ -38,7 +38,7 @@
 	<meta property="og:url"                content="<?php echo get_permalink(); ?>" />
 	<meta property="og:type"               content="article" />
 	<meta property="og:title"              content="Guide to <?php echo get_the_title(); ?>" />
-	<meta property="og:description"        content="<?php echo get_post_meta(get_the_ID(), 'Subheading', TRUE) ?>" />
+	<meta property="og:description"        content="<?php echo strip_tags(get_post_meta(get_the_ID(), 'Subheading', TRUE)) ?>" />
         <?php if(is_single()) : ?>
             <meta property="og:image"          content="<?php echo get_post_meta(get_the_ID(), 'Banner photo', TRUE) ?>" />
         <?php else : ?>
@@ -55,7 +55,7 @@
 	<meta name="twitter:image" content="http://res.cloudinary.com/eu-sep/image/upload/v1446804093/screenshot_wj5ajj.jpg">
     <?php else : ?>
 	<meta name="twitter:title" content="Guide to <?php echo get_the_title(); ?>">
-	<meta name="twitter:description" content="<?php echo get_post_meta(get_the_ID(), 'Subheading', TRUE) ?>">
+	<meta name="twitter:description" content="<?php echo strip_tags(get_post_meta(get_the_ID(), 'Subheading', TRUE)) ?>">
 	<meta name="twitter:image" content="<?php echo get_post_meta(get_the_ID(), 'Banner photo', TRUE) ?>">
     <?php endif; ?>
 	
