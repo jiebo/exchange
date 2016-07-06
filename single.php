@@ -228,7 +228,8 @@ get_header(); ?>
                                                 <th colspan="2">Cost</th>
                                             </thead>
                                             <tbody>
-                                                <?php 
+                                            <?php 
+                                            if(empty($foodarr)) {
                                                 for($i=0; $i<$numfoodrow; $i++) {
                                                 ?>
                                                 <tr>
@@ -249,9 +250,16 @@ get_header(); ?>
                                                     ?>
                                                     </td>
                                                 </tr>
-                                                <?php
+                                            <?php
                                                 }
-                                                ?>
+                                            } else {
+                                            ?>
+                                            <tr>
+                                                <td colspan="4" class="text-center"><em>Either nothing really worth raving about or I've forgotten where I had my meals and Google doesn't have it as well.</em></td>
+                                            </tr>
+                                            <?php
+                                            }
+                                            ?>
                                             </tbody>
                                         </table>
                                     </div>
