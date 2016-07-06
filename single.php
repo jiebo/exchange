@@ -229,7 +229,7 @@ get_header(); ?>
                                             </thead>
                                             <tbody>
                                             <?php 
-                                            if(empty($foodarr)) {
+                                            if(!empty($foodarr)) {
                                                 for($i=0; $i<$numfoodrow; $i++) {
                                                 ?>
                                                 <tr>
