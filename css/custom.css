@@ -170,18 +170,6 @@ article hr.small {
     left: 50%;
     transform: translate(-50%, -50%);
 }
-/* Styling to align chart */
-.align-chart {
-    position: absolute;
-    top: 35%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-/* Styling to remove default text-shadow */
-.highcharts-drilldown-data-label tspan {
-    text-shadow: 0px 0px 0px #000;
-    font-size: 100%;
-}
 /* Center col */
 .centered {
     float: none;
@@ -214,24 +202,6 @@ article hr.small {
     }
     .col-xs-E-6 {
         width: 50%;
-    }
-}
-/* Extra-Small devices (tablets, 601px and up) */
-@media (min-width: 601px) { 
-    #chart-div {
-        height: 300px;
-    }
-}
-/* Large devices (large desktops, 1200px and up) */
-@media (min-width: 1400px) { 
-    #chart-div {
-        height: 400px;
-    }
-}
-/* Extra large devices (my monitor, 1600px and up) */
-@media (min-width: 1800px) {
-    #chart-div {
-        height: 500px;
     }
 }
 
