@@ -25,6 +25,20 @@
     } else {
         echo '<title>Europe Exchange</title>';
     } ?>
+        
+        <!-- Custom Fonts -->
+        <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Source+Sans+Pro:300,400,700,300italic,400italic,700italic|Open+Sans:600' rel='stylesheet' type='text/css'>
+
+        <!-- Bootstrap Core CSS -->
+        <link href="http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+        <link href="<?php bloginfo('template_directory'); ?>/css/stylish-portfolio.min.css" rel="stylesheet">
+        <script async defer src="http://use.fonticons.com/e2810944.js"></script>
+        
+        <?php if(is_single() || is_home()): ?>
+            <link href="<?php bloginfo('template_directory'); ?>/css/custom.min.css" rel="stylesheet">
+        <?php elseif(is_page()) : ?>
+            <link href="<?php bloginfo('template_directory'); ?>/css/article.min.css" rel="stylesheet">
+        <?php endif; ?>
 	
 	<!-- Facebook Open Graph Meta -->
 	<meta property="og:site_name" content="EU-SEP" />
@@ -64,20 +78,6 @@
 	<!--[if lt IE 9]>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/html5.js"></script>
 	<![endif]-->
-        
-        <!-- Custom Fonts -->
-        <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Source+Sans+Pro:300,400,700,300italic,400italic,700italic|Open+Sans:600' rel='stylesheet' type='text/css'>
-
-        <!-- Bootstrap Core CSS -->
-        <link href="http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-        <link href="<?php bloginfo('template_directory'); ?>/css/stylish-portfolio.min.css" rel="stylesheet">
-        <script async defer src="http://use.fonticons.com/e2810944.js"></script>
-        
-        <?php if(is_single() || is_home()): ?>
-            <link href="<?php bloginfo('template_directory'); ?>/css/custom.min.css" rel="stylesheet">
-        <?php elseif(is_page()) : ?>
-            <link href="<?php bloginfo('template_directory'); ?>/css/article.min.css" rel="stylesheet">
-        <?php endif; ?>
         
         <!--[if lt IE 9]>
             <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
