@@ -66,7 +66,7 @@
 	<![endif]-->
         
         <!-- Custom Fonts -->
-        <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Source+Sans+Pro:300,400,700,300italic,400italic,700italic|Open+Sans' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Source+Sans+Pro:300,400,700,300italic,400italic,700italic|Open+Sans:600' rel='stylesheet' type='text/css'>
 
         <!-- Bootstrap Core CSS -->
         <link href="http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
