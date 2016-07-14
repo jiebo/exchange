@@ -137,6 +137,22 @@ $(function(){$('[data-toggle="tooltip"]').tooltip()});
     
 // Make social-media-sidebar appear after scroll
 var boo=!0;$(document).scroll(function(){var a=$("header").height(),e=$(window).scrollTop(),o=$("#predeparture").height();e>a-75?$(".social-media-sidebar").fadeIn("fast"):$(".social-media-sidebar").fadeOut("fast"),e>o&&boo&&($("#ajax-button").trigger("click"),boo=!1)});
+
+// Initialise social media widgets
+function fbshare(url) {
+    window.open(url, "_blank", "width=630,height=530,toolbar=0,status=0");
+}
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+
+// Google Analytics
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-73574306-1', 'auto');
+ga('require', 'linkid');
+ga('send', 'pageview');
 </script>
 <?php if(is_page_template('article-collapse.php')): ?>
 <!-- Scripts for article-collapse -->

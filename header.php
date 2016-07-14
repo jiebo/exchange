@@ -83,17 +83,6 @@
             <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->  
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-73574306-1', 'auto');
-  ga('require', 'linkid');
-  ga('send', 'pageview');
-
-</script>
     </head>
 
 <body>
@@ -107,12 +96,6 @@
                 <li><a onclick="fbshare('https://www.facebook.com/dialog/feed?app_id=181914305480369&display=popup&link=http%3A%2F%2Feu-sep.com%2F<?php echo get_the_title(); ?>&redirect_uri=http%3A%2F%2Feu-sep.com%2F<?php echo get_the_title(); ?>')" href="javascript:void(0);" class="facebook-share"><span style="color: #FFF; font-weight: bold;">Share</span> <i class="icon icon-facebook text-primary"></i></a></li>
                 <li><a href="https://twitter.com/intent/tweet?text=To%20All%20Exchangers%21&url=http%3A%2F%2Feu-sep.com%2F<?php echo get_the_title(); ?>" data-via="TiJieBo" target="_blank"><span style="color: #FFF; font-weight: bold;">Tweet</span> <i class="icon icon-twitter text-primary"></i></a></li>
             <?php endif; ?>
-            <script>
-            function fbshare(url) {
-                window.open(url, "_blank", "width=630,height=530,toolbar=0,status=0");
-            }
-            </script>
-            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
         </ul>
     </div>
     <style>.social-media-sidebar{position:fixed;top:50%;left:0;z-index:9999;display:none}.social-media-sidebar ul{transform:translate(-72px,0);-webkit-transform:translate(-72px,0);padding:0}.social-media-sidebar a:hover{text-decoration:none}.social-media-sidebar ul li{color:#FFF;display:block;width:120px;background:rgba(0,0,0,.36);text-align:right;padding:10px;margin:5px;font-size:1.25em;-webkit-border-radius:0 30px 30px 0;-moz-border-radius:0 30px 30px 0;border-radius:0 30px 30px 0;-webkit-transition:-webkit-transform .5s ease-in;-moz-transition:-moz-transform .3s ease-in;-o-transition:-o-transform .5s ease-in;transition:transform .3s ease-in;z-index:-1}.social-media-sidebar ul li:focus,.social-media-sidebar ul li:hover{-webkit-transform:translate(60px,0);-moz-transform:translate(60px,0);-ms-transform:translate(60px,0);-o-transform:translate(60px,0);transform:translate(60px,0);-webkit-transition:-webkit-transform .3s ease-in;-moz-transition:-moz-transform .3s ease-in;-o-transition:-o-transform .3s ease-in;transition:transform .3s ease-in;z-index:99}.social-media-sidebar ul li i{margin-left:10px;width:2em;height:2em;padding:.5em;font-size:1em;background:#FFF;-webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%}</style>
