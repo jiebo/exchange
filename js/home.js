@@ -1,23 +1,8 @@
 // On Document Ready, hide ajax loading div & load swipe action
 $(document).ready( function() {
     $(".social-media-sidebar").hide('1');
-    $("#swipe-div").owlCarousel({
-        items: 1,
-        itemsDesktop: [1199, 1],
-        itemsDesktopSmall: [979, 1],
-        itemsTablet: [768, 1],
-        itemsMobile: [479, 1],
-        touchDrag: false,
-        dots: true
-    });
     $("#ajax-loading").hide();
     $("#ajax-load-sm").hide();
-    if(document.createStyleSheet) {
-        document.createStyleSheet(src1);
-        document.createStyleSheet(src2);
-    } else {
-         $("head").append($("<link rel='stylesheet' href='" + src2 + "' type='text/css' media='screen' />"));
-    }
 });
 
 // Script for ajax loading of City Guide thumbnails

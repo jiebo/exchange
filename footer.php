@@ -113,19 +113,19 @@
     var loadCity = "<?php bloginfo('template_directory'); ?>/ajax-load-more.php";
     var loadExpense = "<?php bloginfo('template_directory'); ?>/ajax-load-expense.php";
     var sendMsg  = "<?php bloginfo("template_directory"); ?>/contact.php";
-    var src2 = "<?php bloginfo('template_directory'); ?>/owl-carousel/owl.theme.css";
 </script>
-<!-- Javascript for Owl Carousel -->
-<script defer src="<?php bloginfo('template_directory'); ?>/owl-carousel/owl.carousel.min.js"></script>
+
+<?php /*
 <!-- HighCharts component -->
 <script defer src="<?php bloginfo('template_directory'); ?>/highcharts/highcharts.js" charset="utf-8"></script>
-
 <script defer async src="<?php bloginfo('template_directory'); ?>/js/exchange-expense-chart.js" type="text/javascript"></script>
+*/?>
+
 <script defer src="<?php bloginfo('template_directory'); ?>/js/home.min.js" type="text/javascript"></script>
 <?php endif; ?>
 
     <!-- JavaScript -->
-    <script>
+<script>
 // Closes the sidebar menu
 $("#menu-close").click(function(e){e.preventDefault(),$("#sidebar-wrapper").toggleClass("active")});
 
@@ -137,10 +137,10 @@ $(function(){$('[data-toggle="tooltip"]').tooltip()});
     
 // Make social-media-sidebar appear after scroll
 var boo=!0;$(document).scroll(function(){var a=$("header").height(),e=$(window).scrollTop(),o=$("#predeparture").height();e>a-75?$(".social-media-sidebar").fadeIn("fast"):$(".social-media-sidebar").fadeOut("fast"),e>o&&boo&&($("#ajax-button").trigger("click"),boo=!1)});
-    </script>
+</script>
 <?php if(is_page_template('article-collapse.php')): ?>
-    <!-- Scripts for article-collapse -->
-    <script>
+<!-- Scripts for article-collapse -->
+<script>
 function triggerToggle(t){$("#panel"+t).toggle("fast"),$("#toggle"+t+" i").toggleClass("icon-caret-right").toggleClass("icon-caret-down")}$(document).ready(function(){$(".collapse-panel").hide(),$("#hide-all-button").hide(),$(".social-media-sidebar").show(),$("#panel1").slideDown("slow"),$("#toggle1 i").toggleClass("icon-caret-right").toggleClass("icon-caret-down")}),$("#show-all-button").click(function(){$(".collapse-panel").show(),$(".toggle-btn").toggle();for(var t=document.getElementsByClassName("rotate"),e=0;e<t.length;e++)t[e].classList.contains("icon-caret-right")&&$("#toggle"+(e+1)+" i").toggleClass("icon-caret-right").toggleClass("icon-caret-down")}),$("#hide-all-button").click(function(){$(".collapse-panel").hide(),$(".toggle-btn").toggle();for(var t=document.getElementsByClassName("rotate"),e=0;e<t.length;e++)t[e].classList.contains("icon-caret-down")&&$("#toggle"+(e+1)+" i").toggleClass("icon-caret-right").toggleClass("icon-caret-down")});
 </script>
 <?php /*

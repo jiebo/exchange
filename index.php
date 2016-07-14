@@ -156,64 +156,62 @@ get_header(); ?>
     <!-- Expense Guide -->
     <aside class="call-to-action bg-primary" style="position: relative;" id="expense">
         <div class="loading-div" id="ajax-loading"><div class="align-center"><i class="icon icon-refresh icon-spin icon-5x"></i></div></div>
-        <div class="container ">
+        <div class="container">
             <div class="col-lg-12 text-center centered">
                 <h2>Expenses</h2>
                 <hr class="small">
-                <div id="swipe-div" class="owl-carousel">
-                    <div class="this-div-is-for-the-carousel row">
-                    <style>#swipe-div h3 a{color:#fff}#swipe-div h3 a:hover{text-decoration:none;font-style:italic}</style>
-                        <div id="ajax-expense-display">
-                            <h3>City</h3>
-                            <form class="form-horizontal col-lg-6 col-lg-offset-1 col-md-8 col-sm-8" style="font-size: 18px;"> 
-                                <div class="form-group">
-                                    <label class="col-sm-6 control-label">Average Meal</label>
-                                    <div class="col-sm-6 col-xs-12">
-                                        <p class="form-control-static"></p>
-                                    </div>
-                                </div>        
-                                <div class="form-group">
-                                    <label class="col-sm-6 control-label">Transportation / Day</label>
-                                    <div class="col-sm-6 col-xs-12">
-                                        <p class="form-control-static"></p>
-                                    </div>
-                                </div>                     
-                                <div class="form-group">
-                                    <label class="col-sm-6 control-label">Accommodation / Night</label>
-                                    <div class="col-sm-6 col-xs-12">
-                                        <p class="form-control-static"></p>
-                                    </div>
-                                </div>                       
-                                <div class="form-group">
-                                    <label class="col-sm-6 control-label">Est. Local Currency required</label>
-                                    <div class="col-sm-6 col-xs-12">
-                                        <p class="form-control-static"></p>
-                                    </div>
-                                </div>  
-                            </form>  
+                <style>#ajax-expense-display h3 a{color:#fff}#ajax-expense-display h3 a:hover{text-decoration:none;font-style:italic}</style>
+                <div id="ajax-expense-display">
+                    <h3>City</h3>
+                    <form class="form-horizontal col-lg-6 col-lg-offset-1 col-md-8 col-sm-8" style="font-size: 18px;"> 
+                        <div class="form-group">
+                            <label class="col-sm-6 control-label">Average Meal</label>
+                            <div class="col-sm-6 col-xs-12">
+                                <p class="form-control-static"></p>
+                            </div>
+                        </div>        
+                        <div class="form-group">
+                            <label class="col-sm-6 control-label">Transportation / Day</label>
+                            <div class="col-sm-6 col-xs-12">
+                                <p class="form-control-static"></p>
+                            </div>
+                        </div>                     
+                        <div class="form-group">
+                            <label class="col-sm-6 control-label">Accommodation / Night</label>
+                            <div class="col-sm-6 col-xs-12">
+                                <p class="form-control-static"></p>
+                            </div>
+                        </div>                       
+                        <div class="form-group">
+                            <label class="col-sm-6 control-label">Est. Local Currency required</label>
+                            <div class="col-sm-6 col-xs-12">
+                                <p class="form-control-static"></p>
+                            </div>
+                        </div>  
+                    </form>  
+                </div>
+                <div class="row" style="margin-bottom:30px;">
+                    <form class="form-horizontal col-lg-10 col-md-11 col-sm-11 col-xs-11">
+                        <?php
+                        include 'sql.php';
+                        $city_array = get_expense_city_list();
+                        ?>
+                        <div class="btn-group pull-right dropup">     <!-- Button dropdown for Select City -->
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">City Selector &nbsp; <span class="caret"></span>                        </button>
+                            <ul class="dropdown-menu scrollable-menu">
+                            <?php foreach ( $city_array as $city ) { ?>
+                                <li><a href="javascript:void(0);" onclick="ajaxLoadCityExpense('<?php echo $city; ?>');"><?php echo $city; ?></a></li>
+                            <?php } ?>
+                            </ul>
                         </div>
-                        <div class="row">
-                            <form class="form-horizontal col-lg-10 col-md-11 col-sm-11 col-xs-11">
-                                <?php
-                                include 'sql.php';
-                                $city_array = get_expense_city_list();
-                                ?>
-                                <div class="btn-group pull-right dropup">     <!-- Button dropdown for Select City -->
-                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">City Selector &nbsp; <span class="caret"></span>                        </button>
-                                    <ul class="dropdown-menu scrollable-menu">
-                                    <?php foreach ( $city_array as $city ) { ?>
-                                        <li><a href="javascript:void(0);" onclick="ajaxLoadCityExpense('<?php echo $city; ?>');"><?php echo $city; ?></a></li>
-                                    <?php } ?>
-                                    </ul>
-                                </div>
-                            </form>  
-                        </div>
-                    </div>
-                    <div class="this-div-is-for-the-carousel hidden-xs"  id="chart-div">
-                        <h3>Exchange</h3>
-                        <div id="chart" style="height: 40%;" class="align-chart"></div>
-                    </div> 
-                </div>                 
+                    </form>  
+                </div>
+        <?php /*
+        <div class="this-div-is-for-the-carousel hidden-xs"  id="chart-div">
+            <h3>Exchange</h3>
+            <div id="chart" style="height: 40%;" class="align-chart"></div>
+        </div> 
+        */?>               
             </div>
         </div>
     </aside>
