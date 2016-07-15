@@ -32,7 +32,7 @@
         <!-- Bootstrap Core CSS -->
         <link href="http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
         <link href="<?php bloginfo('template_directory'); ?>/css/stylish-portfolio.min.css" rel="stylesheet">
-        <script async defer src="http://use.fonticons.com/e2810944.js"></script>
+        <script async defer src="https://use.fortawesome.com/e2810944.js"></script>
         
         <?php if(is_single() || is_home()): ?>
             <link href="<?php bloginfo('template_directory'); ?>/css/custom.min.css" rel="stylesheet">
