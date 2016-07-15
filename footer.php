@@ -104,6 +104,7 @@
 <!-- Bootstrap Core JavaScript -->
 <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.4.min.js"></script>
 <script src="http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.5/bootstrap.min.js"></script>
+<script async defer src="https://use.fortawesome.com/e2810944.js"></script>
         
 <?php if(is_single()) : ?>
 <script defer src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyBLtzqmB9thtme1YsvAraa4XN4AyE9XdOU"></script>
@@ -122,9 +123,10 @@
 */?>
 
 <script defer src="<?php bloginfo('template_directory'); ?>/js/home.min.js" type="text/javascript"></script>
+        
 <?php endif; ?>
 
-    <!-- JavaScript -->
+<!-- JavaScript -->
 <script>
 function fbshare(e){window.open(e,"_blank","width=630,height=530,toolbar=0,status=0")}$("#menu-close").click(function(e){e.preventDefault(),$("#sidebar-wrapper").toggleClass("active")}),$("#menu-toggle").click(function(e){e.preventDefault(),$("#sidebar-wrapper").toggleClass("active")}),$(function(){$('[data-toggle="tooltip"]').tooltip()});var boo=!0;$(document).scroll(function(){var e=$("header").height(),t=$(window).scrollTop(),a=$("#predeparture").height();t>e-75?$(".social-media-sidebar").fadeIn("fast"):$(".social-media-sidebar").fadeOut("fast"),t>a&&boo&&($("#ajax-button").trigger("click"),boo=!1)}),!function(e,t,a){var o,n=e.getElementsByTagName(t)[0],i=/^http:/.test(e.location)?"http":"https";e.getElementById(a)||(o=e.createElement(t),o.id=a,o.src=i+"://platform.twitter.com/widgets.js",n.parentNode.insertBefore(o,n))}(document,"script","twitter-wjs"),function(e,t,a,o,n,i,r){e.GoogleAnalyticsObject=n,e[n]=e[n]||function(){(e[n].q=e[n].q||[]).push(arguments)},e[n].l=1*new Date,i=t.createElement(a),r=t.getElementsByTagName(a)[0],i.async=1,i.src=o,r.parentNode.insertBefore(i,r)}(window,document,"script","//www.google-analytics.com/analytics.js","ga"),ga("create","UA-73574306-1","auto"),ga("require","linkid"),ga("send","pageview");
 </script>
