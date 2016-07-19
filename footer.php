@@ -102,8 +102,8 @@
 <?php endif; ?>
 
 <!-- Bootstrap Core JavaScript -->
-<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.4.min.js"></script>
-<script src="http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.5/bootstrap.min.js"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.4.min.js"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.5/bootstrap.min.js"></script>
 <script async defer src="https://use.fortawesome.com/e2810944.js"></script>
         
 <?php if(is_single()) : ?>
