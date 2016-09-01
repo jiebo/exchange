@@ -102,28 +102,25 @@
 <?php endif; ?>
 
 <!-- Bootstrap Core JavaScript -->
-<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.4.min.js"></script>
-<script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.5/bootstrap.min.js"></script>
-<script async defer src="https://use.fortawesome.com/e2810944.js"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.4.min.js" type="text/javascript"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.5/bootstrap.min.js" type="text/javascript"></script>
+<script async defer src="https://use.fortawesome.com/e2810944.js" type='text/javascript'></script>
         
 <?php if(is_single()) : ?>
 <script defer src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyBLtzqmB9thtme1YsvAraa4XN4AyE9XdOU"></script>
-<script async defer src="<?php bloginfo('template_directory'); ?>/js/maps.min.js" type="text/javascript" ></script>  
+<script async defer src="<?php bloginfo('template_directory'); ?>/js/maps.min.js" type="text/javascript"></script>  
 <?php elseif(is_home()) : ?>
 <script>
     var loadCity = "<?php bloginfo('template_directory'); ?>/ajax-load-more.php";
     var loadExpense = "<?php bloginfo('template_directory'); ?>/ajax-load-expense.php";
     var sendMsg  = "<?php bloginfo("template_directory"); ?>/contact.php";
 </script>
-
+<script defer src="<?php bloginfo('template_directory'); ?>/js/home.min.js" type="text/javascript"></script>
 <?php /*
 <!-- HighCharts component -->
 <script defer src="<?php bloginfo('template_directory'); ?>/highcharts/highcharts.js" charset="utf-8"></script>
 <script defer async src="<?php bloginfo('template_directory'); ?>/js/exchange-expense-chart.js" type="text/javascript"></script>
 */?>
-
-<script defer src="<?php bloginfo('template_directory'); ?>/js/home.min.js" type="text/javascript"></script>
-        
 <?php endif; ?>
 
 <!-- JavaScript -->

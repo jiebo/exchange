@@ -30,12 +30,12 @@
         <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Source+Sans+Pro:300,400,700,400italic,700italic|Open+Sans:600' rel='stylesheet' type='text/css'>
 
         <!-- Bootstrap Core CSS -->
-        <link href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-        <link href="<?php bloginfo('template_directory'); ?>/css/stylish-portfolio.min.css" rel="stylesheet">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type='text/css'>
+        <link href="<?php bloginfo('template_directory'); ?>/css/stylish-portfolio.min.css" rel="stylesheet" type='text/css'>
         <?php if(is_single() || is_home()): ?>
-            <link href="<?php bloginfo('template_directory'); ?>/css/custom.min.css" rel="stylesheet">
+            <link href="<?php bloginfo('template_directory'); ?>/css/custom.min.css" rel="stylesheet" type='text/css'>
         <?php elseif(is_page()) : ?>
-            <link href="<?php bloginfo('template_directory'); ?>/css/article.min.css" rel="stylesheet">
+            <link href="<?php bloginfo('template_directory'); ?>/css/article.min.css" rel="stylesheet" type='text/css'>
         <?php endif; ?>
 	
 	<!-- Facebook Open Graph Meta -->
